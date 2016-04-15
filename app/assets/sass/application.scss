@@ -1,0 +1,235 @@
+// Import GOV.UK elements, this will import the frontend toolkit and some base styles.
+// Take a look in _govuk-elements.scss to see which files are imported.
+@import 'govuk-elements';
+
+// Take a look at patterns.scss to see which files are imported.
+@import 'patterns';
+
+// If you need to create a page as part of your journey, but without GOV.UK branding
+// See localhost:3000/examples/unbranded/
+.unbranded {
+background: $white;
+// Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
+* {
+font-family: Arial !important;
+}
+// Remove GOV.UK footer styles
+#footer {
+border: 0;
+background: $white;
+}
+}
+
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+.govuk-related-items {
+margin-top: $gutter;
+border-top: 10px solid $govuk-blue;
+padding-top: 5px;
+
+.heading-medium {
+margin-top: 0.3em;
+margin-bottom: 0.5em
+}
+
+li {
+margin-bottom: 10px;
+list-style-type: none;
+}
+}
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+//content font
+/* Noto sans, not currently needed
+
+#proposition-name {
+font-family: 'NotoSans', arial, sans-serif !important;
+}
+
+#content, #main, p, h1, h2, h3, {
+font-family: 'NotoSans', arial, sans-serif !important;
+}
+
+.text {
+font-family: 'NotoSans', arial, sans-serif !important;
+font-size: 18px;
+}
+
+p, li, label {
+font-family: 'NotoSans', arial, sans-serif !important;
+font-size: 18px;
+}
+
+.heading-large, .heading-xlarge, heading-medium, heading-small  {
+font-family: 'NotoSans', arial, sans-serif !important;
+} */
+
+
+.heading-large {
+  margin-top: 30px;
+}
+
+#content {
+margin: 0
+}
+
+#content
+{max-width: 1500px}
+
+.column-two-thirds
+{width: 84%}
+
+
+//left hand nav
+.column-menu {
+
+background-color: #F8F8F8;
+border-right: 1px solid #bfc1c3;
+padding: 40px 0 0 0;
+float: left;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+@media (min-width: 641px) {
+.column-menu,
+{
+float: left;
+width: 15%;
+}
+}
+
+.main-nav {
+height: 100%;
+min-height: 100%;
+}
+
+#home a
+
+{
+text-decoration: none;
+color: white;
+
+}
+
+#home-notactive a
+
+{
+text-decoration: none;
+color: black;
+
+}
+
+
+.main-nav li {
+margin-bottom: 800px;
+padding: 10px 0 10px 40px;
+background-color: #28A197;
+} 
+
+.main-nav-notactive li {
+margin-bottom: 800px;
+padding: 10px 0 10px 40px;
+
+} 
+
+// Customer header
+
+.customer-header {
+  padding-left: 40px; 
+  padding-bottom: 10px; 
+  background-color: #28A197
+}
+
+.customer-header ul li {
+ color: #fff;
+}
+
+.customer-header H1 {
+ color: #fff;
+ margin-bottom: 10px;
+}
+
+// search and forms
+
+#header-search input.submit {
+width: 40px;
+height: 40px;
+border: 1px solid #0b0c0c;
+border-width: 0 0 0 1px;
+border-left-color: #222;
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+overflow: hidden;
+text-indent: -5000px;
+cursor: pointer;
+color: #fff;
+background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat 2px 50%;
+}
+
+.form-control {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+font-family: "nta", Arial, sans-serif;
+font-size: 19px;
+line-height: 1.5;
+font-weight: 400;
+text-transform: none;
+width: 40%;
+padding: 4px;
+background-color: #fff;
+border: 2px solid #6f777b;
+}
+
+.form-control2 {
+
+width: 80%;
+padding: 4px;
+background-color: #fff;
+border: 2px solid #6f777b;
+}
+
+
+// search results
+
+.results-list {
+margin: 0 0 1em;
+}
+
+.name {
+font-size: 1.4em;
+margin: 0;
+font-weight: bold;
+}
+
+.result {
+border-bottom: 1px solid #BFC1C3;
+padding: 1em 0;
+margin: 0;
+}
+
+
+
+.secondary-button {
+background-color: #DEE0E2;
+color: #0B0C0C;
+box-shadow: 0 2px 0 #6F777B;
+}
+
+.secondary-button a {
+text-decoration: none;
+color: #000
+}
+
+
+// address
+
+.change-postcode-button {
+  padding-left: 30px
+}
+

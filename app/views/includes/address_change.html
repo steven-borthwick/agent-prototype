@@ -1,0 +1,91 @@
+ <details>
+
+        <summary><span class="summary">Change address</span></summary>
+
+        <div class="panel panel-border-narrow" id="id1">
+
+          <fieldset>
+            <label for="address_postcode">
+              Postcode
+            </label>
+            <div>
+              <div class="validation-wrapper ">
+                <input type="text" id="address_postcode" name="address.postcode" class="form-control">
+              </div>
+              <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px">
+                Find address
+              </button>
+            </div>
+          </fieldset>
+        </div><!-- ID1 postcode end -->
+        <!-- ID2 address finder start  -->
+
+        <div id="id2" style="display:none">
+          <p>
+            <span class="postcode-prefix">Postcode</span>
+            <span class="visuallyhidden">:</span>
+            <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
+            <a href="issuev2" class="change-postcode-button">
+              Edit<span class="visuallyhidden"> your postcode</span>
+            </a>
+          </p>
+          <!-- address wrapper start -->
+          <div class="panel panel-border-narrow">
+            <form action="issuev2_amended" class="form">
+              <fieldset>
+                <input type="hidden" id="address_postcode" name="address.postcode" value="ne259hq" class="text hidden">
+
+                <label for="address_uprn">
+                  <span class="visuallyhidden">Select your </span>Address
+                </label>
+                <div class="validation-wrapper">
+                 {% include "includes/address_list.html" %}
+               </div><!-- address wrapper end -->
+             </fieldset>
+
+               <p style="padding-top: 20px">
+                <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="addressSelect">
+                  Update address
+                </button>
+                <a href="#" style="padding-left: 30px" id="cant-find">
+                  I can’t find the address in the list<span class="visuallyhidden"> section</span>
+                </a>
+              </p>
+            </form>
+          </div>
+        </div><!-- ID2 address select end  -->
+
+        <div id="id3" style="display:none;">
+            <p>
+            <span class="postcode-prefix">Postcode</span>
+            <span class="visuallyhidden">:</span>
+            <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
+            <a href="issuev2" class="change-postcode-button">
+              Edit<span class="visuallyhidden"> your postcode</span>
+            </a>
+          </p>
+           <form action="issuev2_amended" class="form">
+          <div class="form-group">
+            <fieldset class="multi-line-field">
+                <legend class="label">
+                    Address
+                </legend>
+                <label for="address_manualAddress_lineOne" class="visuallyhidden">Address line one</label>
+                <input type="text" id="address_manualAddress_lineOne" class="form-control">
+                <label for="address_manualAddress_lineTwo" class="visuallyhidden">Address line two</label>
+                <input type="text" id="address_manualAddress_lineTwo" class="form-control">
+                <label for="address_manualAddress_lineThree" class="visuallyhidden">Address line three</label>
+                <input type="text" id="address_manualAddress_lineThree" class="form-control">
+            </fieldset>
+            <label for="address_manualAddress_city">Town or city</label>
+            <div class="validation-wrapper">
+            <input type="text" id="address_manualAddress_city" class="form-control">
+        </div>
+
+        </div>
+         <button type="submit" id="continue" class="button next validation-submit" data-validation-sources="addressSelect">
+                  Update address
+                </button>
+             </form>
+        </div>
+      </details>

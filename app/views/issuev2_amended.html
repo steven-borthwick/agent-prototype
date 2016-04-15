@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-menu">
+			<ul class="main-nav-notactive">
+				<li id="home-notactive"><a href="start">Search</a></li>
+          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+        </ul>
+      </div><!-- col menu -->
+      {% include "includes/customer_header_noaddress.html" %}
+
+     <div class="column-one-half" style="padding-left: 40px; padding-right: 100px">
+      <h2 class="heading-large">Send forecast</h2>
+      <p class="lede">1. Check postal address before sending</p>
+
+        <div style="border-left: 5px solid #ccc; padding-left: 20px"><p>Updated: {{ uprn }}, NE25 9HQ  </p></div>
+       {% include "includes/address_change.html" %}
+
+  </div>
+  <div style="float: left; padding-top: 100px">
+    <p class="lede">2. Choose letter type</p>
+    {% include "includes/statement_type_radio.html" %}
+  </div>
+</div>
+</div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#find-address', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').hide();
+  $('#id3').show();
+});
+
+</script>
+{% endblock %}
+

@@ -1,0 +1,122 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-menu">
+			<ul class="main-nav-notactive">
+				<li id="home-notactive"><a href="start">Search</a></li>
+          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      		</ul>
+  		</div><!-- col menu -->
+  			{% include "includes/customer_header_full.html" %}
+  		
+  		<div class="column-one-half" style="padding-left: 40px; padding-right: 100px"><h2 class="heading-large">Send forecast</h2>
+  			<p class="lede">1. Check postal address before sending</p><details>
+
+    <summary><span class="summary">Change address</span></summary>
+    <p>
+        <span class="postcode-prefix">Postcode</span>
+        <span class="visuallyhidden">:</span>
+        <span class="postcode"><span style="font-weight: 700">ne259hq</s></span>
+        <a href="issue" class="change-postcode-button">
+            Edit<span class="visuallyhidden"> your postcode</span>
+        </a>
+    </p>
+    <div class="panel panel-border-narrow">
+    	<form action="issue_amended">
+<fieldset>
+        <input type="hidden" id="address_postcode" name="address.postcode" value="ne259hq" class="text hidden">
+
+        <label for="address_uprn">
+            <span class="visuallyhidden">Select your </span>Address
+        </label>
+        <div class="validation-wrapper ">
+            <select id="address_uprn" name="address.uprn" class="form-control" style="width: 90%" data-validation-name="addressSelect" data-validation-type="field" data-validation-rules="nonEmpty">
+                <option value="" selected="selected">16 addresses found</option>
+                <option value="47016866">23a Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016867">23b Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016868">24 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016869">25 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016870">26 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016871">27 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016872">28 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016873">29 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016874">29a Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016875">30 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016876">30a Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016877">31 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016878">31a Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016879">32 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016880">33 Burnbank Avenue, Wellfield, North Tyneside</option>
+                <option value="47016881">34 Burnbank Avenue, Wellfield, North Tyneside</option>
+            </select>
+        </div>
+    </fieldset>
+</form>
+    <p style="padding-top: 20px"><button type="submit" id="continue" class="button next validation-submit" data-validation-sources="addressSelect">
+        Update address
+    </button><a href="/register-to-vote/address/manual" style="padding-left: 30px">I can’t find the address in the list<span class="visuallyhidden"> section</span></p>
+    </a>
+    </div>
+
+  </details>
+
+
+  			</div>
+  			<div style="float: left; padding-top: 100px">
+  				<p class="lede">2. Choose letter type</p>
+  				{% include "includes/statement_type_radio.html" %}
+
+
+  		</div><!-- col menu -->
+
+     <!-- <h2 class="heading-medium">About this page</h2>
+
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+			<h2 class="heading-medium">Examples and documentation</h2>
+
+			<ul class="list list-bullet">
+				<li><a href="/examples">Example pages and patterns</a></li>
+				<li><a href="https://github.com/alphagov/govuk_prototype_kit/tree/master/docs">
+						Read the full documentation</a></li>
+			</ul>
+
+      <h2 class="heading-medium">Other resources</h2>
+
+			<ul class="list list-bullet">
+				<li>
+					<a href="http://govuk-elements.herokuapp.com/snippets/">
+						Guide to GOV.UK Elements
+					</a>
+				</li>
+				<li>
+					<a href="https://www.gov.uk/service-manual">
+						Service design manual
+					</a>
+				</li>
+				<li>
+					<a href="https://www.gov.uk/design-principles">
+						Government Digital Service Design Principles
+					</a>
+				</li>
+			</ul>-->
+
+		</div>
+	</div>
+</main>
+
+{% endblock %}
+
+
