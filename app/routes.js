@@ -56,11 +56,11 @@ router.get('/issue_amended', function (req, res) {
 
 });
 
-router.get('/issueV2_amended', function (req, res) {
+router.get('/issuev2_amended', function (req, res) {
 
   var uprn = req.query.uprn;
 
-  res.render('issueV2_amended', { 'uprn' : uprn });
+  res.render('issuev2_amended', { 'uprn' : uprn });
 
 });
 
