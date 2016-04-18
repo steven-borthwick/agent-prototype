@@ -40,6 +40,16 @@ list-style-type: none;
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+// hiding GOV.UK
+
+.global-header {
+	display: none;
+}
+
+global-header-bar {
+	display: none;
+}
+
 
 //content font
 /* Noto sans, not currently needed
