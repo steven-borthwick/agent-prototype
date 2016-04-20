@@ -23,11 +23,11 @@ Agent view - Pension forecast
       <h2 class="heading-large">Send forecast</h2>
       <p class="lede">1. Check postal address before sending</p>
 
-        <div style="border-left: 5px solid #ccc; padding-left: 20px"><p>Updated: {{ lineOne }} {{ lineTwo }} {{ lineThree }} {{ city }} {{ uprn }}, NE25 9HQ  </p></div>
-       {% include "includes/address_change.html" %}
+        <div class="panel-indent" style="border-left: 5px solid #ccc; background-color: #F8F8F8; padding: 5px 0 5px 20px; margin-bottom: 30px">Updated: {{ lineOne }} {{ lineTwo }} {{ lineThree }} {{ city }} {{ country }}, NE25 9HQ.</div>
+       {% include "includes/address_change_manual.html" %}
 
   </div>
-  <div style="float: left; padding-top: 100px">
+  <div style="float: left; padding-top: 80px">
     <p class="lede">2. Choose letter type</p>
     {% include "includes/statement_type_radio.html" %}
   </div>

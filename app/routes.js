@@ -56,14 +56,33 @@ router.get('/issue_amended', function (req, res) {
 
 });
 
+
+
 router.get('/issuev2_amended', function (req, res) {
 
   var uprn = req.query.uprn;
+  var lineOne = req.query.lineOne;
+  var lineTwo = req.query.lineTwo;
+  var lineThree = req.query.lineThree;
+  var city = req.query.city;
 
-  res.render('issuev2_amended', { 'uprn' : uprn });
+  res.render('issuev2_amended', { 'lineOne' : lineOne , 'lineTwo' : lineTwo , 'lineThree' : lineThree , 'city' : city  , 'uprn' : uprn });
 
 });
 
+
+
+router.get('/issuev3_amended', function (req, res) {
+
+  var lineOne = req.query.lineOne;
+  var lineTwo = req.query.lineTwo;
+  var lineThree = req.query.lineThree;
+  var city = req.query.city;
+  var country = req.query.country;
+
+  res.render('issuev3_amended', { 'lineOne' : lineOne , 'lineTwo' : lineTwo , 'lineThree' : lineThree , 'city' : city , 'country' : country  });
+
+});
 
 
 // add your routes here
