@@ -42,14 +42,6 @@ list-style-type: none;
 
 // hiding GOV.UK
 
-.header-global {
-display: none;
-}
-
-,global-header-bar {
-display: none;
-}
-
 .header-global-DWP {
 width: 33.3% !important;
 float: left;
@@ -59,13 +51,10 @@ float: left;
 max-width: 1235px !important;	
 }
 
-.header-global-DWP .header-wrapper .header-global .header-logo {
-margin: 5px 0 2px;
-}
-
 .dwplogo {
 font-size: 30px !important;
 background: none !important;
+margin-top: 2px;
 }
 
 @media (min-width: 641px) {
@@ -175,6 +164,21 @@ color: #fff;
 }
 
 .customer-header H1 {
+color: #fff;
+margin-bottom: 10px;
+}
+
+.customer-header-cant-issue {
+padding-left: 40px; 
+padding-bottom: 10px; 
+background-color: #6F777B
+}
+
+.customer-header-cant-issue ul li {
+color: #fff;
+}
+
+.customer-header-cant-issue H1 {
 color: #fff;
 margin-bottom: 10px;
 }
@@ -297,6 +301,15 @@ font-weight: 700;
 .forecast-data {
 width: 40%;
 float: left;
+}
+
+// panel-indent
+
+.panel-indent {
+  clear: both;
+  border-left: 5px solid #bfc1c3;
+  padding: 0.7894736842em;
+  margin-bottom: 0.7894736842em;
 }
 
 

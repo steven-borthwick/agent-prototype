@@ -78,6 +78,7 @@ router.get('/issuev3_amended', function (req, res) {
   var lineTwo = req.query.lineTwo;
   var lineThree = req.query.lineThree;
   var city = req.query.city;
+  var city = req.query.postcode;
   var country = req.query.country;
 
   res.render('issuev3_amended', { 'lineOne' : lineOne , 'lineTwo' : lineTwo , 'lineThree' : lineThree , 'city' : city , 'country' : country  });
