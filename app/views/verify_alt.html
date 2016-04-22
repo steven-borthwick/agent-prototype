@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Agent view - Pension forecast
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	<div class="grid-row">
+		<div class="column-menu">
+			<ul class="main-nav-notactive">
+				<li id="home-notactive"><a href="start">Search</a></li>
+          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      		</ul>
+  		</div><!-- col menu -->
+  {% include "includes/customer_header_alt.html" %}
+  <div class="column-half" style="padding-left: 40px; padding-right: 100px">
+  			<h2 class="heading-medium">Ask security questions</h2>
+        <p>Select the question customer answers correctly to continue	</p>
+
+  			<form>
+  				<fieldset>
+
+  					<legend class="visuallyhidden">Security questions</legend>
+
+  					<label class="block-label" for="waste-type-1">
+  						<input id="waste-type-1" name="waste-types" type="checkbox" value="waste-animal">
+  						Last employer: <span style="font-weight: 700">Boots</span><br> Date employed:  <span style="font-weight: 700">1 September 1999 - Present
+  					</label>
+  					<label class="block-label" for="waste-type-2">
+  						<input id="waste-type-2" name="waste-types" type="checkbox" value="waste-mines">
+  						Date of marriage:  <span style="font-weight: 700">1 January 1984</span>
+  					</label>
+  					<label class="block-label" for="waste-type-3">
+  						<input id="waste-type-3" name="waste-types" type="checkbox" value="waste-farm-agricultural">
+  						Address:  <span style="font-weight: 700">10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9 5EU</span>
+  					</label>
+
+  				</fieldset>
+  			</form>
+
+  			<p style="padding-top: 20px"><a href="issuev2" class="button">Customer passed security</a>  <a href="not_verified" style="padding-left: 50px;">Customer failed security</a></p></div><!-- col menu -->
+
+     <!-- <h2 class="heading-medium">About this page</h2>
+
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+			<h2 class="heading-medium">Examples and documentation</h2>
+
+			<ul class="list list-bullet">
+				<li><a href="/examples">Example pages and patterns</a></li>
+				<li><a href="https://github.com/alphagov/govuk_prototype_kit/tree/master/docs">
+						Read the full documentation</a></li>
+			</ul>
+
+      <h2 class="heading-medium">Other resources</h2>
+
+			<ul class="list list-bullet">
+				<li>
+					<a href="http://govuk-elements.herokuapp.com/snippets/">
+						Guide to GOV.UK Elements
+					</a>
+				</li>
+				<li>
+					<a href="https://www.gov.uk/service-manual">
+						Service design manual
+					</a>
+				</li>
+				<li>
+					<a href="https://www.gov.uk/design-principles">
+						Government Digital Service Design Principles
+					</a>
+				</li>
+			</ul>-->
+</div>
+	</div>
+</main>
+
+{% endblock %}
+
+
