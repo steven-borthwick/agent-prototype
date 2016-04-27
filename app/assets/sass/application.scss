@@ -47,6 +47,11 @@ width: 33.3% !important;
 float: left;
 }
 
+
+#global-header .header-wrapper {
+	padding-left: 0;
+}
+
 .header-wrapper {
 max-width: 1235px !important;	
 }
@@ -54,7 +59,7 @@ max-width: 1235px !important;
 .dwplogo {
 font-size: 30px !important;
 background: none !important;
-margin-top: 2px;
+margin: 2px 0 0 10px;
 }
 
 @media (min-width: 641px) {
@@ -65,29 +70,28 @@ margin-top: 2px;
 
 
 //content font
-/* Noto sans, not currently needed
 
 #proposition-name {
-font-family: 'NotoSans', arial, sans-serif !important;
+font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
 #content, #main, p, h1, h2, h3, {
-font-family: 'NotoSans', arial, sans-serif !important;
+font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
 .text {
-font-family: 'NotoSans', arial, sans-serif !important;
+font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 font-size: 18px;
 }
 
 p, li, label {
-font-family: 'NotoSans', arial, sans-serif !important;
+font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 font-size: 18px;
 }
 
 .heading-large, .heading-xlarge, heading-medium, heading-small  {
-font-family: 'NotoSans', arial, sans-serif !important;
-} */
+font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+} 
 
 
 .heading-large {
@@ -111,18 +115,13 @@ background-color: #F8F8F8;
 border-right: 1px solid #bfc1c3;
 padding: 25px 0 0 0;
 float: left;
+width: 15%;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 }
 
-@media (min-width: 641px) {
-.column-menu,
-{
-float: left;
-width: 15%;
-}
-}
+
 
 .main-nav {
 height: 100%;
