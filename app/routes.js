@@ -48,6 +48,14 @@ router.get('/results', function (req, res) {
   
 });
 
+router.get('/results_non_found', function (req, res) {
+
+  var search = req.query.search;
+
+  res.render('results_non_found', { 'search' : search });
+  
+});
+
 router.get('/issue_amended', function (req, res) {
 
   var uprn = req.query.uprn;

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Agent view - Pension forecast
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+
+    <ul class="main-nav">
+          <li id="home"><a href="start">Search</a></li>
+          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+        </ul>
+
+    </div>
+    <div class="column-two-thirds" style="padding-left: 40px">
+
+      <h1 class="heading-large">Search results for "{{ search }}"</h1>
+     <form id="header-search" class="site-search" action="results" method="get" role="search">
+                <div class="header-search-content">
+                  <label for="search-main" class="hidden">Search NI numbers</label>
+                  <input type="search" name="search" id="search-main" title="Search" class="form-control" value="{{search}}"><input class="submit" type="submit" value="Search">
+                </div>
+              </form>
+<ul class="results-list"><li class="result employer"><h2 class="name">No results found</h2>
+
+    
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
