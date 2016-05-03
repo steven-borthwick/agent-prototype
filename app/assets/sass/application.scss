@@ -53,14 +53,14 @@ float: left;
 }
 
 .header-wrapper {
-max-width: 1235px !important;	
+	max-width: 1235px !important;	
 }
 
 .dwplogo {
-font-size: 30px !important;
-background: none !important;
-margin: 2px 0 0 10px;
-font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	font-size: 30px !important;
+	background: none !important;
+	margin: 2px 0 0 10px;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
 @media (min-width: 641px) {
@@ -72,122 +72,128 @@ font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 
 //content font
 
+body {
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+}
+
 #proposition-name {
-font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
 #content, #main, p, h1, h2, h3, {
-font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
 .text {
-font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
-font-size: 18px;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	font-size: 18px;
 }
 
 p, li, label {
-font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
-font-size: 18px;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	font-size: 18px;
 }
 
 .heading-large, .heading-xlarge, heading-medium, heading-small  {
-font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 } 
 
 
 .heading-large {
-margin-top: 30px;
+	margin-top: 30px;
 }
 
 #content {
-margin: 0
+	margin: 0
 }
 
-#content
-{max-width: 1500px}
+#content {
+	max-width: 1500px
+}
 
-.column-two-thirds
-{width: 84%}
+.column-two-thirds {
+	width: 84%
+}
 
 
 //left hand nav
 .column-menu {
-background-color: #F8F8F8;
-border-right: 1px solid #bfc1c3;
-padding: 25px 0 0 0;
-float: left;
-width: 15%;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
+	background-color: #F8F8F8;
+	border-right: 1px solid #bfc1c3;
+	padding: 25px 0 0 0;
+	float: left;
+	width: 15%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
 
 .main-nav {
-height: 100%;
-min-height: 100%;
+	height: 100%;
+	min-height: 100%;
 }
 
 #home a {
-text-decoration: none;
-color: white;
+	text-decoration: none;
+	color: white;
 }
 
 #home-notactive a {
-text-decoration: none;
-color: black;
+	text-decoration: none;
+	color: black;
 }
 
 
 .main-nav li {
-margin-bottom: 800px;
-padding: 10px 0 10px 40px;
-background-color: #28A197;
+	margin-bottom: 800px;
+	padding: 10px 0 10px 40px;
+	background-color: #28A197;
 } 
 
 .main-nav-notactive li {
-margin-bottom: 800px;
-padding: 10px 0 10px 40px;
+	margin-bottom: 800px;
+	padding: 10px 0 10px 40px;
 } 
 
 // Customer header
 
 .customer-header {
-padding-left: 40px; 
-padding-bottom: 10px; 
-background-color: #28A197
+	padding-left: 40px; 
+	padding-bottom: 10px; 
+	background-color: #28A197
 }
 
 .customer-header ul li {
-color: #fff;
+	color: #fff;
 }
 
 .customer-header H1 {
-color: #fff;
-margin-bottom: 10px;
+	color: #fff;
+	margin-bottom: 10px;
 }
 
 .customer-header-cant-issue {
-padding-left: 40px; 
-padding-bottom: 10px; 
-background-color: #6F777B
+	padding-left: 40px; 
+	padding-bottom: 10px; 
+	background-color: #6F777B
 }
 
 .customer-header-cant-issue ul li {
-color: #fff;
+	color: #fff;
 }
 
 .customer-header-cant-issue H1 {
-color: #fff;
-margin-bottom: 10px;
+	color: #fff;
+	margin-bottom: 10px;
 }
 
 
 .customer-header-alt {
-padding-left: 40px; 
-padding-bottom: 10px; 
-border-bottom: 1px solid #BFC1C3
+	padding-left: 40px; 
+	padding-bottom: 10px; 
+	border-bottom: 1px solid #BFC1C3
 }
 
 
@@ -198,121 +204,121 @@ margin-bottom: 10px;
 // search and forms
 
 #header-search input.submit {
-width: 40px;
-height: 40px;
-border: 1px solid #0b0c0c;
-border-width: 0 0 0 1px;
-border-left-color: #222;
--webkit-border-radius: 0;
--moz-border-radius: 0;
-border-radius: 0;
-overflow: hidden;
-text-indent: -5000px;
-cursor: pointer;
-color: #fff;
-background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat 2px 50%;
+	width: 40px;
+	height: 40px;
+	border: 1px solid #0b0c0c;
+	border-width: 0 0 0 1px;
+	border-left-color: #222;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+	overflow: hidden;
+	text-indent: -5000px;
+	cursor: pointer;
+	color: #fff;
+	background: #0b0c0c url(https://assets.digital.cabinet-office.gov.uk/frontend/homepage/search-button-085aa82ff641b5cfb3eb090c888459f96be271efe9c1d98a73c8a181202d9063.png) no-repeat 2px 50%;
 }
 
 .form-control {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-font-family: "nta", Arial, sans-serif;
-font-size: 19px;
-line-height: 1.5;
-font-weight: 400;
-text-transform: none;
-width: 40%;
-padding: 4px;
-background-color: #fff;
-border: 2px solid #6f777b;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "nta", Arial, sans-serif;
+	font-size: 19px;
+	line-height: 1.5;
+	font-weight: 400;
+	text-transform: none;
+	width: 40%;
+	padding: 4px;
+	background-color: #fff;
+	border: 2px solid #6f777b;
 }
 
 .form-control2 {
-width: 80%;
-padding: 4px;
-background-color: #fff;
-border: 2px solid #6f777b;
+	width: 80%;
+	padding: 4px;
+	background-color: #fff;
+	border: 2px solid #6f777b;
 }
 
 
 .address-control {
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-box-sizing: border-box;
-font-family: "nta", Arial, sans-serif;
-font-size: 19px;
-line-height: 1.5;
-font-weight: 400;
-text-transform: none;
-padding: 4px;
-background-color: #fff;
-border: 2px solid #6f777b;
-display: block;
-clear: both;
-margin-bottom: 15px;
-width: 60%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: "nta", Arial, sans-serif;
+	font-size: 19px;
+	line-height: 1.5;
+	font-weight: 400;
+	text-transform: none;
+	padding: 4px;
+	background-color: #fff;
+	border: 2px solid #6f777b;
+	display: block;
+	clear: both;
+	margin-bottom: 15px;
+	width: 60%;
 }
 
 
 // search results
 
 .results-list {
-margin: 0 0 1em;
+	margin: 0 0 1em;
 }
 
 .name {
-font-size: 1.4em;
-margin: 0;
-font-weight: bold;
+	font-size: 1.4em;
+	margin: 0;
+	font-weight: bold;
 }
 
 .result {
-border-bottom: 1px solid #BFC1C3;
-padding: 1em 0;
-margin: 0;
+	border-bottom: 1px solid #BFC1C3;
+	padding: 1em 0;
+	margin: 0;
 }
 
 
 .secondary-button {
-background-color: #DEE0E2;
-color: #0B0C0C;
-box-shadow: 0 2px 0 #6F777B;
+	background-color: #DEE0E2;
+	color: #0B0C0C;
+	box-shadow: 0 2px 0 #6F777B;
 }
 
 .secondary-button a {
-text-decoration: none;
-color: #000
+	text-decoration: none;
+	color: #000
 }
 
 
 // address
 
 .change-postcode-button {
-padding-left: 30px
+	padding-left: 30px
 }
 
 // forecast page
 
 .forecast-wrapper {
-clear: both;
-display: block;
+	clear: both;
+	display: block;
 }
 
 .forecast-label {
-width: 50%;
-float: left;
+	width: 50%;
+	float: left;
 }
 
 .forecast-data-bold {
-width: 40%;
-float: left;
-font-weight: 700;
+	width: 40%;
+	float: left;
+	font-weight: 700;
 }
 
 .forecast-data {
-width: 40%;
-float: left;
+	width: 40%;
+	float: left;
 }
 
 // panel-indent
@@ -328,6 +334,7 @@ float: left;
 // errors
 
 .error-message {
+	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
     color: #b10e1e;
     font-weight: bold;
 }

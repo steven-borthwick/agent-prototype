@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Agent view - Pension forecast
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+
+    <ul class="main-nav">
+          <li id="home"><a href="#">Search</a></li>
+          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+        </ul>
+
+    </div>
+    <div class="column-two-thirds" style="padding-left: 40px">
+
+      <h1 class="heading-large">Enter National Insurance number</h1>
+<p class="form-hint">For example QQ123456C</p>
+     <form id="header-search" class="site-search" action="results" method="get" role="search">
+                <div class="header-search-content">
+                  <label for="search-main" class="hidden">Search NI numbers</label>
+                  <input type="search" name="search" id="search-main" title="Search" class="form-control"><input class="submit" type="submit" value="Search">
+                </div>
+              </form>
+
+     <!-- <h2 class="heading-medium">About this page</h2>
+
+      <p>We recommend you add links to your prototype to this page, rather than delete it.
+        You'll find this page in the kit at '/app/views/index.html'.</p>
+      <p>You can change the service name by editing the file '/app/config.js'.</p>
+
+			<h2 class="heading-medium">Examples and documentation</h2>
+
+			<ul class="list list-bullet">
+				<li><a href="/examples">Example pages and patterns</a></li>
+				<li><a href="https://github.com/alphagov/govuk_prototype_kit/tree/master/docs">
+						Read the full documentation</a></li>
+			</ul>
+
+      <h2 class="heading-medium">Other resources</h2>
+
+			<ul class="list list-bullet">
+				<li>
+					<a href="http://govuk-elements.herokuapp.com/snippets/">
+						Guide to GOV.UK Elements
+					</a>
+				</li>
+				<li>
+					<a href="https://www.gov.uk/service-manual">
+						Service design manual
+					</a>
+				</li>
+				<li>
+					<a href="https://www.gov.uk/design-principles">
+						Government Digital Service Design Principles
+					</a>
+				</li>
+			</ul>-->
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
