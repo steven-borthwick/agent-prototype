@@ -15,14 +15,12 @@ Agent view - Pension forecast
             <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
       </ul>
    </div><!-- end col menu -->
-   {% include "includes/customer_header_alt.html" %}
-   <div class="column-two-thirds" style="padding-left: 40px; padding-right: 100px">
-      <h2 class="heading-medium">Send forecast</h2>
-      <h3 class="heading-small">1. Check address</h3>
-       <p>10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9 5EU</p>
-       <div class="panel-indent">If address has changed, or customer wants a different correspondence address add instructions here</div>
-      <h3 class="heading-small">2. Choose letter type</h3>
-    {% include "includes/statement_type_radio_horizontal.html" %}
+   {% include "includes/customer_header_alt_excluded.html" %}
+   <div class="column-two-thirds" style="padding-left: 40px;">
+      <h2 class="heading-medium">Cannot send a forecast</h2>
+      <p class="text">Customer has paid National Insurance in the Isle of Man. We cannot forecast their pension because the Isle of Man now has it's own pension rules.</p>
+      <h3 class="heading-small">What happens next</h3>
+      <p class="text">Issue a statement of their pension amount to date using PFIT.</p>
       
 
 

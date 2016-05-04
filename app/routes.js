@@ -48,6 +48,19 @@ router.get('/results', function (req, res) {
   
 });
 
+router.get('/sprint1/results', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('sprint1/results', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c'
+  });
+  
+});
+
+
 router.get('/results_non_found', function (req, res) {
 
   var search = req.query.search;

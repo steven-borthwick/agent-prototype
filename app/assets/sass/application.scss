@@ -43,8 +43,8 @@ list-style-type: none;
 // hiding GOV.UK
 
 .header-global-DWP {
-width: 33.3% !important;
-float: left;
+	width: 33.3% !important;
+	float: left;
 }
 
 
@@ -63,11 +63,14 @@ float: left;
 	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
-@media (min-width: 641px) {
-.dwplogo {
- font-size: 18px;
- }
+@media (max-width: 641px) {
+	.dwplogo {
+	font-size: 22px !important;
+	padding: 0 0 0 14px;
+	}
 }
+
+
 
 
 //content font
@@ -115,18 +118,40 @@ p, li, label {
 	width: 84%
 }
 
+@media (max-width: 641px) {
+	.column-two-thirds {
+	width: 100%;
+	display: block;
+	clear: both;
+		}	
+	}
+
+
 
 //left hand nav
 .column-menu {
 	background-color: #F8F8F8;
 	border-right: 1px solid #bfc1c3;
-	padding: 25px 0 0 0;
+	padding: 25px 0 500px 0;
 	float: left;
 	width: 15%;
+	height: 100%;
+	min-height: 100%;
+	margin-bottom: -90px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+@media (max-width: 641px) {
+	.column-menu {
+	width: 100%;
+	padding: 10px 0 10px 0;
+	border-bottom: 1px solid #bfc1c3;
+	margin: -10px 0 10px 0
+
+		}	
+	}
 
 
 
@@ -140,22 +165,51 @@ p, li, label {
 	color: white;
 }
 
+@media (max-width: 641px) {
+	#home a {
+	color: #005EA5;
+	padding-left: 40px;
+	font-size: 16px;
+		}	
+	}
+
 #home-notactive a {
 	text-decoration: none;
 	color: black;
 }
 
+@media (max-width: 641px) {
+	#home-notactive a {
+	color: #005EA5;
+	padding-left: 40px;
+	font-size: 16px;
+		}	
+	}
+
 
 .main-nav li {
-	margin-bottom: 800px;
 	padding: 10px 0 10px 40px;
 	background-color: #28A197;
 } 
 
+@media (max-width: 641px) {
+	.main-nav li {
+	padding: 0;
+	background-color:  #F8F8F8;
+		}	
+	}
+
 .main-nav-notactive li {
-	margin-bottom: 800px;
 	padding: 10px 0 10px 40px;
 } 
+
+@media (max-width: 641px) {
+	.main-nav-notactive li {
+	padding: 0;
+	background-color:  #F8F8F8;
+		}	
+	}
+
 
 // Customer header
 
@@ -193,13 +247,57 @@ p, li, label {
 .customer-header-alt {
 	padding-left: 40px; 
 	padding-bottom: 10px; 
-	border-bottom: 1px solid #BFC1C3
+	border-bottom: 1px solid #BFC1C3;
+	
+}
+
+@media (max-width: 641px) {
+	.customer-header-alt {
+	width: 100%;
+	display: block;
+	clear: both;
+	border-bottom: 0px;
+	}	
 }
 
 
 .customer-header-cant-issue H1 {
-margin-bottom: 10px;
+	margin-bottom: 10px;
 }
+
+.customer-header-alt-dob {
+	width: 30%; 
+	padding-bottom: 20px; 
+	float: left;
+	
+}
+
+@media (max-width: 641px) {
+	.customer-header-alt-dob {
+	width: 100%;
+	display: block;
+	clear: both;
+	font-size: 16px;
+	}	
+}
+
+.customer-header-alt-ni {
+	width: 30%; float: left;
+	
+}
+
+
+@media (max-width: 641px) {
+	.customer-header-alt-ni {
+	width: 100%;
+	display: block;
+	clear: both;
+	font-size: 16px;
+	}	
+}
+
+
+
 
 // search and forms
 
@@ -233,6 +331,13 @@ margin-bottom: 10px;
 	background-color: #fff;
 	border: 2px solid #6f777b;
 }
+
+@media (max-width: 641px) {
+	.form-control {
+	width: 80%;
+	}	
+}
+
 
 .form-control2 {
 	width: 80%;
