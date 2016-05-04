@@ -40,6 +40,28 @@ router.get('/examples/over-18', function (req, res) {
 });
 
 
+router.get('/sprint1/sent', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('sprint1/sent');
+
+
+  } else {
+
+      // redirect to the relevant page
+    res.redirect('/sprint1/issue_cant');
+
+  }
+
+});
+
+
+
 router.get('/results', function (req, res) {
 
   var search = req.query.search;
@@ -55,7 +77,8 @@ router.get('/sprint1/results', function (req, res) {
   res.render('sprint1/results', {
     'search' : req.query.search,
     'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c'
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c'
   });
   
 });
