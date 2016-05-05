@@ -48,6 +48,7 @@ list-style-type: none;
 }
 
 
+
 #global-header .header-wrapper {
 	padding-left: 0;	
 }
@@ -126,6 +127,14 @@ p, li, label {
 		}	
 	}
 
+@media (max-width: 641px) {
+	#proposition-menu {
+	margin: 30px 0 0 10px;
+	padding: 5px 0 0 0;
+	display: block;
+	clear: both;
+		}	
+	}
 
 
 //left hand nav
