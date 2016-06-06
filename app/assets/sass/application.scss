@@ -453,4 +453,35 @@ p, li, label {
     font-weight: bold;
 }
 
+// alerts
+
+.style1 {
+    border-color: #2b8cc4;
+    background-color: #eaf4f9;
+}
+
+.style2 {
+    border-color: #b10e1e;
+    background-color: #fceaeb;
+}
+
+.panel-border-wide {
+    border-left-width: 10px;
+}
+
+.padding-small {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.govuk-box-highlight {
+    margin: 1em 0 1em 0;
+    padding: 2em 0 1em 0;
+    color: #fff;
+    background: #28a197;
+    text-align: center;
+}
+
+
+
 
