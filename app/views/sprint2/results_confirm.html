@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+ Search results : Pension statements
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+
+      <ul class="main-nav">
+        <li id="home"><a href="start">Search</a></li>
+          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+        </ul>
+
+      </div>
+      <div class="column-two-thirds" style="padding-left: 40px">
+        <form id="header-search" class="site-search" action="results" method="get" role="search">
+          <h1 class="heading-large">Search results for "{{ search }}"</h1>
+          <div class="form-group">
+
+            <fieldset data-required data-error="Enter a valid NI number, for example QQ123456C">
+
+              <label for="search-main" class="hidden">Search NI numbers</label>
+              <input name="search" id="search-main" title="Search" class="form-control" type="text"value="{{search}}"><input class="submit" type="submit" value="Search" onclick="removeWhitespaces()">
+            </div>
+          </fieldset>
+        </form>
+        <ul class="results-list">
+
+          {% if included %}
+            <li class="result employer">
+              <h2 class="name">Mr Henry David Williamson</h2>
+              <p class="text">Date of Birth: <span style="font-weight: 700">1 December 1962</p>
+              <hr>
+               <form action="issue_address_confirm" class="form">
+              <fieldset class="inline" data-required data-error="Choose Yes or No">
+                <legend><span style="font-weight: 700">Are the customer's name and date of birth correct?</span></legend>
+                 <div class="form-group">
+                <label class="block-label" for="radio-1">
+                  <input id="radio-1" type="radio" name="address_same" value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" for="radio-2">
+                  <input id="radio-2" type="radio" name="address_same" value="No">
+                  No
+                </label>
+                <div class="panel panel-border-wide style2" id="warningmessage" style="display: none; width: 66%">
+                 <p class="text">You must amend the details using PFIT.</p>
+                </div>
+              </div>
+              </fieldset>
+            <input type="submit" value="Continue" class="button">
+          </form>
+            </li>
+          {% elif excluded %}
+            <li class="result employer">
+              <h2 class="name"><a href="issue_excluded">Ms Amber Neve Green</a></h2>
+              <p class="text">Date of Birth: <span style="font-weight: 700">8 November 1969</p>
+            </li>
+          {% elif included_address %}
+            <li class="result employer">
+              <h2 class="name"><a href="issue_address_confirm2">Mr Jake Tobias Wilmington</a></h2>
+              <p class="text">Date of Birth: <span style="font-weight: 700">6 April 1964</p>
+            </li>
+          {% else %}
+            <li class="result employer">
+              <h2 class="name">No results found</h2>
+            </li>
+          {% endif %}
+
+        </ul>
+
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+$(document).on('click', 'input[type="radio"]', function (e) {
+      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        $('#warningmessage').show();
+        if ($(this).attr('id') === 'radio-2') {
+          $('#warningmessage').show();
+        } else {
+          $('#warningmessage').hide();
+        }
+      }
+    });
+
+  function removeWhitespaces() {
+            var txtbox = document.getElementById('search-main');
+            txtbox.value = txtbox.value.replace(/\s/g, "");
+        }
+  </script>   
+{% endblock %}
+
+

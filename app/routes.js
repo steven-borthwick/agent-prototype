@@ -62,6 +62,27 @@ router.get('/sprint2/sent', function (req, res) {
 });
 
 
+router.get('/sprint2/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('sprint2/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/sprint2/issue_cant_details');
+
+  }
+
+});
+
+
 router.get('/sprint2/results', function (req, res) {
 
   var search = req.query.search ? req.query.search.toLowerCase() : '';
@@ -75,6 +96,19 @@ router.get('/sprint2/results', function (req, res) {
   
 });
 
+
+router.get('/sprint2/results_confirm', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('sprint2/results_confirm', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c'
+  });
+  
+});
 
 
 //sprint1

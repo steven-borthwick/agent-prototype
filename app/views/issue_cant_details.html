@@ -1,0 +1,52 @@
+
+{% extends "layout.html" %}
+{% block page_title %}
+Agent view - Pension forecast
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+   <div class="grid-row">
+   <div class="column-menu">
+      <ul class="main-nav-notactive">
+         <li id="home-notactive"><a href="start">Search</a></li>
+         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+            <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+            <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+            <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+   </div><!-- end col menu -->
+   {% include "includes/customer_header_cant_issue.html" %}
+   <div class="column-two-thirds" style="padding-left: 40px; padding-right: 100px">
+      <h2 class="heading-large">Cannot send a forecast</h2>
+      <p class="lede">Customer has paid National Insurance in the Isle of Man.</p>
+      <h3 class="heading-medium">What happens next</h3>
+      <p>Issue a statement of their pension amount to date using PFIT.</p>
+      
+
+
+</div>
+</div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#find-address', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').hide();
+  $('#id3').show();
+});
+
+</script>
+{% endblock %}
+
+
