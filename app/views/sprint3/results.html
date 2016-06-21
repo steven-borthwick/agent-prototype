@@ -11,7 +11,7 @@
     <div class="column-menu">
 
       <ul class="main-nav">
-        <li id="home"><a href="start">Search</a></li>
+        <li id="home"><a href="start_light">Search</a></li>
           <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
           <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
           <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
@@ -35,7 +35,7 @@
 
           {% if included %}
             <li class="result employer">
-              <h2 class="name"><a href="issue_address_confirm?address_same=Yes">Mr Henry David Williamson</a></h2>
+              <h2 class="name"><a href="issue_address_confirm2">Mr Henry David Williamson</a></h2>
               <p class="text">Date of Birth: <span style="font-weight: 700">1 December 1962</p>
             </li>
           {% elif excluded %}
@@ -49,9 +49,21 @@
               <p class="text">Date of Birth: <span style="font-weight: 700">6 April 1964</p>
             </li>
           {% else %}
-            <li class="result employer">
-              <h2 class="name">No results found</h2>
-            </li>
+          <li class="result employer">
+            <h2 class="name">No record found</h2>
+            <div class="panel panel-border-wide style1" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
+            <details>
+
+              <summary><span class="summary">Lines to take</span></summary>
+
+              <div class="panel panel-border-narrow"  style="width: 66%">
+
+                <p>Information to tell the customer</p>
+
+              </div>
+
+            </details>
+          </li>
           {% endif %}
 
         </ul>

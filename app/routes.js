@@ -39,6 +39,98 @@ router.get('/examples/over-18', function (req, res) {
 
 });
 
+//sprint 3
+
+router.get('/sprint3/results', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('sprint3/results', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c'
+  });
+  
+});
+
+router.get('/sprint3/results_confirm', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('sprint3/results_confirm', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c'
+  });
+  
+});
+
+router.get('/sprint3/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same = req.query.details_same;
+
+  if (details_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('sprint3/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/sprint3/issue_cant_details');
+
+  }
+
+});
+
+router.get('/sprint3/issue_excluded', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same2 = req.query.details_same2;
+
+  if (details_same2 == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('sprint3/issue_excluded');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/sprint3/issue_cant_details');
+
+  }
+
+});
+
+
+
+router.get('/sprint3/sent', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('sprint3/sent');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/sprint3/issue_cant');
+
+  }
+
+});
+
+
+
 //sprint2
 
 router.get('/sprint2/sent', function (req, res) {
@@ -76,7 +168,7 @@ router.get('/sprint2/issue_address_confirm', function (req, res) {
   } else {
 
           // redirect to the relevant page
-    res.redirect('/sprint2/issue_cant_details');
+    res.redirect('/sprint2/issue_cant');
 
   }
 
