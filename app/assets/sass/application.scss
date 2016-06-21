@@ -48,19 +48,20 @@ list-style-type: none;
 }
 
 
+#global-header .header-wrapper {
+	max-width: 100%;
+}
+
+
 
 #global-header .header-wrapper {
 	padding-left: 0;	
 }
 
-.header-wrapper {
-	max-width: 1235px !important;	
-}
-
 .dwplogo {
 	font-size: 30px !important;
 	background: none !important;
-	margin: 2px 0 0 10px;
+	margin: 2px 0 0 23px;
 	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
 }
 
@@ -68,6 +69,7 @@ list-style-type: none;
 	.dwplogo {
 	font-size: 22px !important;
 	padding: 0 0 0 14px;
+	margin: 0 0 0 10px;
 	}
 }
 
@@ -480,6 +482,9 @@ p, li, label {
     background: #28a197;
     text-align: center;
 }
+
+
+//
 
 
 
