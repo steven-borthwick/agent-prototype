@@ -481,38 +481,7 @@ p, li, label {
     text-align: center;
 }
 
-// header styles
 
-#global-header.with-proposition .header-wrapper .header-proposition {
-    width: 66.66%;
-    float: left;
-}
-
-#global-header .header-proposition {
-    padding-top: 0;
-}
-
-#global-header.with-proposition .header-wrapper .header-proposition .content {
-    margin: 0 15px;
-}
-
-.header-proposition #proposition-menu {
-    margin-top: 5px;
-}
-
-@media (min-width: 769px)
-#global-header.with-proposition .header-wrapper .header-global .header-logo, #global-header.with-proposition .header-wrapper .header-global .site-search {
-    width: 100%;
-}
-
-#global-header .header-wrapper .header-global .header-logo {
-    margin: 5px 0 2px;
-}
-
-
-#global-header .header-wrapper .header-global .header-logo {
-    float: left;
-}
 
 
 
