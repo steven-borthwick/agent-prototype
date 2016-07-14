@@ -1,63 +1,70 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Agent view - Pension forecast
+Agent view - Pension forecast
 {% endblock %}
 
 {% block content %}
 
 <main id="content" role="main">
-  	<div class="grid-row">
-  		<div class="column-two-thirds" style="width: 100%; padding-left: 30px">
-      		<h1 class="heading-xlarge">Check your State Pension - Agent view </h1>
-          <h2 class="heading-medium">Sprint 4</h2>
-            <ul class="list-bullet">
-            <li><a href="/sprint3/start">Check if details are correct (Yes/No questions)</a><br>NINO search > check address > produce paper statement<br>
-              BB123456C  - can issue statement<br>
-              AA678910C - can't issue, customer excluded<br>
-              DD123456C (or any other NI number) - no record found</li>
-              <li><a href="/sprint3/start_light">Alternative version (no prompts)</a>
+ <div class="grid-row">
+  <div class="column-two-thirds" style="width: 100%; padding-left: 30px">
+    <h1 class="heading-xlarge">Check your State Pension - Agent view </h1>
+    <h2 class="heading-medium">Sprint 5</h2>
+    <ul class="list-bullet">
+      <li><a href="/sprint5/start">Print flow</a><br>NINO search > check details > check address > produce paper statement<br>
+        BB123456C  - can issue statement<br>
+        AA678910C - can't issue, customer excluded<br>
+        GG123456C special customer record</li>
+      </ul>
 
-          </ul>
-          <h2 class="heading-medium">Sprint 2</h2>
-            <ul class="list-bullet">
-            <li><a href="/sprint2/start">Added patterns for warning messages/lines to take</a><br>NINO search > check address > produce paper statement<br>
-              BB123456C  - can issue statement<br>
-              AA678910C - can't issue, customer excluded<br>
-              ZZ123456C - wants to change address</li>
-              <li><a href="/sprint2/results_confirm?search=bb123456c">check if name and DOB are correct</a></li>
+      <h2 class="heading-medium">Sprint 4</h2>
+      <ul class="list-bullet">
+        <li><a href="/sprint3/start">Check if details are correct (Yes/No questions)</a><br>NINO search > check address > produce paper statement<br>
+          BB123456C  - can issue statement<br>
+          AA678910C - can't issue, customer excluded<br>
+          DD123456C (or any other NI number) - no record found</li>
+          <li><a href="/sprint3/start_light">Alternative version (no prompts)</a></li>
+        </ul>
+        <h2 class="heading-medium">Sprint 2</h2>
+        <ul class="list-bullet">
+          <li><a href="/sprint2/start">Added patterns for warning messages/lines to take</a><br>NINO search > check address > produce paper statement<br>
+            BB123456C  - can issue statement<br>
+            AA678910C - can't issue, customer excluded<br>
+            ZZ123456C - wants to change address</li>
+            <li><a href="/sprint2/results_confirm?search=bb123456c">check if name and DOB are correct</a></li>
 
           </ul>
           <h2 class="heading-medium">Sprint 1</h2>
-            <ul class="list-bullet">
+          <ul class="list-bullet">
             <li><a href="/sprint1/start">MVP - test 6 May 2016</a><br>NINO search > check address > produce paper statement<br>
               BB123456C  - can issue statement<br>
               AA678910C - can't issue, customer excluded<br>
               ZZ123456C - wants to change address</li>
-            <li><a href="/sprint1/error">Service down</a></li>
-          </ul>
-      		<h2 class="heading-medium">Sprint 0</h2>
-        		<ul class="list-bullet">
-        	 		<li><a href="start">MVP</a><br>NINO search > security > amend address > produce paper statement</li>
-        	 		  <li><a href="forecast">Forecast</a></li>
-                <li><a href="issuev3">Manual address change</a></li>
-                <li><a href="issue_cant">Exclusion from online</a></li>
-                <li><a href="issue_no_address_change">No address change</a></li>
-                <li><a href="start_error_blank">Search error</a></li>
-                <li><a href="results_non_found">Search no results</a></li>
-                <li><a href="verify_alt">Alternative header</a></li>
-        		</ul>
+              <li><a href="/sprint1/error">Service down</a></li>
+            </ul>
+            <h2 class="heading-medium">Sprint 0</h2>
+            <ul class="list-bullet">
+              <li><a href="start">MVP</a><br>NINO search > security > amend address > produce paper statement</li>
+              <li><a href="forecast">Forecast</a></li>
+              <li><a href="issuev3">Manual address change</a></li>
+              <li><a href="issue_cant">Exclusion from online</a></li>
+              <li><a href="issue_no_address_change">No address change</a></li>
+              <li><a href="start_error_blank">Search error</a></li>
+              <li><a href="results_non_found">Search no results</a></li>
+              <li><a href="verify_alt">Alternative header</a></li>
+            </ul>
             
             <!--<h3 class="heading-small">Paper statement</h3>
             <ul class="list-bullet">
               <li><a href="/public/PDF/06_04_2thirds.pdf">Paper statement v1 (PDF)</a></li>
               <li><a href="/public/PDF/paper_statement_Jarrett.pdf">Paper statement v2 (PDF)</a><br>
                 similar to Notify template</li>
-            </ul>-->
-        </div>
-  	</div>
-</main>
+              </ul>-->
+            </div>
+          </div>
+        </main>
 
-{% endblock %}
+        {% endblock %}
 
 
