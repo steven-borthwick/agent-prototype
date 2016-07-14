@@ -394,7 +394,18 @@ p, li, label {
 	margin: 0;
 }
 
-http://nisp2016.herokuapp.com/32/start/persona_logins
+
+.secondary-button {
+	background-color: #DEE0E2;
+	color: #0B0C0C;
+	box-shadow: 0 2px 0 #6F777B;
+}
+
+.secondary-button a {
+	text-decoration: none;
+	color: #000
+}
+
 
 // address
 
@@ -471,6 +482,9 @@ http://nisp2016.herokuapp.com/32/start/persona_logins
     background: #28a197;
     text-align: center;
 }
+
+
+//
 
 
 
