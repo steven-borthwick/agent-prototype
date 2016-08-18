@@ -55,7 +55,7 @@ list-style-type: none;
 
 
 #global-header .header-wrapper {
-	padding-left: 0;	
+	padding-left: 0;
 }
 
 .dwplogo {
@@ -102,7 +102,7 @@ p, li, label {
 
 .heading-large, .heading-xlarge, heading-medium, heading-small  {
 	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
-} 
+}
 
 
 .heading-large {
@@ -126,7 +126,7 @@ p, li, label {
 	width: 100%;
 	display: block;
 	clear: both;
-		}	
+		}
 	}
 
 @media (max-width: 641px) {
@@ -135,7 +135,7 @@ p, li, label {
 	padding: 5px 0 0 0;
 	display: block;
 	clear: both;
-		}	
+		}
 	}
 
 
@@ -161,7 +161,7 @@ p, li, label {
 	border-bottom: 1px solid #bfc1c3;
 	margin: -10px 0 10px 0
 
-		}	
+		}
 	}
 
 
@@ -181,7 +181,7 @@ p, li, label {
 	color: #005EA5;
 	padding-left: 40px;
 	font-size: 16px;
-		}	
+		}
 	}
 
 #home-notactive a {
@@ -194,39 +194,39 @@ p, li, label {
 	color: #005EA5;
 	padding-left: 40px;
 	font-size: 16px;
-		}	
+		}
 	}
 
 
 .main-nav li {
 	padding: 10px 0 10px 40px;
 	background-color: #28A197;
-} 
+}
 
 @media (max-width: 641px) {
 	.main-nav li {
 	padding: 0;
 	background-color:  #F8F8F8;
-		}	
+		}
 	}
 
 .main-nav-notactive li {
 	padding: 10px 0 10px 40px;
-} 
+}
 
 @media (max-width: 641px) {
 	.main-nav-notactive li {
 	padding: 0;
 	background-color:  #F8F8F8;
-		}	
+		}
 	}
 
 
 // Customer header
 
 .customer-header {
-	padding-left: 40px; 
-	padding-bottom: 10px; 
+	padding-left: 40px;
+	padding-bottom: 10px;
 	background-color: #28A197
 }
 
@@ -240,8 +240,8 @@ p, li, label {
 }
 
 .customer-header-cant-issue {
-	padding-left: 40px; 
-	padding-bottom: 10px; 
+	padding-left: 40px;
+	padding-bottom: 10px;
 	background-color: #6F777B
 }
 
@@ -256,10 +256,10 @@ p, li, label {
 
 
 .customer-header-alt {
-	padding-left: 40px; 
-	padding-bottom: 10px; 
+	padding-left: 40px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #BFC1C3;
-	
+
 }
 
 @media (max-width: 641px) {
@@ -268,7 +268,7 @@ p, li, label {
 	display: block;
 	clear: both;
 	border-bottom: 0px;
-	}	
+	}
 }
 
 
@@ -277,10 +277,10 @@ p, li, label {
 }
 
 .customer-header-alt-dob {
-	width: 30%; 
-	padding-bottom: 20px; 
+	width: 30%;
+	padding-bottom: 20px;
 	float: left;
-	
+
 }
 
 @media (max-width: 641px) {
@@ -289,12 +289,12 @@ p, li, label {
 	display: block;
 	clear: both;
 	font-size: 16px;
-	}	
+	}
 }
 
 .customer-header-alt-ni {
 	width: 30%; float: left;
-	
+
 }
 
 
@@ -304,7 +304,7 @@ p, li, label {
 	display: block;
 	clear: both;
 	font-size: 16px;
-	}	
+	}
 }
 
 
@@ -346,7 +346,7 @@ p, li, label {
 @media (max-width: 641px) {
 	.form-control {
 	width: 80%;
-	}	
+	}
 }
 
 
@@ -431,6 +431,13 @@ p, li, label {
 	font-weight: 700;
 }
 
+.forecast-data-important {
+	width: 40%;
+	float: left;
+	font-weight: 700;
+	font-size: 24px;
+}
+
 .forecast-data {
 	width: 40%;
 	float: left;
@@ -489,7 +496,7 @@ p, li, label {
 // modelling gaps options
 
 .options-wrapper {
-    display: inline-block; 
+    display: inline-block;
     clear: both;
     width: 100%;
     padding: 25px 0 0px 0;
@@ -574,5 +581,6 @@ p, li, label {
     clear: both;
 }
 
-
-
+#global-breadcrumb {
+	margin-bottom: -20px;
+}

@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function (req, res) {
-  
+
   res.render('index');
 
 });
@@ -39,6 +39,138 @@ router.get('/examples/over-18', function (req, res) {
 
 });
 
+//full_service2
+
+router.get('/full_service2/results', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('full_service2/results', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c',
+    'special': search === 'gg123456c'
+  });
+
+});
+
+router.get('/full_service2/results_confirm', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('full_service2/results_confirm', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c',
+    'special': search === 'gg123456c'
+  });
+
+});
+
+
+router.get('/full_service2/issue_excluded', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same2 = req.query.details_same2;
+
+  if (details_same2 == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('full_service2/issue_excluded');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/full_service2/issue_cant_details');
+
+  }
+
+});
+
+router.get('/full_service2/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same = req.query.details_same;
+
+  if (details_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('full_service2/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/full_service2/issue_cant_details');
+
+  }
+
+  });
+
+  router.get('/full_service2/print', function (req, res) {
+
+    // get the answer from the query string (eg. ?address_same=No)
+    var address_same = req.query.address_same;
+
+    if (address_same == "Yes" ){
+
+      // if address_same is any other value (or is missing) render the page requested
+      res.render('full_service2/print');
+
+
+    } else {
+
+            // redirect to the relevant page
+      res.redirect('/full_service2/security_address2');
+
+    }
+
+  });
+
+  router.get('/full_service2/change_address', function (req, res) {
+
+    // get the answer from the query string (eg. ?address_same=No)
+    var security_passed = req.query.security_passed;
+
+    if (security_passed == "Yes" ){
+
+      // if address_same is any other value (or is missing) render the page requested
+      res.render('full_service2/change_address');
+
+
+    } else {
+
+            // redirect to the relevant page
+      res.redirect('/full_service2/issue_cant');
+
+    }
+
+  });
+
+  router.get('/full_service2/forecast', function (req, res) {
+
+    // get the answer from the query string (eg. ?address_same=No)
+    var security_passed = req.query.security_passed;
+
+    if (security_passed == "Yes" ){
+
+      // if address_same is any other value (or is missing) render the page requested
+      res.render('full_service2/forecast');
+
+
+    } else {
+
+            // redirect to the relevant page
+      res.redirect('/full_service2/issue_cant');
+
+    }
+
+  });
+
+
 //full_service1
 
 router.get('/full_service1/results', function (req, res) {
@@ -52,7 +184,7 @@ router.get('/full_service1/results', function (req, res) {
     'included_address': search === 'zz123456c',
     'special': search === 'gg123456c'
   });
-  
+
 });
 
 router.get('/full_service1/results_confirm', function (req, res) {
@@ -66,7 +198,7 @@ router.get('/full_service1/results_confirm', function (req, res) {
     'included_address': search === 'zz123456c',
     'special': search === 'gg123456c'
   });
-  
+
 });
 
 
@@ -104,7 +236,7 @@ router.get('/change_address/results', function (req, res) {
     'included_address': search === 'zz123456c',
     'special': search === 'gg123456c'
   });
-  
+
 });
 
 router.get('/change_address/results_confirm', function (req, res) {
@@ -118,7 +250,7 @@ router.get('/change_address/results_confirm', function (req, res) {
     'included_address': search === 'zz123456c',
     'special': search === 'gg123456c'
   });
-  
+
 });
 
 router.get('/change_address/issue_address_confirm', function (req, res) {
@@ -196,7 +328,7 @@ router.get('/change_address/change_address', function (req, res) {
     res.render('change_address/change_address');
 
 
-  } 
+  }
 
   else if (employer_name == "No" && address == "No" || marriage == "No" ){
 
@@ -229,7 +361,7 @@ router.get('/sprint5/results', function (req, res) {
     'included_address': search === 'zz123456c',
     'special': search === 'gg123456c'
   });
-  
+
 });
 
 router.get('/sprint5/results_confirm', function (req, res) {
@@ -243,7 +375,7 @@ router.get('/sprint5/results_confirm', function (req, res) {
     'included_address': search === 'zz123456c',
     'special': search === 'gg123456c'
   });
-  
+
 });
 
 router.get('/sprint5/issue_address_confirm', function (req, res) {
@@ -321,7 +453,7 @@ router.get('/sprint3/results', function (req, res) {
     'included': search === 'bb123456c',
     'included_address': search === 'zz123456c'
   });
-  
+
 });
 
 router.get('/sprint3/results_confirm', function (req, res) {
@@ -334,7 +466,7 @@ router.get('/sprint3/results_confirm', function (req, res) {
     'included': search === 'bb123456c',
     'included_address': search === 'zz123456c'
   });
-  
+
 });
 
 router.get('/sprint3/issue_address_confirm', function (req, res) {
@@ -455,7 +587,7 @@ router.get('/sprint2/results', function (req, res) {
     'included': search === 'bb123456c',
     'included_address': search === 'zz123456c'
   });
-  
+
 });
 
 
@@ -469,7 +601,7 @@ router.get('/sprint2/results_confirm', function (req, res) {
     'included': search === 'bb123456c',
     'included_address': search === 'zz123456c'
   });
-  
+
 });
 
 
@@ -502,7 +634,7 @@ router.get('/results', function (req, res) {
   var search = req.query.search;
 
   res.render('results', { 'search' : search });
-  
+
 });
 
 router.get('/sprint1/results', function (req, res) {
@@ -515,7 +647,7 @@ router.get('/sprint1/results', function (req, res) {
     'included': search === 'bb123456c',
     'included_address': search === 'zz123456c'
   });
-  
+
 });
 
 
@@ -524,7 +656,7 @@ router.get('/results_non_found', function (req, res) {
   var search = req.query.search;
 
   res.render('results_non_found', { 'search' : search });
-  
+
 });
 
 //sprint 0

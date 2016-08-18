@@ -5,80 +5,78 @@ Can't send forecast : Pension statements
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
- <div class="grid-row">
-   <div class="column-menu">
-    <ul class="main-nav-notactive">
-     <li id="home-notactive"><a href="start">Search</a></li>
-         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
-            <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
-            <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
-            <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
-          </ul>
-        </div><!-- end col menu -->
-        {% include "includes/customer_header_alt.html" %}
-        <div class="column-one-half" style="padding: 0 40px 0 40px; width: 41%">
-        <div id="global-breadcrumb">
-    <a class="link-back" href="issue_address_confirm?details_same=Yes">Back</a>
-  </div>
-          <h1 class="heading-medium">Address to send forecast</h1>
-          <form action="print?address_same=Yes" class="form">
-      <div class="form-group">
-        <fieldset class="multi-line-field">
-          <legend class="label">Address</legend>
+  <div class="grid-row">
+    <div class="column-menu">
+      <ul class="main-nav-notactive">
+        <li id="home-notactive"><a href="start">Search</a></li>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+    </div><!-- end col menu -->
+    {% include "includes/customer_header_alt.html" %}
+    <div class="column-one-half" style="padding: 0 40px 0 40px; width: 41%">
+      <div id="global-breadcrumb">
+        <a class="link-back" href="issue_address_confirm?details_same=Yes">Back</a>
+      </div>
+      <h1 class="heading-medium">Address to send forecast</h1>
+      <form action="print?address_same=Yes" class="form">
+        <div class="form-group">
+          <fieldset class="multi-line-field">
+            <legend class="label">Address</legend>
             <label for="lineOne" class="visuallyhidden">Address line one</label>
             <input type="text" id="lineOne" name="lineOne" class="address-control">
             <label for="lineTwo" class="visuallyhidden">Address line two</label>
             <input type="text" id="lineTwo"  name="lineTwo" class="address-control">
-        </fieldset>
+          </fieldset>
           <label for="city">Town or city</label>
           <div class="validation-wrapper">
-          <input type="text" id="city" name="city" class="address-control">
+            <input type="text" id="city" name="city" class="address-control">
           </div>
           <label for="postcode">Postcode</label>
           <div class="validation-wrapper">
-          <input type="text" id="postcode" name="postcode" class="form-control" style="margin-bottom: 20px;">
+            <input type="text" id="postcode" name="postcode" class="form-control" style="margin-bottom: 20px;">
           </div>
           <label for="country">Country</label>
           <div class="validation-wrapper">
-          <input type="text" id="country" name="country" class="address-control">
+            <input type="text" id="country" name="country" class="address-control">
           </div>
-        <a href="print?address_same=Yes" class="button next validation-submit">Print forecast</a>
+          <a href="print?address_same=Yes" class="button next validation-submit">Print forecast</a>
         </form>
-          <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
-      
-        </div>
-  </div>
-</main>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script type="text/javascript">
-// function show(elementId) {
-//   document.getElementById("id1").style.display = "none";
-//   document.getElementById("id2").style.display = "block";
-//   document.getElementById(elementId).style.display = "block";
-// }
+        <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
 
-$(document).on('click', '#find-address', function () {
-  $('#id2').show();
-});
+      </div>
+    </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript">
+  // function show(elementId) {
+  //   document.getElementById("id1").style.display = "none";
+  //   document.getElementById("id2").style.display = "block";
+  //   document.getElementById(elementId).style.display = "block";
+  // }
 
-$(document).on('click', '#cant-find', function (e) {
-  e.preventDefault();
-  $('#id2').hide();
-  $('#id3').show();
-});
+  $(document).on('click', '#find-address', function () {
+    $('#id2').show();
+  });
 
-$(document).on('click', 'input[type="radio"]', function (e) {
-      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+  $(document).on('click', '#cant-find', function (e) {
+    e.preventDefault();
+    $('#id2').hide();
+    $('#id3').show();
+  });
+
+  $(document).on('click', 'input[type="radio"]', function (e) {
+    if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+      $('#warningmessage').show();
+      if ($(this).attr('id') === 'radio-2') {
         $('#warningmessage').show();
-        if ($(this).attr('id') === 'radio-2') {
-          $('#warningmessage').show();
-        } else {
-          $('#warningmessage').hide();
-        }
+      } else {
+        $('#warningmessage').hide();
       }
-    });
+    }
+  });
 
-</script>
-{% endblock %}
-
-
+  </script>
+  {% endblock %}

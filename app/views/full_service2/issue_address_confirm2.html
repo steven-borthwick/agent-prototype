@@ -8,7 +8,7 @@ Confirm address : Pension statements
  <div class="grid-row">
    <div class="column-menu">
     <ul class="main-nav-notactive">
-     <li id="home-notactive"><a href="start">Search</a></li>
+     <li id="home-notactive"><a href="start_light">Search</a></li>
          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
             <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
             <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
@@ -16,25 +16,15 @@ Confirm address : Pension statements
           </ul>
         </div><!-- end col menu -->
         {% include "includes/customer_header_alt.html" %}
-         <div class="column-one-half" style="padding: 0 40px 0 40px; width: 41%">
-          <h2 class="heading-medium">Send forecast</h2>
-          <p class="text" style="padding-bottom: 20px">10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9&nbsp;5EU</p>
+        <div class="column-two-thirds" style="padding-left: 40px;">
+          <h2 class="heading-medium">Confirm address</h2>
+          <p class="text" style="padding-bottom: 20px">1 Finley Park Avenue, Poppleton, PP1&nbsp;1TN</p>
           <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
-          <p><a href="security_address">Change address</a></p>
           
+        <div class="panel panel-border-wide style1" style="width: 60%"><p>If the address has changed or is incorrect, issue the statement through PFIT</p></div>
+            <p><a href="sent?address_same=Yes" class="button">Send to this address</a> <span style="padding: 20px 0 0 50px"><a href="start_light">Exit record</a></span></p> 
 
-            <p><a href="/full_service1/print" class="button">Print statement</a></p>
          </div>
-          <div class="column-one-half" style="padding: 0 40px 0 40px; width: 41%">
-            <h2 class="heading-medium">Enquiries</h2>
-                  <table style="width: 450px">
-      <tr><td>Last paper forecast</td><td> 12 November 2015</td></tr>
-      <tr><td>Last visited online</td><td>3 April 2016</td></tr>
-
-    </table>
-
-             <p style="padding-top: 20px;"><a href="security_forecast">View forecast</a></p>
-          </div>
   </div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -55,6 +45,18 @@ $(document).on('click', '#cant-find', function (e) {
   $('#id3').show();
 });
 
+$(document).on('click', 'input[type="radio"]', function (e) {
+      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        $('#warningmessage').show();
+        if ($(this).attr('id') === 'radio-2') {
+          $('#warningmessage').show();
+        } else {
+          $('#warningmessage').hide();
+        }
+      }
+    });
 
 </script>
 {% endblock %}
+
+

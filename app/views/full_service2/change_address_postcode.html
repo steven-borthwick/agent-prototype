@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Can't send forecast : Pension statements
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+ <div class="grid-row">
+   <div class="column-menu">
+    <ul class="main-nav-notactive">
+     <li id="home-notactive"><a href="start">Search</a></li>
+         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+            <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+            <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+            <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+          </ul>
+        </div><!-- end col menu -->
+        {% include "includes/customer_header_alt.html" %}
+        <div class="column-one-half" style="padding: 0 40px 0 40px; width: 55%">
+        <div id="global-breadcrumb">
+    <a class="link-back" href="security_address">Back</a>
+  </div>
+     <h2 class="heading-medium">Send forecast</h2>
+     <div id="id1">
+     <fieldset>
+       <label for="address_postcode">
+         Postcode
+       </label>
+         <div class="validation-wrapper ">
+           <input type="text" id="address_postcode" name="address.postcode" class="form-control">
+         </div>
+
+         <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px">
+           Find address
+         </button>
+           <p style="padding-top: 20px">
+         <a href="change_address?security_passed=Yes">
+            Address is overseas</span>
+          </a>
+        </p>
+
+     </fieldset>
+     </div>
+   <!-- ID1 postcode end -->
+   <!-- ID2 address finder start  -->
+
+   <div id="id2" style="display:none">
+     <p>
+       <span class="postcode-prefix">Postcode</span>
+       <span class="visuallyhidden">:</span>
+       <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
+       <a href="change_address_postcode" class="change-postcode-button">
+         Edit<span class="visuallyhidden"> your postcode</span>
+       </a>
+     </p>
+     <!-- address wrapper start -->
+     <div class="panel panel-border-narrow">
+       <form method="post" action="" class="form">
+         <fieldset>
+           <input type="hidden" id="address_postcode" name="address.postcode" value="ne259hq" class="text hidden">
+
+           <label for="address_uprn">
+             <span class="visuallyhidden">Select your </span>Address
+           </label>
+           <div class="validation-wrapper">
+            {% include "includes/address_list.html" %}
+          </div><!-- address wrapper end -->
+        </fieldset>
+
+          <p style="padding-top: 20px;">
+           <a href="print?address_same=Yes" class="button">
+             Print forecast for this address
+           </a>
+           <a href="change_address_postcode" style="padding-left: 30px" id="cant-find">
+             I can’t find the address in the list<span class="visuallyhidden"> section</span>
+           </a>
+         </p>
+       </form>
+     </div>
+   </div><!-- ID2 address select end  -->
+
+   <div id="id3" style="display:none;">
+       <p>
+       <span class="postcode-prefix">Postcode</span>
+       <span class="visuallyhidden">:</span>
+       <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
+       <a href="change_address_postcode" class="change-postcode-button">
+         Edit<span class="visuallyhidden"> your postcode</span>
+       </a>
+     </p>
+      <form method="post" action="print?address_same=Yes" class="form">
+     <div class="form-group">
+       <fieldset class="multi-line-field">
+           <legend class="label">
+               Address
+           </legend>
+           <label for="address_manualAddress_lineOne" class="visuallyhidden">Address line one</label>
+           <input type="text" id="address_manualAddress_lineOne" name="lineOne" class="address-control">
+           <label for="address_manualAddress_lineTwo" class="visuallyhidden">Address line two</label>
+           <input type="text" id="address_manualAddress_lineTwo"  name="lineTwo" class="address-control">
+           <label for="address_manualAddress_lineThree" class="visuallyhidden">Address line three</label>
+           <input type="text" id="address_manualAddress_lineThree" name="lineThree" class="address-control">
+       </fieldset>
+       <label for="address_manualAddress_city">Town or city</label>
+       <div class="validation-wrapper">
+       <input type="text" id="address_manualAddress_city" name="city" class="address-control">
+   </div>
+
+   </div>
+   <p>
+    <a href="print?address_same=Yes" class="button">
+             Print forecast for this address
+           </a>
+         </p>
+        </form>
+   </div>
+ </details>
+ </div>
+
+          <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
+
+        </div>
+  </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#find-address', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').hide();
+  $('#id3').show();
+});
+
+</script>
+{% endblock %}
