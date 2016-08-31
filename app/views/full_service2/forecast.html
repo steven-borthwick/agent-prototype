@@ -1,111 +1,136 @@
-
-{% extends "layout.html" %}
-{% block page_title %}
-Agent view - Pension forecast
-{% endblock %}
-{% block content %}
+ {% extends "layout.html" %} {% block page_title %} Agent view - Pension forecast {% endblock %} {% block content %}
 <main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-menu" style="height: 1000px;">
-      <ul class="main-nav-notactive">
-        <li id="home-notactive"><a href="start">Search</a></li>
-        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+    <div class="grid-row">
+        <div class="column-menu" style="height: 1000px;">
+            <ul class="main-nav-notactive">
+                <li id="home-notactive"><a href="start">Search</a></li>
+                <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
         <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
         <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
         <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
-      </ul>
-    </div><!-- end col menu -->
-    {% include "includes/customer_header_alt.html" %}
+            </ul>
+        </div>
+        <!-- end col menu -->
+        {% include "includes/customer_header_alt.html" %}
 
-    <div class="column-one-half" style="padding: 0 40px 0 40px; width: 45%">
-      <div id="global-breadcrumb">
-        <a class="link-back" href="issue_address_confirm?details_same=Yes">Back</a>
-      </div>
+        <div class="column-one-half" style="padding: 0 40px 0 40px; width: 45%">
+            <div id="global-breadcrumb">
+                <a class="link-back" href="issue_address_confirm?details_same=Yes">Back</a>
+            </div>
 
-      <h2 class="heading-medium">Forecast</h2>
-      <div class="forecast-wrapper">
-        <span class="forecast-label">State Pension age (SPa):</span> <span class="forecast-data-important">67</span>
-      </div>
-      <div class="forecast-wrapper">
-        <span class="forecast-label">&nbsp;</span> <span class="forecast-data-important">1 December 2020</span>
-      </div>
-      <br>
-      <br>
-      <div class="forecast-wrapper">
-        <span class="forecast-label">Forecast at SPa:</span> <span class="forecast-data-important">£155.65 a week</span>
-      </div>
-      <div class="forecast-wrapper">
-        <span class="forecast-label">&nbsp;</span> <span class="forecast-data">£700 a month<br> £8,000 a year </span>
-      </div>
+            <h2 class="heading-medium">Forecast</h2>
+            <div class="forecast-wrapper">
+                <span class="forecast-label">State Pension age (SPa):</span> <span class="forecast-data-important">67</span>
+            </div>
+            <div class="forecast-wrapper">
+                <span class="forecast-label">&nbsp;</span> <span class="forecast-data-important">1 December 2020</span>
+            </div>
+            <br>
+            <br>
+            <div class="forecast-wrapper">
+                <span class="forecast-label">Forecast at SPa:</span> <span class="forecast-data-important">£155.65 a week</span>
+            </div>
+            <div class="forecast-wrapper">
+                <span class="forecast-label">&nbsp;</span> <span class="forecast-data">£700 a month<br> £8,000 a year </span>
+            </div>
+        </div>
+        <div style="float: left; width: 38%;">
+            <div class="print" style="float: right; padding: 10px 120px 0 0;">
+                <p><a href="/full_service2/security_address" style="float: right" class="button">Send forecast</a></p>
+            </div>
+            <h3 class="heading-small" style="margin-top: 100px">COPE (contracted out amount)</h3>
+            <div class="forecast-wrapper">
+                <span class="forecast-label">COPE estimate</span> <span class="forecast-data-bold">£10.20 a week</span>
+            </div>
+            <details style="width: 80%;">
+                <summary style="margin-top: 20px"><span class="summary">Lines to take</span></summary>
+                <p>In the past you’ve been part of one or more contracted out pension schemes, such as workplace or personal pension schemes.</p>
+                <p>When you were contracted out:</p>
+                <ul class="list-bullet">
+                    <li>you and your employers paid lower rate National Insurance contributions; or</li>
+                    <li>some of your National Insurance contributions were paid into your other pension schemes instead</li>
+                </ul>
+                <p>The COPE amount is in addition to your State Pension and is paid as part of your other pension schemes, not by the government.</p>
+            </details>
+        </div>
+        <div class="column-one-half" style="padding: 0 40px 0 40px; margin-top: 20px; width: 45%; border-top: 1px solid #BFC1C3; ">
+            <br>
+            <h3 class="heading-small">National Insurance breakdown</h3>
+            <table>
+                <tr>
+                    <th style="width: 50%"></th>
+                    <th>full years</th>
+                    <th>weekly amount</th>
+                </tr>
+                <tr>
+                    <td>NI record up to 5 April 2015</td>
+                    <td>32</td>
+                    <td>£140.65</td>
+                </tr>
+                <tr>
+                    <td>Can reach the maximum if continue to contribute to 5 April 2019</td>
+                    <td>35</td>
+                    <td>£155.56</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <div style="float: left; margin-top: 20px; width: 38%; border-top: 1px solid #BFC1C3;">
+            <br>
+
+            <h3 class="heading-small">Gaps in National Insurance record</h3>
+            <p>Customer has 5 gaps in their record</p>
+            <table style="width: 80%;">
+                <tr>
+                    <th>Years with gaps</th>
+                    <th>Shortfall</th>
+                </tr>
+                <tr>
+                    <td>2014-15</td>
+                    <td>£95.00</td>
+                </tr>
+                <tr>
+                    <td>2013-14</td>
+                    <td>£222.56</td>
+                </tr>
+                <tr>
+                    <td>2012-13</td>
+                    <td>£133.12</td>
+                </tr>
+                <tr>
+                    <td>2002-03</td>
+                    <td>It's too late to pay for this year</td>
+                </tr>
+                <tr>
+                    <td>2001-02</td>
+                    <td>It's too late to pay for this year</td>
+                </tr>
+
+            </table>
+        </div>
+
     </div>
-    <div style="float: left; width: 38%;">
-      <div class="print" style="float: right; padding: 10px 120px 0 0;">
-        <p><a href="/full_service2/security_address" style="float: right" class="button">Send forecast</a></p>
-      </div>
-      <h3 class="heading-small" style="margin-top: 100px">COPE (contracted out amount)</h3>
-      <div class="forecast-wrapper">
-        <span class="forecast-label">COPE estimate</span> <span class="forecast-data-bold">£10.20 a week</span>
-      </div>
-      <details style="width: 80%;">
-        <summary style="margin-top: 20px"><span class="summary">Lines to take</span></summary>
-        <p>In the past you’ve been part of one or more contracted out pension schemes, such as workplace or personal pension schemes.</p>
-        <p>When you were contracted out:</p>
-        <ul class="list-bullet">
-          <li>you and your employers paid lower rate National Insurance contributions; or</li>
-          <li>some of your National Insurance contributions were paid into your other pension schemes instead</li>
-        </ul>
-        <p>The COPE amount is in addition to your State Pension and is paid as part of your other pension schemes, not by the government.</p>
-      </details>
+
     </div>
-    <div class="column-one-half" style="padding: 0 40px 0 40px; margin-top: 20px; width: 45%; border-top: 1px solid #BFC1C3; ">
-      <br>
-      <h3 class="heading-small">National Insurance breakdown</h3>
-      <table>
-        <tr><th style="width: 50%"></th><th>full years</th><th>weekly amount</th></tr>
-        <tr><td>NI record up to 5 April 2015</td><td>32</td><td>£140.65</td></tr>
-        <tr><td>Can reach the maximum if continue to contribute to 5 April 2019</td><td>35</td><td>£155.56</td></tr>
-      </table>
-    </div>
-
-
-    <div style="float: left; margin-top: 20px; width: 38%; border-top: 1px solid #BFC1C3;">
-      <br>
-
-      <h3 class="heading-small">Gaps in National Insurance record</h3>
-      <p>Customer has 5 gaps in their record</p>
-      <table style="width: 80%;">
-        <tr><th>Years with gaps</th><th>Shortfall</th></tr>
-        <tr><td>2014-15</td><td>£95.00</td></tr>
-        <tr><td>2013-14</td><td>£222.56</td></tr>
-        <tr><td>2012-13</td><td>£133.12</td></tr>
-        <tr><td>2002-03</td><td>It's too late to pay for this year</td></tr>
-        <tr><td>2001-02</td><td>It's too late to pay for this year</td></tr>
-
-      </table>
-    </div>
-
-  </div>
-
-</div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-// function show(elementId) {
-//   document.getElementById("id1").style.display = "none";
-//   document.getElementById("id2").style.display = "block";
-//   document.getElementById(elementId).style.display = "block";
-// }
+    // function show(elementId) {
+    //   document.getElementById("id1").style.display = "none";
+    //   document.getElementById("id2").style.display = "block";
+    //   document.getElementById(elementId).style.display = "block";
+    // }
 
-$(document).on('click', '#find-address', function () {
-  $('#id1').hide();
-  $('#id2').show();
-});
+    $(document).on('click', '#find-address', function() {
+        $('#id1').hide();
+        $('#id2').show();
+    });
 
-$(document).on('click', '#cant-find', function (e) {
-  e.preventDefault();
-  $('#id2').hide();
-  $('#id3').show();
-});
-
+    $(document).on('click', '#cant-find', function(e) {
+        e.preventDefault();
+        $('#id2').hide();
+        $('#id3').show();
+    });
 </script>
 {% endblock %}

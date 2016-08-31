@@ -1,48 +1,42 @@
-
-{% extends "layout.html" %}
-{% block page_title %}
-Can't send forecast : Pension statements
-{% endblock %}
-{% block content %}
+ {% extends "layout.html" %} {% block page_title %} Can't send forecast : Pension statements {% endblock %} {% block content %}
 <main id="content" role="main">
- <div class="grid-row">
-   <div class="column-menu">
-    <ul class="main-nav-notactive">
-     <li id="home-notactive"><a href="start">Search</a></li>
-         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+    <div class="grid-row">
+        <div class="column-menu">
+            <ul class="main-nav-notactive">
+                <li id="home-notactive"><a href="start">Search</a></li>
+                <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
             <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
             <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
             <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
-          </ul>
-        </div><!-- end col menu -->
+            </ul>
+        </div>
+        <!-- end col menu -->
         {% include "includes/customer_header_alt.html" %}
         <div class="column-two-thirds" style="padding-left: 40px;">
 
-          <h1 class="heading-medium">Send forecast</h1>
-          <form action="change_address" class="form">
+            <h1 class="heading-medium">Send forecast</h1>
+            <form action="change_address" class="form">
 
-          <h2 class="heading-small"><span style ="font-weight: 400;">Send to this address:</span> <br>8 November 1974</h2>
-          </div>
+                <h2 class="heading-small"><span style ="font-weight: 400;">Send to this address:</span> <br>8 November 1974</h2>
+        </div>
 
-            <fieldset class="inline" data-required data-error="Choose Yes or No">
-                              <legend>Answered correctly?</legend>
-                 <div class="form-group">
+        <fieldset class="inline" data-required data-error="Choose Yes or No">
+            <legend>Answered correctly?</legend>
+            <div class="form-group">
                 <label class="block-label" for="radio-1">
-                  <input id="radio-1" type="radio" name="marriage" value="Yes">
-                  Yes
+                    <input id="radio-1" type="radio" name="marriage" value="Yes"> Yes
                 </label>
                 <label class="block-label" for="radio-2">
-                  <input id="radio-2" type="radio" name="marriage" value="No">
-                  No
+                    <input id="radio-2" type="radio" name="marriage" value="No"> No
                 </label>
 
 
 
 
-           <input type="submit" value="Continue" class="button">
-          </form>
-        </div>
-  </div>
+                <input type="submit" value="Continue" class="button">
+                </form>
+            </div>
+    </div>
 </main>
 
 {% endblock %}

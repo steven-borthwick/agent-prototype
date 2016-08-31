@@ -20,6 +20,20 @@ Can't send forecast : Pension statements
     <a class="link-back" href="security_address">Back</a>
   </div>
      <h2 class="heading-medium">Send forecast</h2>
+     <fieldset class="inline" data-required data-error="Choose Yes or No">
+       <legend><span style="font-weight: 700">Is the address in the UK or overseas? </span></legend>
+        <div class="form-group">
+       <label class="block-label" for="radio-1">
+         <input id="radio-1" type="radio" name="address_UK" value="Yes" checked="checked">
+         UK
+       </label>
+       <label class="block-label" for="radio-2">
+         <input id="radio-2" type="radio" name="address_UK" value="No">
+         Overseas
+       </label>
+
+     </div>
+     </fieldset>
      <div id="id1">
      <fieldset>
        <label for="address_postcode">
@@ -32,18 +46,12 @@ Can't send forecast : Pension statements
          <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px">
            Find address
          </button>
-           <p style="padding-top: 20px">
-         <a href="change_address?security_passed=Yes">
-            Address is overseas</span>
-          </a>
-        </p>
-
      </fieldset>
      </div>
    <!-- ID1 postcode end -->
    <!-- ID2 address finder start  -->
 
-   <div id="id2" style="display:none">
+   <div id="id2" class="js-hidden">
      <p>
        <span class="postcode-prefix">Postcode</span>
        <span class="visuallyhidden">:</span>
@@ -78,7 +86,7 @@ Can't send forecast : Pension statements
      </div>
    </div><!-- ID2 address select end  -->
 
-   <div id="id3" style="display:none;">
+   <div id="id3" class="js-hidden">
        <p>
        <span class="postcode-prefix">Postcode</span>
        <span class="visuallyhidden">:</span>
@@ -113,7 +121,37 @@ Can't send forecast : Pension statements
          </p>
         </form>
    </div>
- </details>
+   <div id="id4" class="js-hidden">
+     <form action="print?address_same=Yes" class="form">
+         <div class="form-group">
+             <fieldset class="multi-line-field">
+                 <legend class="label">Address</legend>
+                 <label for="lineOne" class="visuallyhidden">Address line one</label>
+                 <input type="text" id="lineOne" name="lineOne" class="address-control">
+                 <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                 <input type="text" id="lineTwo" name="lineTwo" class="address-control">
+             </fieldset>
+             <label for="city">Town or city</label>
+             <div class="validation-wrapper">
+                 <input type="text" id="city" name="city" class="address-control">
+             </div>
+             <label for="city">Region</label>
+             <div class="validation-wrapper">
+                 <input type="text" id="region" name="region" class="address-control">
+             </div>
+             <label for="city">Postal code</label>
+             <div class="validation-wrapper">
+                 <input type="text" id="region" name="region" class="address-control">
+             </div>
+             <label for="country">Country</label>
+             <div class="validation-wrapper">
+                 <input type="text" id="country" name="country" class="address-control">
+             </div>
+             <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+     </form>
+     <p><a href="print?address_same=Yes" class="button">Print forecast</a></p>
+   </div>
+
  </div>
 
           <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
@@ -130,14 +168,26 @@ Can't send forecast : Pension statements
 // }
 
 $(document).on('click', '#find-address', function () {
-  $('#id1').hide();
-  $('#id2').show();
+  $('#id1').addClass('js-hidden');
+  $('#id2').removeClass('js-hidden');;
 });
 
 $(document).on('click', '#cant-find', function (e) {
   e.preventDefault();
-  $('#id2').hide();
-  $('#id3').show();
+  $('#id2').addClass('js-hidden');
+  $('#id3').removeClass('js-hidden');;
+});
+
+$(document).on('click', 'input[type="radio"]', function (e) {
+  if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+    if ($(this).attr('id') === 'radio-1') {
+      $('#id1').removeClass('js-hidden');
+      $('#id4').addClass('js-hidden');
+    } else {
+      $('#id4').removeClass('js-hidden');
+      $('#id1,#id2,#id3').addClass('js-hidden');
+    }
+  }
 });
 
 </script>

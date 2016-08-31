@@ -1,57 +1,47 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
- Search using NI number : Pension statements
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Search using NI number : Pension statements {% endblock %} {% block content %}
 
 <main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-menu">
+    <div class="grid-row">
+        <div class="column-menu">
 
-      <ul class="main-nav">
-        <li id="home"><a href="#">Search</a></li>
-          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+            <ul class="main-nav">
+                <li id="home"><a href="#">Search</a></li>
+                <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
           <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
           <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
           <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
-        </ul>
+            </ul>
 
-      </div>
-      <div class="column-two-thirds" style="padding-left: 40px">
-              
-         
- <div class="form-group">
-          <fieldset class="inline">
-
-            <legend>Are you 18 or over?</legend>
-
-            <label for="over18True" class="block-label">
-              <input type="radio" name="over18" value="true" id="over18True">
-              Yes
-            </label>
-
-            <label for="over18False" class="block-label">
-              <input type="radio" name="over18" value="false" id="over18False">
-              No
-            </label>
-
-          </fieldset>
         </div>
+        <div class="column-two-thirds" style="padding-left: 40px">
 
 
-      </div>
+            <div class="form-group">
+                <fieldset class="inline">
+
+                    <legend>Are you 18 or over?</legend>
+
+                    <label for="over18True" class="block-label">
+                        <input type="radio" name="over18" value="true" id="over18True"> Yes
+                    </label>
+
+                    <label for="over18False" class="block-label">
+                        <input type="radio" name="over18" value="false" id="over18False"> No
+                    </label>
+
+                </fieldset>
+            </div>
+
+
+        </div>
     </div>
-  </main>
+</main>
 
-  <script type="text/javascript">
-  function removeWhitespaces() {
-            var txtbox = document.getElementById('search-main');
-            txtbox.value = txtbox.value.replace(/\s/g, "");
-        }
-  </script>      
+<script type="text/javascript">
+    function removeWhitespaces() {
+        var txtbox = document.getElementById('search-main');
+        txtbox.value = txtbox.value.replace(/\s/g, "");
+    }
+</script>
 
 {% endblock %}
-
-

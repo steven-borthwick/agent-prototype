@@ -347,6 +347,97 @@ router.get('/change_address/change_address', function (req, res) {
 
 });
 
+//MVP
+
+router.get('/MVP/results', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('MVP/results', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c',
+    'special': search === 'gg123456c'
+  });
+
+});
+
+router.get('/MVP/results_confirm', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('MVP/results_confirm', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c',
+    'special': search === 'gg123456c'
+  });
+
+});
+
+router.get('/MVP/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same = req.query.details_same;
+
+  if (details_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('MVP/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/MVP/issue_cant_details');
+
+  }
+
+});
+
+router.get('/MVP/issue_excluded', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same2 = req.query.details_same2;
+
+  if (details_same2 == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('MVP/issue_excluded');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/MVP/issue_cant_details');
+
+  }
+
+});
+
+
+
+router.get('/MVP/print', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('MVP/print');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/MVP/issue_cant');
+
+  }
+
+});
 
 //sprint 5
 

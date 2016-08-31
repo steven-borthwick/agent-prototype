@@ -5,74 +5,68 @@ Send forecast : Pension statements
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
- <div class="grid-row">
-   <div class="column-menu">
-    <ul class="main-nav-notactive">
-     <li id="home-notactive"><a href="start">Search</a></li>
-         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+    <div class="grid-row">
+        <div class="column-menu">
+            <ul class="main-nav-notactive">
+                <li id="home-notactive"><a href="start">Search</a></li>
+                <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
             <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
             <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
             <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
-          </ul>
-        </div><!-- end col menu -->
+            </ul>
+        </div>
+        <!-- end col menu -->
         {% include "includes/customer_header_alt.html" %}
         <div class="column-two-thirds" style="padding-left: 40px;">
-          <h2 class="heading-medium">Send forecast</h2>
-          <h2 class="heading-small">1. Confirm adress</h2>
-          <p class="text">10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9 5EU</p>
-          <div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>
-          
-          <form action="sent">
-            <h2 class="heading-small">2. Choose letter type</h2>
-            <div class="form-group">
-              <fieldset class="inline" data-required data-error="Choose Normal, Large print, Braille or Welsh">
-                <legend class="visuallyhidden">Choose letter type</legend>
-                 <div class="form-group">
-                <label class="block-label" for="radio-1">
-                  <input id="radio-1" type="radio" name="radio-group" value="Normal">
-                  Normal
-                </label>
-                <label class="block-label" for="radio-2">
-                  <input id="radio-2" type="radio" name="radio-group" value="Large print">
-                  Large print
-                </label>
+            <h2 class="heading-medium">Send forecast</h2>
+            <h2 class="heading-small">1. Confirm adress</h2>
+            <p class="text">10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9 5EU</p>
+            <div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>
 
-                <label class="block-label" for="radio-3">
-                  <input id="radio-3" type="radio" name="radio-group" value="Braille">
-                  Braille
-                </label>
-                   <label class="block-label" for="radio-4">
-                  <input id="radio-4" type="radio" name="radio-group" value="Welsh">
-                  Welsh
-                </label>
-              </div>
-              </fieldset>
-            <input type="submit" value="Send forecast" class="button" style="margin-top: 20px">
-            </div>
-          </form>
-         </div>
-  </div>
+            <form action="sent">
+                <h2 class="heading-small">2. Choose letter type</h2>
+                <div class="form-group">
+                    <fieldset class="inline" data-required data-error="Choose Normal, Large print, Braille or Welsh">
+                        <legend class="visuallyhidden">Choose letter type</legend>
+                        <div class="form-group">
+                            <label class="block-label" for="radio-1">
+                                <input id="radio-1" type="radio" name="radio-group" value="Normal"> Normal
+                            </label>
+                            <label class="block-label" for="radio-2">
+                                <input id="radio-2" type="radio" name="radio-group" value="Large print"> Large print
+                            </label>
+
+                            <label class="block-label" for="radio-3">
+                                <input id="radio-3" type="radio" name="radio-group" value="Braille"> Braille
+                            </label>
+                            <label class="block-label" for="radio-4">
+                                <input id="radio-4" type="radio" name="radio-group" value="Welsh"> Welsh
+                            </label>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Send forecast" class="button" style="margin-top: 20px">
+                </div>
+            </form>
+        </div>
+    </div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript">
-// function show(elementId) {
-//   document.getElementById("id1").style.display = "none";
-//   document.getElementById("id2").style.display = "block";
-//   document.getElementById(elementId).style.display = "block";
-// }
+    // function show(elementId) {
+    //   document.getElementById("id1").style.display = "none";
+    //   document.getElementById("id2").style.display = "block";
+    //   document.getElementById(elementId).style.display = "block";
+    // }
 
-$(document).on('click', '#find-address', function () {
-  $('#id1').hide();
-  $('#id2').show();
-});
+    $(document).on('click', '#find-address', function() {
+        $('#id1').hide();
+        $('#id2').show();
+    });
 
-$(document).on('click', '#cant-find', function (e) {
-  e.preventDefault();
-  $('#id2').hide();
-  $('#id3').show();
-});
-
+    $(document).on('click', '#cant-find', function(e) {
+        e.preventDefault();
+        $('#id2').hide();
+        $('#id3').show();
+    });
 </script>
 {% endblock %}
-
-
