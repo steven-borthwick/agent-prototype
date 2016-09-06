@@ -35,8 +35,10 @@
 
           {% if included %}
             <li class="result employer">
-              <h2 class="name"><a href="issue_address_confirm2">Mr Henry David Williamson</a></h2>
+              <h2 class="name">Mr Henry David Williamson</h2>
               <p class="text">Date of Birth: <span style="font-weight: 700">1 December 1962</p>
+                  <div class="panel panel-border-wide style1" style="width: 60%"><p>If the name and date of birth needs to be changed, issue the statement through PFIT</p></div>
+                  <p><a href="issue_address_confirm2" class="button">Continue</a><span style="padding: 20px 0 0 50px"><a href="start_light">Exit record</a></p>
             </li>
           {% elif excluded %}
             <li class="result employer">
@@ -76,7 +78,5 @@
             var txtbox = document.getElementById('search-main');
             txtbox.value = txtbox.value.replace(/\s/g, "");
         }
-  </script>   
+  </script>
 {% endblock %}
-
-

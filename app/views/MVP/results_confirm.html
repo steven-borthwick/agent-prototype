@@ -79,24 +79,13 @@
              <li class="result employer">
             <h2 class="name">Permission to access account denied</h2>
             <div class="panel panel-border-wide style2" style="width: 60%"><p>Take down the customer's details and pass to a manager.</p></div>
-            <details>
-
-              <summary><span class="summary">Lines to take</span></summary>
-
-              <div class="panel panel-border-narrow"  style="width: 66%">
-
-                <p>Information to tell the customer</p>
-
-              </div>
-
-            </details>
           </li>
 
           {% else %}
           <li class="result employer">
             <h2 class="name">No record found</h2>
-            <div class="panel panel-border-wide style1" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
-            <details>
+            <div class="panel panel-border-wide style2" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
+            <!--<details>
 
               <summary><span class="summary">Lines to take</span></summary>
 
@@ -106,7 +95,7 @@
 
               </div>
 
-            </details>
+            </details>-->
           </li>
           {% endif %}
 
@@ -123,7 +112,5 @@
             var txtbox = document.getElementById('search-main');
             txtbox.value = txtbox.value.replace(/\s/g, "");
         }
-  </script>   
+  </script>
 {% endblock %}
-
-
