@@ -377,6 +377,20 @@ router.get('/MVP/results_confirm', function (req, res) {
 
 });
 
+router.get('/MVP/results_confirm_audit', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('MVP/results_confirm_audit', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'included_address': search === 'zz123456c',
+    'special': search === 'gg123456c'
+  });
+
+});
+
 router.get('/MVP/issue_address_confirm', function (req, res) {
 
   // get the answer from the query string (eg. ?address_same=No)

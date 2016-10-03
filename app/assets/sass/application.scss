@@ -438,6 +438,10 @@ p, li, label {
 	font-size: 24px;
 }
 
+.forecast-data-important2 {
+	font-weight: 700;
+}
+
 .forecast-data {
 	width: 40%;
 	float: left;
@@ -592,6 +596,7 @@ p, li, label {
     background:#fff;
     padding:0;
     position:relative;
+		border-bottom: 1px solid #bfc1c3;
 }
 .nav-tabs:after {
     content:".";
@@ -615,7 +620,8 @@ p, li, label {
     .nav-tabs ol,
     .nav-tabs ul {
         float: none;
-        margin: 0 -16px
+        margin: 0 -16px;
+				;
     }
 }
 
@@ -625,7 +631,6 @@ p, li, label {
     line-height:1.3;
     font-weight:400;
     text-transform:none;
-    border-bottom: 0;
     float: left;
     margin: 0 0 -1px;
    /* margin-right: 5px;
@@ -658,19 +663,12 @@ p, li, label {
     position:relative;
     text-align:center;
     text-decoration: none;
-     font-weight:400;
+     font-weight:800;
     top:0;
 
     margin: 0.26316em 0.26316em 0.26316em 0;
     padding: 0.47368em 1em;
 
-     @media only screen and (max-width: 640px) {
-      background-color: #ffffff;
-       text-decoration: underline;
-       margin: 0;
-  padding: 0;
-
-  }
 
 }
 
@@ -685,7 +683,6 @@ p, li, label {
         text-align:left;
         margin-bottom:0;
         border-bottom:1px solid #bfc1c3;
-
     }
 }
 
@@ -704,14 +701,12 @@ p, li, label {
     margin-bottom:0;
     padding: 0.68421em 0.94737em 0.73684em;
 
-
 }
 
 @media (max-width: 640px) {
     .nav-tabs li.active a{
         border:none;
-        border:1px solid #bfc1c3;
-        padding: 0 0 0 16px;
+        border-bottom:1px solid #bfc1c3
     }
 }
 
@@ -733,7 +728,7 @@ p, li, label {
 .tab-content .tab-pane {
     // padding: 1em 1em 0 1em;
     padding: 1em 0 0 0;
-    border-top:solid 1px #bfc1c3;
+    border-top: 1px solid #bfc1c3;
     clear:both;
     width:auto
 }
@@ -768,3 +763,198 @@ p, li, label {
 
 
 //
+
+
+// accordion
+
+accordion dd, .ni-table dd {
+  padding-top: 10px;
+  padding-bottom: 5px; }
+
+.accordion dt, .ni-table dt {
+  border-top: 1px solid #bfc1c3; }
+
+.accordion2 dd, .ni-table dd {
+  padding-top: 10px;
+  padding-bottom: 5px; }
+
+.accordion2 dt, .ni-table dt {
+  border-top: 1px solid #bfc1c3;
+  padding-top: 10px; }
+
+.ni-wrapper {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  padding: 12px 0 15px 0; }
+
+.ni-years {
+  width: 25%;
+  float: left; }
+
+.ni-years2 {
+  width: 20%;
+  float: left; }
+
+.title {
+  cursor: pointer;
+  margin: 0;
+  color: #005ea5;
+  border: none; }
+
+.ni-cost {
+  width: 25%;
+  float: left; }
+
+.ni-payby {
+  width: 30%;
+  float: left; }
+
+.ni-full {
+  width: 40%;
+  float: left;
+  color: #999; }
+
+.ni-full2 {
+  color: #999; }
+
+.ni-late {
+  width: 50%;
+  float: left;
+  color: #999; }
+
+.ni-notfull {
+  width: 50%;
+  float: left; }
+
+.ni-notfull2 {
+  width: 60%;
+  float: left; }
+
+.ni-action {
+  width: 30%;
+  float: left;
+  text-align: right; }
+
+.ni-action-arrow {
+  width: 6%;
+  float: right;
+  background-image: url(/public/20/images/down-arrow.png);
+  background-size: 17px 15px;
+  background-repeat: no-repeat;
+  background-position: right; }
+
+.ni-action-arrow2 {
+  width: 6%;
+  float: right;
+  background-size: 32px 50px;
+  background-repeat: no-repeat; }
+
+.ni-action-check {
+  width: 50%;
+  float: left;
+  background-color: #000; }
+
+.tickBox {
+  background: #fff;
+  color: #6c3;
+  width: 30px;
+  height: 30px;
+  line-height: 34px;
+  display: block;
+  float: right;
+  border: 1px solid #6d6d6d; }
+
+.contributions-wrapper {
+  display: block;
+  clear: both;
+  padding: 10px 0px 0px 25%;
+  margin-bottom: 5px;
+  font-size: 16px; }
+
+.contributions-wrapper2 {
+  display: block;
+  clear: both;
+  padding: 0px 0px 0px 20%;
+  margin-bottom: 5px;
+  font-size: 16px; }
+
+.contributions-value {
+  float: left;
+  width: 40%; }
+
+.contributions-header {
+  font-weight: 700;
+  color: #6f777b;
+  margin: 0 0 5px 0; }
+
+@media (max-width: 640px) {
+  .contributions-value {
+    float: left;
+    width: 100%;
+    display: block;
+    clear: both;
+    padding-bottom: 5px; }
+  .contributions-wrapper2 {
+    padding: 10px 0px 0px 0px;
+    margin-bottom: 5px;
+    font-size: 14px; } }
+
+// charts
+	.chart-block {
+		  clear: both;
+		   margin-bottom: 50px;
+		    @media only screen and (max-width: 640px) {
+		      margin-bottom:20px;
+		  }
+		}
+
+	.chart-block .footnote {
+
+		    display:inline-block;
+		}
+
+	.graph {
+		    float: left;
+		    width: 100%;
+		    margin-top: -2px;
+		}
+
+		.graph-title {
+					font-size: 16px;
+			}
+
+		.graph li
+		{
+		  position: relative;
+		  display: block;
+		  background: #C1DFE4;
+		  height: 28px;
+		  @media only screen and (max-width: 640px) {
+		      height: 20px;
+		      margin-left: 0;
+		  }
+		}
+
+		.article li {
+		    padding-left: 0;
+		}
+
+
+		.graph  li .amount {
+		  display: block;
+		  height: 100%;
+		  background: #28A197;
+		  line-height: 1.2em;
+		  color:#fff;
+		  text-align: right;
+		  font-size: 20px;
+		  font-weight: 800;
+		  @media only screen and (max-width: 640px) {
+		      font-size: 18px;
+		  }
+		}
+
+		li .amount {
+		  padding-right: 10px;
+		}
