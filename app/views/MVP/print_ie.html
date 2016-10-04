@@ -19,7 +19,7 @@ Can't send forecast : Pension statements
       <h1 class="heading-large">Forecast</h1>
       <div id="id1">
 
-        <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
+        <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="document.getElementById('Pdf1').printWithDialog()">
           Print forecast
         </button>
 
@@ -47,7 +47,7 @@ Can't send forecast : Pension statements
 //   document.getElementById(elementId).style.display = "block";
 // }
 
-$(document).on('click', '#print-pdf', function () {
+$(document).on('click', '#find-address', function () {
   $('#id1').hide();
   $('#id2').show();
 });

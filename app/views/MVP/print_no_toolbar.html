@@ -19,7 +19,7 @@ Can't send forecast : Pension statements
       <h1 class="heading-large">Forecast</h1>
       <div id="id1">
 
-        <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
+        <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
           Print forecast
         </button>
 
@@ -33,7 +33,7 @@ Can't send forecast : Pension statements
       </div><!-- ID2 address select end  -->
 
       <div id="pdf" style="margin-top: 20px;">
-        <embed id="pdf1" name="pdf1" src="/public/images/janeb.pdf" width="800" height="1000" type='application/pdf'>
+        <embed src="/public/images/janeb.pdf#toolbar=0&navpanes=0" width="800" height="1000" type='application/pdf'>
       </div>
     </div>
   </div>
@@ -47,7 +47,7 @@ Can't send forecast : Pension statements
 //   document.getElementById(elementId).style.display = "block";
 // }
 
-$(document).on('click', '#print-pdf', function () {
+$(document).on('click', '#find-address', function () {
   $('#id1').hide();
   $('#id2').show();
 });
