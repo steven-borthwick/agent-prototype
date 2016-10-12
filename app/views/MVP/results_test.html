@@ -20,7 +20,7 @@ Search results : Pension statements
 
     </div>
     <div class="column-two-thirds" style="padding-left: 40px">
-      <form id="header-search" class="site-search" action="results_confirm" method="get" role="search">
+      <form id="header-search" class="site-search" action="results_confirm_test" method="get" role="search">
         <h1 class="heading-large">Search results for "{{ search }}"</h1>
         <div class="form-group">
 
@@ -33,9 +33,9 @@ Search results : Pension statements
       </form>
       <ul class="results-list">
 
-        {% if included %}
+        {% if change %}
         <li class="result employer">
-          <h2 class="name">Mr Henry David Williamson</h2>
+          <h2 class="name">Name</h2>
           <p class="text">Date of Birth: <span style="font-weight: 700">1 December 1962</p>
             <form action="issue_address_confirm" class="form">
               <fieldset class="inline" data-required data-error="Choose Yes or No">
@@ -67,7 +67,7 @@ Search results : Pension statements
               <input type="submit" value="Continue" class="button">
             </form>
           </li>
-          {% elif excluded %}
+          {% elif stuff %}
           <li class="result employer">
             <h2 class="name">Ms Amber Neve Green</h2>
             <p class="text">Date of Birth: <span style="font-weight: 700">8 November 1969</p>
@@ -92,18 +92,9 @@ Search results : Pension statements
                 <input type="submit" value="Continue" class="button">
               </form>
             </li>
-            {% elif special %}
-            <li class="result employer">
-              <h2 class="name">Permission to access account denied</h2>
-              <div class="panel panel-border-wide style2" style="width: 60%"><p>Take down the customer's details and pass to a manager.</p></div>
-            </li>
-            {% elif name %}
-            <h1>Name</h1>
-            {% elif address %}
-            <h1>Address</h1>
             {% else %}
             <li class="result employer">
-              <h2 class="name">No record found</h2>
+              <h2 class="name">Hello. No record found</h2>
               <div class="panel panel-border-wide style2" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
               <!--<details>
 

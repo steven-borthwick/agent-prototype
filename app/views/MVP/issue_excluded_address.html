@@ -1,7 +1,7 @@
 
 {% extends "layout.html" %}
 {% block page_title %}
-Confirm address : Pension statements
+Can't send forecast : Pension statements
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -15,32 +15,22 @@ Confirm address : Pension statements
         <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
       </ul>
     </div><!-- end col menu -->
-    {% include "includes/customer_header_alt.html" %}
+    {% include "includes/customer_header_alt_address.html" %}
     <div class="column-two-thirds" style="padding-left: 40px;">
-      <div id="global-breadcrumb">
-        <a class="link-back" href="issue_address_confirm?details_same=Yes">Back</a>
-      </div>
-      <h2 class="heading-medium">Confirm address</h2>
-      <p class="text" style="padding-bottom: 20px">10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9&nbsp;5EU</p>
-      <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
+      <h2 class="heading-medium">Use PFIT to issue a statement</h2>
+      <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">A forecast can only be sent to the address we hold. If their address has changed, or they would like to use a different correspondence address, use PFIT to issue a statement</p></div>
+<p><a href="start" class="button">Finish</a></p>
+      <!--  <details>
 
-      <form action="print" class="form">
-        <fieldset data-required data-error="Choose Yes or No">
-          <legend><span style="font-weight: 700">Send to this address?</span></legend>
-          <div class="form-group">
-            <label class="block-label" for="radio-1">
-              <input id="radio-1" type="radio" name="address_same" value="Yes">
-              Yes - generate statement
-            </label>
-            <label class="block-label" for="radio-2">
-              <input id="radio-2" type="radio" name="address_same" value="No">
-              No - amend address or send to another address
-            </label>
+      <summary><span class="summary">Lines to take</span></summary>
 
-          </div>
-        </fieldset>
-        <input type="submit" value="Continue" class="button">
-      </form>
+      <div class="panel panel-border-narrow"  style="width: 66%">
+
+      <p>We cannot forecast your pension because the Isle of Man now has it's own pension rules. We can offer you a statement of the pension based on your UK National Insurance record to date. You can also contact the Isle of Man for a statement, tel: 0800 124567</p>
+
+    </div>
+
+  </details>-->
     </div>
   </div>
 </main>
@@ -53,6 +43,7 @@ Confirm address : Pension statements
 // }
 
 $(document).on('click', '#find-address', function () {
+  $('#id1').hide();
   $('#id2').show();
 });
 
@@ -61,7 +52,6 @@ $(document).on('click', '#cant-find', function (e) {
   $('#id2').hide();
   $('#id3').show();
 });
-
 
 </script>
 {% endblock %}

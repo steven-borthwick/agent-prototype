@@ -1,7 +1,7 @@
 
 {% extends "layout.html" %}
 {% block page_title %}
-Can't send forecast : Pension statements
+Confirm address : Pension statements
 {% endblock %}
 {% block content %}
 <main id="content" role="main">
@@ -15,13 +15,30 @@ Can't send forecast : Pension statements
             <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
           </ul>
         </div><!-- end col menu -->
-          {% include "includes/customer_header_alt.html" %}
+        {% include "includes/customer_header_alt_address.html" %}
         <div class="column-two-thirds" style="padding-left: 40px;">
-          <h2 class="heading-medium">Use PFIT to issue a statement</h2>
-           <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">A forecast can only be sent to the address we hold. If their address has changed, or they would like to use a different correspondence address, use PFIT to issue a statement.</p></div>
+          <h2 class="heading-medium">Confirm address</h2>
+          <p class="text" style="padding-bottom: 20px">9 Meadow Street, Preston, Lancashire, PR1 0GB</p>
           <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
-            <p><a href="start" class="button">Finish</a></p>
-        </div>
+
+          <form action="issue_excluded_address" class="form">
+              <fieldset class="inline" data-required data-error="Choose Yes or No">
+                <legend><span style="font-weight: 700">Is this address correct?</span></legend>
+                 <div class="form-group">
+                <label class="block-label" for="radio-1">
+                  <input id="radio-1" type="radio" name="address_same" value="Yes">
+                  Yes - generate forecast
+                </label>
+                <label class="block-label" for="radio-2">
+                  <input id="radio-2" type="radio" name="address_same" value="No">
+                  No
+                </label>
+
+              </div>
+              </fieldset>
+            <input type="submit" value="Continue" class="button">
+          </form>
+         </div>
   </div>
 </main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -42,16 +59,6 @@ $(document).on('click', '#cant-find', function (e) {
   $('#id3').show();
 });
 
-$(document).on('click', 'input[type="radio"]', function (e) {
-      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
-        $('#warningmessage').show();
-        if ($(this).attr('id') === 'radio-2') {
-          $('#warningmessage').show();
-        } else {
-          $('#warningmessage').hide();
-        }
-      }
-    });
 
 </script>
 {% endblock %}

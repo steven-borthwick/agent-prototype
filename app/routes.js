@@ -371,10 +371,10 @@ router.get('/MVP/results_confirm', function (req, res) {
     'search' : req.query.search,
     'excluded': search === 'aa678910c',
     'included': search === 'bb123456c',
-    'included_address': search === 'zz123456c',
+    'name': search === 'dd123456c',
+    'address': search === 'cc123456c',
     'special': search === 'gg123456c'
   });
-
 });
 
 router.get('/MVP/results_confirm_audit', function (req, res) {
@@ -386,7 +386,21 @@ router.get('/MVP/results_confirm_audit', function (req, res) {
     'excluded': search === 'aa678910c',
     'included': search === 'bb123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'gg123456c',
+    'name': search === 'nn123456c',
+    'address': search === 'hh123456c'
+  });
+
+});
+
+router.get('/MVP/results_test', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('MVP/results_test', {
+    'search' : req.query.search,
+    'change': search === 'dd123456c',
+    'stuff': search === 'cc123456c',
   });
 
 });
@@ -411,7 +425,7 @@ router.get('/MVP/issue_address_confirm', function (req, res) {
 
 });
 
-router.get('/MVP/issue_excluded', function (req, res) {
+router.get('/MVP/issue_address_exclusion', function (req, res) {
 
   // get the answer from the query string (eg. ?address_same=No)
   var details_same2 = req.query.details_same2;
@@ -419,7 +433,7 @@ router.get('/MVP/issue_excluded', function (req, res) {
   if (details_same2 == "Yes"){
 
     // if address_same is any other value (or is missing) render the page requested
-    res.render('MVP/issue_excluded');
+    res.render('MVP/issue_address_exclusion');
 
 
   } else {
