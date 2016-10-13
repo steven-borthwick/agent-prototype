@@ -371,8 +371,8 @@ router.get('/MVP/results_confirm', function (req, res) {
     'search' : req.query.search,
     'excluded': search === 'aa678910c',
     'included': search === 'bb123456c',
-    'name': search === 'dd123456c',
-    'address': search === 'cc123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
     'special': search === 'gg123456c'
   });
 });
