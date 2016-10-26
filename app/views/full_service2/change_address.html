@@ -11,18 +11,18 @@
             </ul>
         </div>
         <!-- end col menu -->
-        {% include "includes/customer_header_alt.html" %}
+        {% include "includes/customer_header_full2.html" %}
         <div class="column-one-half" style="padding: 0 40px 0 40px; width: 41%">
             <div id="global-breadcrumb">
                 <a class="link-back" href="security_address">Back</a>
             </div>
             <h1 class="heading-medium">Send forecast</h1>
-            <p>Address we hold</p>
-              <p class="text" style="padding-bottom: 20px">10 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9&nbsp;5EU</p>
+            <h2 class="heading-small">Address currently held</h2>
+              <p class="text" style="padding-bottom: 20px">55 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9&nbsp;5EU</p>
             <form action="print?address_same=Yes" class="form">
                 <div class="form-group">
                     <fieldset class="multi-line-field">
-                        <legend class="label">Address</legend>
+                        <legend class="label" style="font-weight: 700">New address</legend>
                         <label for="lineOne" class="visuallyhidden">Address line one</label>
                         <input type="text" id="lineOne" name="lineOne" class="address-control">
                         <label for="lineTwo" class="visuallyhidden">Address line two</label>
@@ -42,7 +42,7 @@
                     </div>
                     <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
             </form>
-            <p><a href="print?address_same=Yes" class="button">Print forecast</a></p>
+            <p><a href="print2?address_same=Yes" class="button">Generate forecast</a></p>
             <!--<div class="panel"><span style="font-weight: 700">If their address has changed you must issue a statement through PFIT</span></div>-->
 
             </div>

@@ -14,14 +14,17 @@ Can't send forecast : Pension statements
             <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
           </ul>
         </div><!-- end col menu -->
-        {% include "includes/customer_header_alt.html" %}
+        {% include "includes/customer_header_full2.html" %}
         <div class="column-one-half" style="padding: 0 40px 0 40px; width: 55%">
         <div id="global-breadcrumb">
     <a class="link-back" href="security_address">Back</a>
   </div>
-     <h2 class="heading-medium">Send forecast</h2>
+     <h2 class="heading-medium">Change address</h1>
+     <h2 class="heading-small">Address currently held</h2>
+       <p class="text" style="padding-bottom: 20px">55 Beaconsfield Road, Low Fell, Gateshead, Tyne and Wear, NE9&nbsp;5EU</p>
+
      <fieldset class="inline" data-required data-error="Choose Yes or No">
-       <legend><span style="font-weight: 700">Is the address in the UK or overseas? </span></legend>
+       <legend><span style="font-weight: 700">Is the new address in the UK or overseas? </span></legend>
         <div class="form-group">
        <label class="block-label" for="radio-1">
          <input id="radio-1" type="radio" name="address_UK" value="Yes" checked="checked">
@@ -75,8 +78,8 @@ Can't send forecast : Pension statements
         </fieldset>
 
           <p style="padding-top: 20px;">
-           <a href="print?address_same=Yes" class="button">
-             Print forecast for this address
+           <a href="print2?address_same=Yes" class="button">
+             Generate forecast
            </a>
            <a href="change_address_postcode" style="padding-left: 30px" id="cant-find">
              I can’t find the address in the list<span class="visuallyhidden"> section</span>
@@ -115,8 +118,8 @@ Can't send forecast : Pension statements
 
    </div>
    <p>
-    <a href="print?address_same=Yes" class="button">
-             Print forecast for this address
+    <a href="print2?address_same=Yes" class="button">
+             Generate forecast
            </a>
          </p>
         </form>
@@ -149,7 +152,7 @@ Can't send forecast : Pension statements
              </div>
              <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
      </form>
-     <p><a href="print?address_same=Yes" class="button">Print forecast</a></p>
+     <p><a href="print2?address_same=Yes" class="button">Generate</a></p>
    </div>
 
  </div>

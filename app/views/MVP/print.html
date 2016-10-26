@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+  {% extends "layout.html" %}
 {% block page_title %}
 Can't send forecast : Pension statements
 {% endblock %}
@@ -19,7 +19,7 @@ Can't send forecast : Pension statements
       <h1 class="heading-large">Forecast</h1>
       <div id="id1">
 
-        <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
+        <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px">
           Print forecast
         </button>
 
@@ -33,7 +33,7 @@ Can't send forecast : Pension statements
       </div><!-- ID2 address select end  -->
 
       <div id="pdf" style="margin-top: 20px;">
-        <embed id="pdf1" name="pdf1" src="/public/images/janeb.pdf" width="800" height="1000" type='application/pdf' style="background: url('/public/images/loading.gif') no-repeat;">
+        <iframe id="pdf1" name="pdf1" src="/public/images/janeb.pdf" width="800" height="1000" type='application/pdf' style="background: url('/public/images/loading.gif') no-repeat;">
       </div>
     </div>
   </div>
@@ -50,6 +50,7 @@ Can't send forecast : Pension statements
 $(document).on('click', '#print-pdf', function () {
   $('#id1').hide();
   $('#id2').show();
+  $('#pdf1').get(0).contentWindow.print();
 });
 
 
