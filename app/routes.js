@@ -497,6 +497,20 @@ router.get('/contingency/results_confirm', function (req, res) {
   });
 });
 
+router.get('/contingency/results_confirm2', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency/results_confirm2', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
 router.get('/contingency/results_confirm_audit', function (req, res) {
 
   var search = req.query.search ? req.query.search.toLowerCase() : '';
