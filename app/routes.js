@@ -601,6 +601,15 @@ router.get('/contingency/print', function (req, res) {
 
 });
 
+router.get('/contingency/print_v2', function (req, res) {
+
+  var NInumber = req.query.NInumber;
+
+  res.render('contingency/print_v2', { 'NInumber' : NInumber  });
+
+});
+
+
 //sprint 5
 
 router.get('/sprint5/results', function (req, res) {
