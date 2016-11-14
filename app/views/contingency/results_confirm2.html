@@ -12,114 +12,111 @@
 
       <ul class="main-nav">
         <li id="home"><a href="start2">Search</a></li>
-          <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
-          <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
-          <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
-          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
-        </ul>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
 
-      </div>
-      <div class="column-two-thirds" style="padding-left: 40px; width: 85%">
-        <ul class="results-list">
-
-          {% if included %}
-            <li class="result employer">
-                <h1 class="heading-large">Enter details for BB123456C</h1>
-              <div class="column-one-third" style="width: 20%; margin-left: -10px">
-                <form action="print_v2" class="form">
-                  <div class="form-group">
-                <fieldset class="multi-line-field" data-required data-error="Enter title">
-
+    </div>
+    <div class="column-two-thirds" style="padding-left: 40px; width: 85%">
+      <ul class="results-list">
+        {% if included %}
+        <li class="result employer">
+          <h1 class="heading-large" style="margin-top: 11px">Enter details for BB123456C</h1>
+          <div class="column-one-third contingency1">
+            <form action="print_v2" class="form">
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Select title">
                   {% include "includes/title_pfit.html" %}
+                </fieldset>
+              </div>
+            </div>
+            <div class="column-one-third contingency2">
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter first names">
+                  <label class="form-label-bold" for="first-name">First names</label>
+                  <input id="first-name" type="text" class="form-control" style="width: 100%">
+                </fieldset></div>
+              </div>
+              <div class="column-one-third contingency2">
+                <div class="form-group">
+                  <fieldset class="multi-line-field" data-required data-error="Enter last name">
+                    <label class="form-label" for="last-name"><span style="font-weight: 700">Last name</span></label>
+                    <input id="last-name" type="text" class="form-control"  style="width: 100%">
                   </fieldset>
                 </div>
-
               </div>
-              <div class="column-one-third" style="width: 35%"  style="padding-left: 40px">
-                <div class="form-group">
-              <fieldset class="multi-line-field" data-required data-error="Enter first names">
-                <label class="form-label" for="first-name"><span style="font-weight: 700">First names</span></label>
-                <input id="first-name" type="text" class="form-control" style="width: 100%">
-              </fieldset></div>
-              </div>
-              <div class="column-one-third" style="width: 35%">
-                <div class="form-group">
-              <fieldset class="multi-line-field" data-required data-error="Enter last name">
-                <label class="form-label" for="last-name"><span style="font-weight: 700">Last name</span></label>
-                <input id="last-name" type="text" class="form-control"  style="width: 100%">
-              </fieldset>
-              </div>
-            </div>
               <div class="column-two-thirds" style="margin-left: -10px">
 
-                        <legend class="label" class="visuallyhidden"></legend>
-                        <div class="form-group">
-                          <fieldset class="multi-line-field" data-required data-error="Enter first line of address">
-                          <label for="lineOne" class="form-label" style="font-weight: 700">Address</label>
-                          <input type="text" id="lineOne" name="lineOne" class="form-control">
-                          </fieldset>
-                        </div>
-                        <div class="form-group" style="margin-top: -10px">
-                          <label for="lineTwo" class="visuallyhidden">Address line two</label>
-                          <input type="text" id="lineTwo" name="lineTwo" class="form-control">
-                        </div>
-                        <div class="form-group" style="margin-top: -10px">
-                          <label for="lineThree" class="visuallyhidden">Address line two</label>
-                          <input type="text" id="lineTwo" name="lineThree" class="form-control">
-                        </div>
-                      <div class="form-group">
-                        <label for="city" class="form-label">Town or city</label>
-                        <input type="text" id="city" name="city" class="form-control">
-                      </div>
-                      <div class="form-group">
-                          <fieldset class="multi-line-field" data-required data-error="Enter post or region code">
-                        <label for="postcode" class="form-label">Post/region code</label>
-                        <input type="text" id="postcode" name="region" class="form-control" style="width: 20%">
-                      </fieldset>
-                      </div>
-                      <div class="form-group">
-                        <label for="country" class="form-label">Country</label>
-                        <input type="text" id="country" name="country" class="form-control">
-                      </div>
-                      <div class="form-group" style="display: none">
-                        <label for="NInumber" class="form-label">NINumber</label>
-                        <input type="text" id="country" name="NInumber" class="form-control" value="BB123456C">
-                      </div>
+                <legend class="label" class="visuallyhidden"></legend>
+                <div class="form-group">
+                  <fieldset class="multi-line-field" data-required data-error="Enter first line of address">
+                    <label for="lineOne" class="form-label-bold">Address</label>
+                    <input type="text" id="lineOne" name="lineOne" class="form-control">
+                  </fieldset>
+                </div>
+                <div class="form-group" style="margin-top: -10px">
+                  <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                  <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+                </div>
+                <div class="form-group" style="margin-top: -10px">
+                  <label for="lineThree" class="visuallyhidden">Address line two</label>
+                  <input type="text" id="lineTwo" name="lineThree" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="city" class="form-label">Town or city</label>
+                  <input type="text" id="city" name="city" class="form-control">
+                </div>
+                <div class="form-group">
+                  <fieldset class="multi-line-field" data-required data-error="Enter post or region code">
+                    <label for="postcode" class="form-label">Post/region code</label>
+                    <input type="text" id="postcode" name="region" class="form-control" style="width: 20%">
+                  </fieldset>
+                </div>
+                <div class="form-group">
+                  <label for="country" class="form-label">Country</label>
+                  <input type="text" id="country" name="country" class="form-control">
+                </div>
+                <div class="form-group" style="display: none">
+                  <label for="NInumber" class="form-label">NINumber</label>
+                  <input type="text" id="country" name="NInumber" class="form-control" value="BB123456C">
+                </div>
 
-                      <input type="submit" value="Generate forecast" class="button">
+                <input type="submit" value="Generate forecast" class="button">
 
-
-                    </div>
-                  </form>
 
               </div>
-            </div>
-            </li>
-          {% elif excluded %}
-          <h1 class="heading-large">Cannot send a forecast</h1>
-          <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">A date of death is recorded on this record.  </p><p class="text">Advise customer that there is an issue with their National Insurance record and they should contact the HMRC helpline on 0300&nbsp;200&nbsp;3500.  </p></div>
-          <p><a href="start2" class="button">Finish</a></p>
-               {% elif special %}
-             <li class="result employer">
+            </form>
 
-            <h1  class="heading-large">MCI Message TBD</h1>
-              <p><a href="start2" class="button">Finish</a></p>
-                  </li>
-
-          {% else %}
-          <li class="result employer">
-
-            <h2  class="heading-large">No record found</h2>
-            <div class="panel panel-border-wide style1" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
-            <p><a href="start2" class="button">Finish</a></p>
-          </li>
-          {% endif %}
-
-        </ul>
-
+          </div>
         </div>
-      </div>
-    </main>
+      </li>
+      {% elif excluded %}
+      <h1 class="heading-large">Cannot send a forecast</h1>
+      <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">A date of death is recorded on this record.  </p><p class="text">Advise customer that there is an issue with their National Insurance record and they should contact the HMRC helpline on 0300&nbsp;200&nbsp;3500.  </p></div>
+      <p><a href="start2" class="button">Finish</a></p>
+      {% elif special %}
+      <li class="result employer">
+
+        <h1  class="heading-large">MCI Message TBD</h1>
+        <p><a href="start2" class="button">Finish</a></p>
+      </li>
+
+      {% else %}
+      <li class="result employer">
+
+        <h2  class="heading-large">No record found</h2>
+        <div class="panel panel-border-wide style1" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
+        <p><a href="start2" class="button">Finish</a></p>
+      </li>
+      {% endif %}
+
+    </ul>
+
+  </div>
+</div>
+</main>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript">
 
