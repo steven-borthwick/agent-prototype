@@ -964,7 +964,7 @@ accordion dd, .ni-table dd {
 	width: 20%;
 	margin-left: -10px;
 	@media only screen and (max-width: 640px) {
-			width: 80%;
+			width: 100%;
 			margin-left: -10px;
 	}
 }
@@ -972,7 +972,23 @@ accordion dd, .ni-table dd {
 .contingency2 {
 	width: 35%;
 	@media only screen and (max-width: 640px) {
-			width: 80%;
+			width: 100%;
 			margin-left: -10px;
 	}
 }
+
+.column-two-thirds {
+	@media only screen and (max-width: 640px) {
+			width: 100%;
+			margin-left: -10px;
+
+}
+
+
+.ole td {
+font-size: 14px;
+color: #fff;
+background-color: #5A5984;
+border: 5px solid #9C9EBD;
+vertical-align: text-top;
+padding: 5px;}
