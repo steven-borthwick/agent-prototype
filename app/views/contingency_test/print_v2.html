@@ -19,10 +19,12 @@ Can't send forecast : Pension statements
 
       <div id="id1">
         <h1 class="heading-large">Forecast for {{ NInumber }}</h1>
-        <p class="text">Do a final check that the NI number and customer name match those in OLE then print forecast.</p>
-        <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
+        <p class="text">Before you print this, check that the National Insurance number matches that in OLE.</p>
+        <p class="text">If you're satisfied it's correct print the forecast.</p>
+  <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
           Print forecast
         </button>
+
 
       </div>
       <!-- ID1 postcode end -->
@@ -31,7 +33,7 @@ Can't send forecast : Pension statements
       <div id="id2" style="display:none">
         <h1 class="heading-large">Forecast for {{ NInumber }}</h1>
         <h2 class="heading-medium">Sent to printer?</h2>
-        <p class="text">If the forecast has been sent to printer exit the record.</p>
+        <p class="text">If you successfully sent the forecast to the printer exit the record.</p>
         <p><a href="start2" class="button next validation-submit">Exit record</a></p>
         <p><a href="#" onclick="window.print();">Print again?</a></p>
 
