@@ -682,6 +682,20 @@ router.get('/contingency_test/results_test', function (req, res) {
 
 });
 
+router.get('/contingency_test/ole_details', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_test/ole_details', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
 router.get('/contingency_test/issue_address_confirm', function (req, res) {
 
   // get the answer from the query string (eg. ?address_same=No)
