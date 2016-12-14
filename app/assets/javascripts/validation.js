@@ -71,7 +71,7 @@ function appendErrorSummary() {
 
   if (summaryNotPresent) {
     $('h1').append(
-      '<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1">' +
+      '<div class="error-summary" role="group" aria-labelledby="error-summary-heading" tabindex="-1" style="width: 85%">' +
         '<h1 class="heading-medium error-summary-heading" id="error-summary-heading">' +
           defaultErrorHeading +
         '</h1>' +
