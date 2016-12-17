@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Can't send forecast : Pension statements
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu" style="height: 2000px;">
+      <ul class="main-nav-notactive">
+        <li id="home-notactive"><a href="start">Search</a></li>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+    </div><!-- end col menu -->
+    <div class="column-two-thirds" style="padding-left: 40px">
+      <h1 class="heading-large">Enter details for BB123456C</h1>
+    </div>
+    <div class="column-one-half" style="padding-left: 40px; width: 25%;">
+      <form action="print2?address_same=Yes" class="form">
+        <div class="form-group">
+      <fieldset class="multi-line-field" data-required data-error="Enter title">
+        {% include "includes/title_pfit.html" %}
+        </fieldset>
+      </div>
+
+
+      <div class="form-group">
+    <fieldset class="multi-line-field" data-required data-error="Enter first names">
+      <label class="form-label" for="first-name"><span style="font-weight: 700">First names</span></label>
+      <input id="first-name" type="text" class="form-control" style="width: 100%">
+    </fieldset></div>
+      <div class="form-group">
+    <fieldset class="multi-line-field" data-required data-error="Enter last name">
+      <label class="form-label" for="last-name"><span style="font-weight: 700">Last name</span></label>
+      <input id="last-name" type="text" class="form-control"  style="width: 100%">
+    </fieldset>
+    </div>
+  </div>
+    <div class="column-one-half" style="width: 60%; padding-left: 100px">
+
+              <legend class="label" style="font-weight: 700">Address</legend>
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter first line of address">
+                <label for="lineOne" class="visuallyhidden">Address line one</label>
+                <input type="text" id="lineOne" name="lineOne" class="form-control">
+                </fieldset>
+              </div>
+              <div class="form-group" style="margin-top: -10px">
+                <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+              </div>
+              <div class="form-group" style="margin-top: -10px">
+                <label for="lineThree" class="visuallyhidden">Address line two</label>
+                <input type="text" id="lineTwo" name="lineThree" class="form-control">
+              </div>
+            <div class="form-group">
+              <label for="city" class="form-label">Town or city</label>
+              <input type="text" id="city" name="city" class="form-control">
+            </div>
+            <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter post or region code">
+              <label for="postcode" class="form-label">Post/region code</label>
+              <input type="text" id="postcode" name="region" class="form-control" style="width: 20%">
+            </fieldset>
+            </div>
+            <div class="form-group">
+              <label for="country" class="form-label">Country</label>
+              <input type="text" id="country" name="country" class="form-control">
+            </div>
+          </div>
+          <div class="column-two-thirds">  <input type="submit" value="Generate forecast" class="button"></div>
+        </form>
+
+    </div>
+  </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#find-address', function () {
+  $('#id1').addClass('js-hidden');
+  $('#id2').removeClass('js-hidden');;
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').addClass('js-hidden');
+  $('#id3').removeClass('js-hidden');;
+});
+
+$(document).on('click', 'input[type="radio"]', function (e) {
+  if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+    if ($(this).attr('id') === 'radio-1') {
+      $('#id1').removeClass('js-hidden');
+      $('#id4').addClass('js-hidden');
+    } else {
+      $('#id4').removeClass('js-hidden');
+      $('#id1,#id2,#id3').addClass('js-hidden');
+    }
+  }
+});
+
+</script>
+{% endblock %}

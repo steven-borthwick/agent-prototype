@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+ Search using NI number : Pension statements
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+
+      <ul class="main-nav2">
+        <li id="active-link"><a href="#">Home</a></li>
+          <li><a href="forecast_search">Send forecast</a></li>
+          <li><a href="enquiry_search">Enquiries</a></li>
+
+          <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+        </ul>
+
+      </div>
+      <div class="column-one-third" style="padding: 0 40px 0 40px; width: 80%;">  
+        <h1 class="heading-large">What do you need to do?</h1></div>
+      <div class="column-one-half" style="padding: 0 40px 0 40px; width: 38%">
+
+       <h2 class="heading-medium">Send forecast</h2>
+       <p>Send a forecast to the address we hold or ask extra security to change the address.</p>
+         <p><a href="security_address" class="button">Continue</a></p>
+      </div>
+       <div class="column-one-half" style="padding: 0 40px 0 40px; width: 41%; border-left: 1px solid #ccc">
+         <h2 class="heading-medium">Enquiries</h2>
+           <p> View a forecast at State Pension age, the pension accrued to date, COPE and the National Insurance record.</p>
+          <p style="padding-top: 20px;"><a href="security_forecast">View customer's forecast</a></p>
+       </div>
+    </div>
+  </main>
+
+  <script type="text/javascript">
+  function removeWhitespaces() {
+            var txtbox = document.getElementById('search-main');
+            txtbox.value = txtbox.value.replace(/\s/g, "");
+        }
+  </script>
+
+{% endblock %}

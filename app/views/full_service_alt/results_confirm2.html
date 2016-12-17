@@ -23,6 +23,9 @@
       <ul class="results-list">
         {% if included %}
         <li class="result employer">
+          <div id="global-breadcrumb">
+            <a class="link-back" href="start2">Back</a>
+          </div>
           <h1 class="heading-large" style="margin-top: 11px">Enter details for BB123456C</h1>
           <div class="column-one-third contingency1">
             <form action="print_v2" class="form">
@@ -70,7 +73,7 @@
                 </div>
                 <div class="form-group">
                   <fieldset class="multi-line-field" data-required data-error="Enter post or region code">
-                    <label for="postcode" class="form-label">Postcode or region code</label>
+                    <label for="postcode" class="form-label">Post/region code</label>
                     <input type="text" id="postcode" name="region" class="form-control" style="width: 20%">
                   </fieldset>
                 </div>
@@ -82,14 +85,22 @@
                   <label for="NInumber" class="form-label">NINumber</label>
                   <input type="text" id="country" name="NInumber" class="form-control" value="BB123456C">
                 </div>
+                <div class="panel panel-border-wide" style="width: 60%">
+                  <h2 class="heading-medium">Check the details</h2>
+                  <p>Before you generate the forecast check:</p><ul class="list-bullet"><li> the National Insurance number you entered - BB123456C - matches that in OLE</li>
+                  <li>you've entered the name and address correctly</li></ul></strong></div>
                 <input type="submit" value="Generate forecast" class="button">
               </div>
             </form>
+
           </div>
         </div>
       </li>
       {% elif excluded %}
-      <h1 class="heading-large">Unable to create a forecast for AA678910C</h1>
+      <div id="global-breadcrumb">
+        <a class="link-back" href="javascript:window.history.back();">Back</a>
+      </div>
+      <h1 class="heading-large">Unable to create a forecast </h1>
       <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">Write down the following details to pass to a manager:</p>
         <ul class="list-bullet">
           <li>name</li>
@@ -108,14 +119,8 @@
       {% else %}
       <li class="result employer">
 
-        <h1 class="heading-large">Unable to create a forecast for AA678910C</h1>
-        <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">Write down the following details to pass to a manager:</p>
-          <ul class="list-bullet">
-            <li>name</li>
-            <li>NINO - AA678910C</li>
-            <li>contact telephone number</li>
-            <li>address to send the statement to</li>
-          </ul><p class="text"> </p></div>
+        <h2  class="heading-large">No record found</h2>
+        <div class="panel panel-border-wide style1" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
         <p><a href="start2" class="button">Finish</a></p>
       </li>
       {% endif %}

@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block page_title %}
+Can't send forecast : Pension statements
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+      <ul class="main-nav-notactive">
+        <li id="home-notactive"><a href="start2">Search</a></li>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+    </div><!-- end col menu -->
+    <div class="column-two-thirds" style="padding-left: 40px">
+
+      <h1 class="heading-large">Forecast for BB123456C</h1>
+      <div id="id1">
+        <p>Check NI number and customer details match and then print forecast</p>
+        <p><a id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" onclick="window.print();">
+          Details match - print forecast
+        </a> <a href="start2" style="margin: 0 0 0 40px">Details don't match - start again</a></p>
+      </div>
+      <!-- ID1 postcode end -->
+      <!-- ID2 address finder start  -->
+
+      <div id="id2" style="display:none">
+        <p>
+        <a href="sent2" class="button next validation-submit">Continue</a> <a href="#" onclick="window.print();" style="margin: 0 0 0 40px">Print again?</a></p>
+      </div><!-- ID2 address select end  -->
+
+      <div id="pdf">
+        <embed id="pdf1" name="pdf1" src="/public/images/janeb_gateshead.pdf" width="800" height="1000" type="application/pdf"  style="background: url('/public/images/loading.gif') no-repeat;">
+      </div>
+    </div>
+  </div>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#print-pdf', function () {
+  $('#id1').hide();
+  $('#id2').show();
+});
+
+</script>
+{% endblock %}
