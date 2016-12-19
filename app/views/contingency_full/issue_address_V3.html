@@ -1,0 +1,241 @@
+{% extends "layout.html" %} {% block page_title %} Something's gone wrong : Pension statements {% endblock %} {% block content %}
+
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-menu">
+            <ul class="main-nav-notactive">
+                <li id="home-notactive"><a href="start2">Home</a></li>
+            </ul>
+        </div>
+        <!-- col menu -->
+        <div class="column-two-thirds" style="padding-left: 40px">
+          <div id="global-breadcrumb" class="breadcrumb">
+            <a class="link-back" href="results_confirm2?search=GG123456c">Back</a>
+            <h1 class="heading-large">Enter details for GG123456C</h1>
+            <h2 class="heading-medium">Name</h2>
+          </div>
+          <div class="column-one-third contingency1">
+            <form action="print_v2" class="form">
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Select title">
+                  {% include "includes/title_pfit.html" %}
+                </fieldset>
+              </div>
+            </div>
+            <div class="column-one-third contingency2">
+
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter first names">
+                  <label class="form-label-bold" for="first-name">First names</label>
+                  <input id="first-name" type="text" class="form-control" style="width: 100%">
+                </fieldset></div>
+              </div>
+              <div class="column-one-third contingency2">
+                <div class="form-group">
+                  <fieldset class="multi-line-field" data-required data-error="Enter last name">
+                    <label class="form-label" for="last-name"><span style="font-weight: 700">Last name</span></label>
+                    <input id="last-name" type="text" class="form-control"  style="width: 100%">
+                  </fieldset>
+                </div>
+              </div>
+              <div class="column-two-thirds" style="margin: -20px 0 0 -10px; width: 85%">
+                <h2 class="heading-medium">Address</h2>
+              <fieldset class="inline" data-required data-error="Choose Yes or No">
+                <legend><span style="font-weight: 700">Is the address to send the forecast in the UK or overseas? </span></legend>
+                 <div class="form-group">
+                <label class="block-label" for="radio-1">
+                  <input id="radio-1" type="radio" name="address_UK" value="Yes" checked="checked">
+                  UK
+                </label>
+                <label class="block-label" for="radio-2">
+                  <input id="radio-2" type="radio" name="address_UK" value="No">
+                  Overseas
+                </label>
+
+              </div>
+              </fieldset>
+              <div id="id1">
+              <fieldset>
+                <label for="address_postcode">
+                  Postcode
+                </label>
+                  <div class="validation-wrapper ">
+                    <input type="text" id="address_postcode" name="address.postcode" class="form-control" style="width: 25%">
+                  </div>
+
+                  <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px">
+                    Find address
+                  </button>
+              </fieldset>
+              </div>
+            <!-- ID1 postcode end -->
+            <!-- ID2 address finder start  -->
+
+            <div id="id2" class="js-hidden">
+              <p>
+                <span class="postcode-prefix">Postcode</span>
+                <span class="visuallyhidden">:</span>
+                <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
+                <a href="issue_address_v3" class="change-postcode-button">
+                  Change<span class="visuallyhidden"> your postcode</span>
+                </a>
+              </p>
+              <!-- address wrapper start -->
+
+                <form method="post" action="" class="form">
+                  <fieldset>
+                    <input type="hidden" id="address_postcode" name="address.postcode" value="ne259hq" class="text hidden">
+
+                    <label for="address_uprn" class="form-label-bold">
+                      Select address
+                    </label>
+                    <div class="validation-wrapper">
+                     {% include "includes/address_list.html" %}
+                   </div><!-- address wrapper end -->
+                 </fieldset>
+
+                   <p style="padding-top: 20px;">
+                    <a href="print_v3?address_same=Yes" class="button">
+                      Generate forecast
+                    </a>
+                    <a href="#" style="padding-left: 20px" id="cant-find">
+                      I can’t find the address in the list<span class="visuallyhidden"> section</span>
+                    </a>
+                  </p>
+                </form>
+
+            </div><!-- ID2 address select end  -->
+
+            <div id="id3" class="js-hidden">
+                <p>
+                <span class="postcode-prefix">Postcode</span>
+                <span class="visuallyhidden">:</span>
+                <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
+                <a href="issue_address_v3" class="change-postcode-button">
+                  Edit<span class="visuallyhidden"> your postcode</span>
+                </a>
+              </p>
+              <legend class="label" class="visuallyhidden"></legend>
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter first line of address">
+                  <label for="lineOne" class="form-label">Address</label>
+                  <input type="text" id="lineOne" name="lineOne" class="form-control">
+                </fieldset>
+              </div>
+              <div class="form-group" style="margin-top: -10px">
+                <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+              </div>
+              <div class="form-group" style="margin-top: -10px">
+                <label for="lineThree" class="visuallyhidden">Address line two</label>
+                <input type="text" id="lineTwo" name="lineThree" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="city" class="form-label">Town or city</label>
+                <input type="text" id="city" name="city" class="form-control">
+              </div>
+              <!--<div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter post or region code">
+                  <label for="postcode" class="form-label">Post code or region code</label>
+                  <input type="text" id="postcode" name="region" class="form-control" style="width: 20%">
+                </fieldset>
+              </div>-->
+              <div class="form-group" style="display: none">
+                <label for="NInumber" class="form-label">NINumber</label>
+                <input type="text" id="country" name="NInumber" class="form-control" value="BB123456C">
+              </div>
+            <!--  <div class="panel panel-border-wide" style="width: 60%"><h2 class="heading-small">This will create a forecast for BB123456C </h2>
+                <p>You should check that</p>
+                  <ul class="list-bullet"><li>the National Insurance number matches that in OLE</li>
+                  <li>you've entered the name and address correctly</li>
+                </ul>
+              </div>-->
+             <a href="print_v3?address_same=Yes" class="button">
+                      Generate forecast
+                    </a>
+                  </p>
+                 </form>
+            </div>
+            <div id="id4" class="js-hidden">
+              <legend class="label" class="visuallyhidden"></legend>
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter first line of address">
+                  <label for="lineOne" class="form-label">Address</label>
+                  <input type="text" id="lineOne" name="lineOne" class="form-control">
+                </fieldset>
+              </div>
+              <div class="form-group" style="margin-top: -10px">
+                <label for="lineTwo" class="visuallyhidden">Address line two</label>
+                <input type="text" id="lineTwo" name="lineTwo" class="form-control">
+              </div>
+              <div class="form-group" style="margin-top: -10px">
+                <label for="lineThree" class="visuallyhidden">Address line two</label>
+                <input type="text" id="lineTwo" name="lineThree" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="city" class="form-label">Town or city</label>
+                <input type="text" id="city" name="city" class="form-control">
+              </div>
+              <div class="form-group">
+                <fieldset class="multi-line-field" data-required data-error="Enter post or region code">
+                  <label for="postcode" class="form-label">Post code or region code</label>
+                  <input type="text" id="postcode" name="region" class="form-control" style="width: 20%">
+                </fieldset>
+              </div>
+              <div class="form-group">
+                <label for="country" class="form-label">Country </label>
+                <input type="text" id="country" name="country" class="form-control">
+              </div>
+              <div class="form-group" style="display: none">
+                <label for="NInumber" class="form-label">NINumber</label>
+                <input type="text" id="country" name="NInumber" class="form-control" value="BB123456C">
+              </div>
+              <!--<div class="panel panel-border-wide" style="width: 60%"><h2 class="heading-small">This will create a forecast for BB123456C </h2>
+                <p>You should check that</p>
+                  <ul class="list-bullet"><li>the National Insurance number matches that in OLE</li>
+                  <li>you've entered the name and address correctly</li>
+                </ul>
+              </div>-->
+                <p><a href="print_v3?address_same=Yes" class="button">Generate forecast</a></p>
+          </div>
+          </form>
+                      <!--<button type="submit" id="continue" class="button next validation-submit">Print forecast</button>-->
+
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+
+    $(document).on('click', '#find-address', function () {
+      $('#id1').addClass('js-hidden');
+      $('#id2').removeClass('js-hidden');;
+    });
+
+    $(document).on('click', '#cant-find', function (e) {
+      e.preventDefault();
+      $('#id2').addClass('js-hidden');
+      $('#id3').removeClass('js-hidden');;
+    });
+
+    $(document).on('click', 'input[type="radio"]', function (e) {
+      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        if ($(this).attr('id') === 'radio-1') {
+          $('#id1').removeClass('js-hidden');
+          $('#id4').addClass('js-hidden');
+        } else {
+          $('#id4').removeClass('js-hidden');
+          $('#id1,#id2,#id3').addClass('js-hidden');
+        }
+      }
+    });
+</script>
+
+{% endblock %}

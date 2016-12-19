@@ -1,0 +1,325 @@
+{% extends "layout.html" %} {% block page_title %} Agent view - Pension forecast {% endblock %} {% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+      <ul class="main-nav-notactive">
+        <li id="home-notactive"><a href="start2">Home</a></li>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+    </div>
+    <!-- end col menu -->
+
+    <div class="column-two-thirds" style="padding: 0 40px 0 40px; width: 85%">
+      <div id="global-breadcrumb" class="breadcrumb">
+        <a class="link-back" href="results_confirm2?search=GG123456c">Back</a>
+      </div>
+      <div class="print" style="float: right; padding: 10px 100px 0 0;">
+        <p><a href="issue_address_v3" style="float: right" class="button">Send forecast</a></p>
+      </div>
+      <h1 class="heading-large">GG123456C</h1>
+      <div class="tab-content">
+        <div class="js-tabs nav-tabs" style="width: 90%">
+
+          <ul class="tabs-nav" role="tablist">
+            <li class="active"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
+            <li><a href="#contracted-out" id="tab-ni-record">National Insurance record</a></li>
+            <!--<li><a href="#improve-sp-value" id="tab-contracting-out">Contracting out</a></li>-->
+          </ul>
+
+        </div>
+      </div>
+      <div id="forecast" class="tab-pane" style="float: left; width: 90%;">
+          <div class="column-one-half" style="padding: 0">
+            <h2 class="heading-medium">Forecast</h2>
+            <div class="forecast-wrapper">
+              <span class="forecast-label">State Pension age (SPa):</span> <span class="forecast-data-important2">67</span>
+            </div>
+            <div class="forecast-wrapper">
+              <span class="forecast-label">&nbsp;</span> <span class="forecast-data-important2">2 December 2024</span>
+            </div>
+            <br>
+            <br>
+            <div class="forecast-wrapper">
+              <span class="forecast-label">Forecast at SPa:</span> <span class="forecast-data-important2">£145.65 a week</span>
+            </div>
+            <div class="forecast-wrapper">
+              <span class="forecast-label">&nbsp;</span> <span class="forecast-data">£674.48 a month<br> £8,093.80 a year </span>
+            </div>
+            
+        <!--  <p><a href="issue_address"  class="button">Send forecast</a></p>-->
+        </div>
+          <div class="column-one-half" style="padding: 0; margin-top: 12px;">
+            <br>
+            <h3 class="heading-small">National Insurance breakdown</h3>
+            <!--<table>
+              <tr>
+                <th style="width: 50%"></th>
+                <th>full years</th>
+                <th>weekly amount</th>
+              </tr>
+              <tr>
+                <td>NI record up to 5 April 2015</td>
+                <td>32</td>
+                <td>£140.65</td>
+              </tr>
+              <tr>
+                <td>Can reach the maximum if continue to contribute to 5 April 2019</td>
+                <td>35</td>
+                <td>£155.56</td>
+              </tr>
+            </table>-->
+            <div class="chart-block">
+        <div class="graph-title">Estimate based on NI record up to 5 April 2016. <br><span style="font-weight: 700">24 full years</span></div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{110/155*100}}%">£110.15 a week</span></li>
+        </ul>
+      </div>
+
+      <div class="chart-block">
+        <div class="graph-title">Forecast if contribute until 5 April 2024. <br><span style="font-weight: 700">32 full years</strong></div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{140/155*100}}%">£145.65 a week</span></li>
+        </ul>
+      </div>
+      <div class="chart-block">
+        <div class="graph-title">Can improve forecast by filling 3 gaps  <br><span style="font-weight: 700">35 full years</strong></div>
+        <ul class="graph">
+          <li><span class="amount" style="width:{{152/155*100}}%">£155.65 a week</span></li>
+        </ul>
+      </div>
+          </div>
+      </div>
+
+          <div id="ni-record" class="tab-pane" style="display: none; float: left; width: 60%;">
+              <h2 class="heading-medium">National Insurance record</h2>
+              <ul class="list-bullet">
+                <li>5 gaps in record</li>
+                <li>24 full years</li>
+              </ul>
+              <p><a href="#"> View all years</a>
+
+                <dl class="accordion2">
+                  <h3 class="heading-small">Years with gaps</h3>
+    <dt>
+      <div class="ni-wrapper">
+        <div class="ni-years2">2015-16</div>
+        <div class="ni-full2">Record for this year is not available yet</div>
+      </div>
+    </dt>
+
+    <dt>
+      <div class="ni-wrapper">
+        <div class="ni-years2">2012-13</div>
+        <div class="ni-notfull">£50 shortfall</div>
+        <div class="ni-action"><a href="#">View details</a></div>
+      </div>
+    </dt>
+    <dd>
+      <div class="contributions-wrapper2">
+        <p class="contributions-header">Contributions from</p>
+        <p>Paid-employment earnings: <strong>£600</strong></p>
+
+        <p class="contributions-header">How to fill this year</p>
+        <p>Pay a voluntary contribution of <strong>£50</strong> by <strong>6 April 2019</strong>.</p>
+
+      </div>
+    </dd>
+
+    <dt>
+      <div class="ni-wrapper">
+        <div class="ni-years2">2011-12</div>
+        <div class="ni-notfull">£150 shortfall</div>
+        <div class="ni-action"><a href="#">View details</a></div>
+      </div>
+    </dt>
+    <dd>
+      <div class="contributions-wrapper2">
+        <p class="contributions-header">Contributions from</p>
+        <p>Paid-employment earnings: <strong>£400</strong></p>
+
+        <p class="contributions-header">How to fill this year</p>
+        <p>Pay a voluntary contribution of <strong>£150</strong> by <strong>6 April 2019</strong>.</p>
+
+      </div>
+    </dd>
+
+    <dt>
+      <div class="ni-wrapper">
+        <div class="ni-years2">2009-10</div>
+        <div class="ni-notfull">£100 shortfall</div>
+        <div class="ni-action"><a href="#">View details</a></div>
+      </div>
+    </dt>
+    <dd>
+      <div class="contributions-wrapper2">
+        <p class="contributions-header">Contributions from</p>
+        <p>National Insurance credits: <strong>5 weeks</strong></p>
+        <p>(added to record if ill/disabled, unemployed, caring for someone full-time or on jury service)</p>
+
+        <p class="contributions-header">How to fill this year</p>
+        <p>Pay a voluntary contribution of <strong>£100</strong> by <strong>6 April 2019</strong>.</p>
+
+      </div>
+    </dd>
+
+    <dt>
+      <div class="ni-wrapper">
+        <div class="ni-years2">2006-07</div>
+        <div class="ni-late ">It&rsquo;s too late to pay for this year</div>
+        <div class="ni-action"><a href="#">View details</a></div>
+      </div>
+    </dt>
+    <dd>
+      <div class="contributions-wrapper2">
+        <p class="contributions-header">Did not make any contributions this year</p>
+
+        <div class="panel-indent">
+          <p>The last date could pay by was 6 April 2013. Usually only pay for the last 6 years.</p>
+        </div>
+      </div>
+    </dd>
+
+    <dt>
+      <div class="ni-wrapper">
+        <div class="ni-years2">2005-06</div>
+        <div class="ni-late">It&rsquo;s too late to pay for this year</div>
+        <div class="ni-action"><a href="#">View details</a></div>
+      </div>
+    </dt>
+    <dd>
+      <div class="contributions-wrapper2">
+        <p class="contributions-header">Did not make any contributions this year</p>
+
+        <div class="panel-indent">
+          <p>The last date could pay by was 6 April 2013. Usually only pay for the last 6 years.</p>
+        </div>
+      </div>
+    </dd>
+
+  </dl>
+
+            </div>
+            <div id="contracting-out" class="tab-pane" style="display: none; width: 60%;">
+                <h2 class="heading-medium">Contracting out</h2>
+
+                <details>
+                  <summary style="margin-top: 20px"><span class="summary">Lines to take</span></summary>
+                  <p>In the past you’ve been part of one or more contracted out pension schemes, such as workplace or personal pension schemes.</p>
+                  <p>When you were contracted out:</p>
+                  <ul class="list-bullet">
+                    <li>you and your employers paid lower rate National Insurance contributions; or</li>
+                    <li>some of your National Insurance contributions were paid into your other pension schemes instead</li>
+                  </ul>
+                  <p>The COPE amount is in addition to your State Pension and is paid as part of your other pension schemes, not by the government.</p>
+                </details>
+                <h2 class="heading-small">When customer was contracted out</h2>
+                  <table style="width: 80%"><tr><th>From</th><th>To</th></tr>
+                    <tr><td>March 2009</td><td>February 2011</td></tr>
+                    <tr><td>January 1999</td><td>December 2001</td></tr>
+                  </table>
+                  </div>
+                </div>
+          </div>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script type="text/javascript">
+  // function show(elementId) {
+  //   document.getElementById("id1").style.display = "none";
+  //   document.getElementById("id2").style.display = "block";
+  //   document.getElementById(elementId).style.display = "block";
+  // }
+
+  var allPanels = $('.accordion2 > dd').hide(),
+        allHeaders = $('.accordion2 > dt');
+
+    $('.accordion2 > dt').click(function() {
+      // $(this).parent().children("dd")
+      //   // .hide()
+      //   // .removeClass('active');
+
+      // $(this).parent().children("dt")
+      //   .children('span')
+      //   .removeClass('down');
+
+      if(!$(this).hasClass('active')) {
+        // $(this).parent().children("dt")
+        //   .removeClass('active');
+
+        $(this)
+          .addClass('active')
+          .next()
+          .show();
+
+        $(this).find("a").text("Hide details");
+
+      $(this)
+        .children('span')
+        .addClass('down');
+      }
+      else{
+        $(this)
+          .removeClass('active')
+          .next()
+          .hide();
+
+        $(this).find("a").text("View details");
+      }
+
+      return false;
+    });
+
+  jQuery(document).ready(function($){
+
+
+    $("a#tab-overview").click(function() {
+      $(".tabs-nav li").removeClass("active");
+
+      $(this).parent().addClass("active");
+      $("#forecast").show();
+      $("#ni-record").hide();
+      $("#contracting-out").hide();
+      window.location.hash = "#lie-forecast";
+      return false;
+    });
+
+    $("a#tab-ni-record").click(function() {
+      $(".tabs-nav li").removeClass("active");
+
+      $(this).parent().addClass("active");
+      $("#ni-record").show();
+      $("#contracting-out").hide();
+      $("#forecast").hide();
+      window.location.hash = "#lie-ni-record";
+      return false;
+    });
+
+
+    $("a#tab-contracting-out").click(function() {
+      $(".tabs-nav li").removeClass("active");
+
+      $(this).parent().addClass("active");
+      $("#contracting-out").show();
+      $("#ni-record").hide();
+      $("#forecast").hide();
+      window.location.hash = "#lie-contracting-out";
+      return false;
+    });
+
+    if(window.location.hash === "#lie-forecast") {
+      $("a#tab-overview").trigger('click');
+    }
+    else if (window.location.hash === "#lie-ni-record") {
+      $("a#tab-ni-record").trigger('click');
+    }
+
+    else if (window.location.hash === "#lie-contracting-out") {
+      $("a#tab-contracting-out").trigger('click');
+    }
+  });
+
+
+  </script>
+  {% endblock %}

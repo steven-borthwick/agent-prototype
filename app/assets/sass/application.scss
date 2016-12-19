@@ -586,9 +586,39 @@ p, li, label {
     clear: both;
 }
 
-#global-breadcrumb {
-	margin-bottom: -20px;
+.breadcrumb {
+	padding-top: 20px;
 }
+
+.column-one-half-left {
+	padding: 0 40px 0 0;
+	width: 38%;
+}
+
+.column-one-half-right {
+	padding: 0 40px 0 40px;
+	width: 41%;
+	border-left: 1px solid #ccc
+}
+
+@media (max-width: 640px)
+{
+.column-one-half-left {
+		padding: 0 0px 0 0;
+		width: 100%;
+	}
+}
+
+@media (max-width: 640px)
+{
+.column-one-half-right {
+		padding: 0 0px 0 0;
+		width: 100%;
+		border-left: 0
+	}
+}
+
+
 
 //tabs
 

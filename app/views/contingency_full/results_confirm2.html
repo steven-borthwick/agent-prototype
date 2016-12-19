@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+ Search results : Pension statements
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+
+      <ul class="main-nav">
+        <li id="home"><a href="start2">Home</a></li>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+
+    </div>
+    <div class="column-two-thirds" style="padding-left: 40px; width: 85%">
+      <ul class="results-list">
+        {% if included %}
+        <li class="result employer">
+          <div id="global-breadcrumb">
+            <a class="link-back" href="start2">Back</a>
+          </div>
+          <h1 class="heading-large">BB123456C</h1>
+          <div class="column-one-half column-one-half-left">
+           <h2 class="heading-medium">Print and send a forecast</h2>
+           <p>Enter name and address to send the forecast.</p>
+             <p style="margin-top: 45px"><a href="issue_address" class="button">Continue</a></p>
+          </div>
+           <div class="column-one-half column-one-half-right">
+             <h2 class="heading-medium">Enquiries</h2>
+               <p> View a forecast at State Pension age, the pension accrued to date, COPE and the National Insurance record.</p>
+              <p><a href="forecast" class="button">View forecast</a></p>
+           </div>
+      </li>
+      {% elif excluded %}
+      <div id="global-breadcrumb" class="breadcrumb">
+        <a class="link-back" href="javascript:window.history.back();">Back</a>
+      </div>
+      <h1 class="heading-large">Unable to create a forecast </h1>
+      <div class="panel panel-border-wide style2" style="width: 66%"><p class="text">Write down the following details to pass to a manager:</p>
+        <ul class="list-bullet">
+          <li>name</li>
+          <li>NINO - AA678910C</li>
+          <li>contact telephone number</li>
+          <li>address to send the statement to</li>
+        </ul><p class="text"> </p></div>
+      <p><a href="start2" class="button">Finish</a></p>
+      {% elif special %}
+      <li class="result employer">
+        <li class="result employer">
+          <div id="global-breadcrumb">
+            <a class="link-back" href="start2">Back</a>
+          </div>
+          <h1 class="heading-large">GG123456C</h1>
+          <div class="column-one-half column-one-half-left">
+           <h2 class="heading-medium">Print and send a forecast</h2>
+           <p>Enter name and address to send the forecast.</p>
+             <p style="margin-top: 45px"><a href="issue_address_v3" class="button">Continue</a></p>
+          </div>
+           <div class="column-one-half column-one-half-right">
+             <h2 class="heading-medium">Enquiries</h2>
+               <p> View a forecast at State Pension age, the pension accrued to date, COPE and the National Insurance record.</p>
+              <p><a href="forecast_v3" class="button">View forecast</a></p>
+           </div>
+        </li>
+      </li>
+
+      {% else %}
+      <li class="result employer">
+
+        <h2  class="heading-large">No record found</h2>
+        <div class="panel panel-border-wide style1" style="width: 60%"><p>Check the NI number with the customer, if it's correct take the customer's details and run a trace on the record.</p></div>
+        <p><a href="start2" class="button">Finish</a></p>
+      </li>
+      {% endif %}
+
+    </ul>
+
+  </div>
+</div>
+</main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+  function removeWhitespaces() {
+            var txtbox = document.getElementById('search-main');
+            txtbox.value = txtbox.value.replace(/\s/g, "");
+        }
+  </script>
+{% endblock %}
