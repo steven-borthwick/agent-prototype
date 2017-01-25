@@ -1,0 +1,80 @@
+
+{% extends "layout.html" %}
+{% block page_title %}
+Can't send forecast : Pension statements
+{% endblock %}
+{% block content %}
+<main id="content" role="main">
+ <div class="grid-row">
+   <div class="column-menu">
+    <ul class="main-nav-notactive">
+     <li id="home-notactive"><a href="start">Search</a></li>
+         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+            <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+            <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+            <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+          </ul>
+        </div><!-- end col menu -->
+        {% include "includes/customer_header_full2.html" %}
+        <div class="column-two-thirds" style="padding-left: 40px;">
+             <div id="global-breadcrumb">
+    <a class="link-back" href="issue_address_confirm?details_same=Yes">Back</a>
+  </div>
+  <h1 class="heading-medium">Use OLE to ask security questions</h1>
+  <p class="text">Customer must answer security questions to get informaton about their forecast. Use OLE to ask questions. </p>
+  <form action="forecast" class="form">
+    <fieldset class="inline" data-required data-error="Choose Yes or No">
+      <legend><span style="font-weight: 700">Has customer passed security?</span></legend>
+      <div class="form-group">
+        <label class="block-label" for="radio-1">
+          <input id="radio-1" type="radio" name="security_passed" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="radio-2">
+          <input id="radio-2" type="radio" name="security_passed" value="No">
+          No
+        </label>
+
+      </div>
+    </fieldset>
+    <input type="submit" value="Continue" class="button">
+  </form>
+
+</div>
+</div>
+</main>
+
+        </div>
+  </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+$(document).on('click', '#find-address', function () {
+  $('#id2').show();
+});
+
+$(document).on('click', '#cant-find', function (e) {
+  e.preventDefault();
+  $('#id2').hide();
+  $('#id3').show();
+});
+
+$(document).on('click', 'input[type="radio"]', function (e) {
+      if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+        $('#warningmessage').show();
+        if ($(this).attr('id') === 'radio-2') {
+          $('#warningmessage').show();
+        } else {
+          $('#warningmessage').hide();
+        }
+      }
+    });
+
+</script>
+{% endblock %}

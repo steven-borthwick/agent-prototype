@@ -45,7 +45,7 @@
                   </fieldset>
                 </div>
               </div>
-              <div class="column-two-thirds" style="margin-left: -10px; width: 85%">
+              <!--<div class="column-two-thirds" style="margin-left: -10px; width: 85%">
               <fieldset class="inline" data-required data-error="Choose Yes or No">
                 <legend><span style="font-weight: 700">Is the address to send the forecast in the UK or overseas? </span></legend>
                  <div class="form-group">
@@ -59,9 +59,12 @@
                 </label>
 
               </div>
-              </fieldset>
+            </fieldset>-->
+
               <div id="id1">
+
               <fieldset>
+                <h3 class="heading-small">Address</h3>
                 <label for="address_postcode">
                   Postcode
                 </label>
@@ -72,7 +75,12 @@
                   <button type="button" id="find-address" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px">
                     Find address
                   </button>
+
+                </p>
               </fieldset>
+              <p><a href="change_address_postcode" id="cant-find">
+              Enter address manually.
+            </a></p>
               </div>
             <!-- ID1 postcode end -->
             <!-- ID2 address finder start  -->
@@ -82,13 +90,32 @@
                 <span class="postcode-prefix">Postcode</span>
                 <span class="visuallyhidden">:</span>
                 <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
-                <a href="results_confirm2?search=bb123456c" class="change-postcode-button">
+                <a href="results_confirm4?search=bb123456c" class="change-postcode-button">
                   Change<span class="visuallyhidden"> your postcode</span>
                 </a>
               </p>
               <!-- address wrapper start -->
-<div class="panel wide"><p>Can't find any addresses for that postcode.
-  If the postcode is correct <a href="change_address_postcode">enter it manually<span class="visuallyhidden"> section</span>
+
+                <form method="post" action="" class="form">
+
+                  <fieldset>
+                    <h3 class="heading-small">Address</h3>
+                    <input type="hidden" id="address_postcode" name="address.postcode" value="ne259hq" class="text hidden">
+
+                    <label for="address_uprn" class="form-label">
+                      Select address
+                    </label>
+                    <div class="validation-wrapper">
+                     {% include "includes/address_list.html" %}
+                   </div><!-- address wrapper end -->
+                 </fieldset>
+
+                   <p style="padding-top: 20px;">
+                    <a id="#id1" class="button">
+                      Generate forecast
+                    </a>
+                    <a href="change_address_postcode" style="padding-left: 20px" id="cant-find">
+                      I can’t find the address in the list<span class="visuallyhidden"> section</span>
                     </a>
                   </p>
                 </form>
@@ -99,7 +126,8 @@
               <legend class="label" class="visuallyhidden"></legend>
               <div class="form-group">
                 <fieldset class="multi-line-field" data-required data-error="Enter first line of address">
-                  <label for="lineOne" class="form-label">Address</label>
+                  <h3 class="heading-small">Address</h3>
+                  <label for="lineOne" class="form-label"></label>
                   <input type="text" id="lineOne" name="lineOne" class="form-control">
                 </fieldset>
               </div>
@@ -256,7 +284,7 @@
             <span class="postcode-prefix">Postcode</span>
             <span class="visuallyhidden">:</span>
             <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
-            <a href="results_confirm2?search=bb123456c" class="change-postcode-button">
+            <a href="results_confirm4?search=bb123456c" class="change-postcode-button">
               Change<span class="visuallyhidden"> your postcode</span>
             </a>
           </p>
@@ -291,7 +319,7 @@
             <span class="postcode-prefix">Postcode</span>
             <span class="visuallyhidden">:</span>
             <span class="postcode"><span style="font-weight: 700">NE25 9HQ  </span>
-            <a href="results_confirm2?search=bb123456c" class="change-postcode-button">
+            <a href="results_confirm4?search=bb123456c" class="change-postcode-button">
               Edit<span class="visuallyhidden"> your postcode</span>
             </a>
           </p>
@@ -419,6 +447,7 @@
 
         $(document).on('click', '#cant-find', function (e) {
           e.preventDefault();
+          $('#id1').addClass('js-hidden');
           $('#id2').addClass('js-hidden');
           $('#id3').removeClass('js-hidden');
         });
