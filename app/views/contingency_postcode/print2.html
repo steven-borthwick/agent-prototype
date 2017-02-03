@@ -7,7 +7,7 @@ Can't send forecast : Pension statements
   <div class="grid-row">
     <div class="column-menu">
       <ul class="main-nav-notactive">
-        <li id="home-notactive"><a href="start">Search</a></li>
+        <li id="home-notactive"><a href="start">Home</a></li>
         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
         <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
         <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
@@ -16,25 +16,31 @@ Can't send forecast : Pension statements
     </div><!-- end col menu -->
     <div class="column-two-thirds" style="padding-left: 40px">
 
-      <h1 class="heading-large">Forecast</h1>
+      <div id="global-breadcrumb">
+        <a class="link-back" href="results_confirm5?search=bb123456c">Back</a>
+      </div>
       <div id="id1">
-
-        <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
+        <h1 class="heading-large">Now print the forecast for BB123456C</h1>
+  <button type="button" id="print-pdf" class="button next validation-submit" data-validation-sources="postcode" style="margin-top: 20px" onclick="window.print();">
           Print forecast
         </button>
+        <div id="pdf" style="margin-top: 20px;">
+          <embed id="pdf1" name="pdf1" src="/public/images/janeb_DWP.pdf" width="800" height="1000" type="application/pdf"  style="background: url('/public/images/loading.gif') no-repeat;">
+        </div>
 
       </div>
       <!-- ID1 postcode end -->
       <!-- ID2 address finder start  -->
 
       <div id="id2" style="display:none">
+        <h1 class="heading-large">Sent to printer?</h1>
+        <p class="text">If you successfully sent the forecast to the printer you can finish.</p>
+        <p><a href="start " class="button next validation-submit">Finish</a></p>
         <p><a href="#" onclick="window.print();">Print again?</a></p>
-        <a href="sent" class="button next validation-submit">Continue</a></p>
+
       </div><!-- ID2 address select end  -->
 
-      <div id="pdf" style="margin-top: 20px;">
-        <embed id="pdf1" name="pdf1" src="/public/images/janeb.pdf" width="800" height="1000" type='application/pdf' style="background: url('/public/images/loading.gif') no-repeat;">
-      </div>
+
     </div>
   </div>
 
