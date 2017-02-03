@@ -1034,6 +1034,20 @@ router.get('/contingency_postcode/results_confirm4', function (req, res) {
   });
 });
 
+router.get('/contingency_postcode/results_confirm5', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_postcode/results_confirm5', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
 
 router.get('/contingency_postcode/ole_details', function (req, res) {
 
