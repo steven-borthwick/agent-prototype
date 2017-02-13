@@ -164,6 +164,23 @@ p, li, label {
 		}
 	}
 
+	.column-menu-tall {
+
+		height: 2000px;
+
+	}
+
+	@media (max-width: 641px) {
+		.column-menu-tall {
+			height: auto;
+			}
+		}
+
+	.dwp-related-items {
+		  margin-top: 30px;
+		  border-top: 10px solid #28A197;
+		  padding-top: 5px;
+		}
 
 
 .main-nav {
@@ -447,6 +464,44 @@ p, li, label {
 	width: 40%;
 	float: left;
 }
+
+.forecast-wrapper2 {
+	clear: both;
+	width: 100%;
+	display: inline-block;
+	border-bottom: 1px solid #BFC1C3;
+	padding: 10px 0 10px 0;
+}
+
+
+.forecast-label2 {
+	width: 45%;
+	float: left;
+	font-size: 16px;
+	margin-right: 50px;
+}
+
+.forecast-data-bold2 {
+	width: 35%;
+	float: left;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.forecast-data-important {
+	width: 40%;
+	float: left;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+
+.forecast-data2 {
+	width: 40%;
+	font-size: 16px;
+	float: left;
+}
+
 
 // panel-indent
 
@@ -821,11 +876,14 @@ accordion dd, .ni-table dd {
 
 .ni-years {
   width: 25%;
-  float: left; }
+  float: left;
+ font-size: 16px;
+}
 
 .ni-years2 {
   width: 20%;
-  float: left; }
+  float: left;
+font-size: 16px}
 
 .title {
   cursor: pointer;
@@ -847,20 +905,24 @@ accordion dd, .ni-table dd {
   color: #999; }
 
 .ni-full2 {
-  color: #999; }
+  color: #999;
+ font-size: 16px; }
 
 .ni-late {
   width: 50%;
   float: left;
-  color: #999; }
+  color: #999;
+ font-size: 16px; }
 
 .ni-notfull {
   width: 50%;
-  float: left; }
+  float: left;
+font-size: 16px}
 
 .ni-notfull2 {
   width: 60%;
-  float: left; }
+  float: left;
+font-size: 16px}
 
 .ni-action {
   width: 30%;

@@ -1,0 +1,29 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+ Search using NI number : Pension statements
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div style="width: 100%; background-color: #9C9EBD; margin: 0 auto; height: 1500Px">
+  <div style="margin: 0 auto; padding: 100px 0 100px 0; width: 70%">
+    <form id="header-search" class="site-search" action="ole_details2" method="get" role="search">
+      <div class="form-group">
+
+        <fieldset data-required data-error="Enter a valid NI number for example QQ123456C">
+
+          <label for="search-main">Enter NINO</label>
+          <input name="search" id="search-main" title="Search" class="form-control" type="text"value="{{search}}"><input type="submit" value="Access record" onclick="removeWhitespaces()">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+    </div>
+  </main>
+
+
+
+{% endblock %}

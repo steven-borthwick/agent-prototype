@@ -1,9 +1,9 @@
 {% extends "layout.html" %} {% block page_title %} Agent view - Pension forecast {% endblock %} {% block content %}
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-menu column-menu-tall">
+    <div class="column-menu">
       <ul class="main-nav-notactive">
-        <li id="home-notactive"><a href="start2">Home</a></li>
+        <li id="home-notactive"><a href="start_alt">Home</a></li>
         <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
         <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
         <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
@@ -14,7 +14,7 @@
 
     <div class="column-two-thirds" style="padding: 0 40px 0 40px; width: 85%">
       <div id="global-breadcrumb" class="breadcrumb">
-        <a class="link-back" href="results_confirm2?search=bb123456c">Back</a>
+        <a class="link-back" href="start_alt">Back</a>
       </div>
       <div class="print" style="float: right; padding: 10px 100px 0 0;">
         <p><a href="issue_address" style="float: right" class="button">Send forecast</a></p>
@@ -56,7 +56,23 @@
           <div class="column-one-half" style="padding: 0; margin-top: 12px;">
             <br>
             <h3 class="heading-small">National Insurance breakdown</h3>
-    
+            <!--<table>
+              <tr>
+                <th style="width: 50%"></th>
+                <th>full years</th>
+                <th>weekly amount</th>
+              </tr>
+              <tr>
+                <td>NI record up to 5 April 2015</td>
+                <td>32</td>
+                <td>£140.65</td>
+              </tr>
+              <tr>
+                <td>Can reach the maximum if continue to contribute to 5 April 2019</td>
+                <td>35</td>
+                <td>£155.56</td>
+              </tr>
+            </table>-->
             <div class="chart-block">
         <div class="graph-title">Estimate based on NI record up to 5 April 2016. <br><span style="font-weight: 700">24 full years</span></div>
         <ul class="graph">

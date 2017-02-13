@@ -1387,6 +1387,284 @@ router.get('/contingency_full/print_v2', function (req, res) {
 
 });
 
+// contingency_full2
+
+
+
+router.get('/contingency_full2/results_confirm2', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_full2/results_confirm2', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
+router.get('/contingency_full2/results_confirm3', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_full2/results_confirm3', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
+router.get('/contingency_full2/ole_details', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_full2/ole_details', {
+    'search' : req.query.search,
+    'excluded': search === 'gg123456c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+  });
+});
+
+router.get('/contingency_full2/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same = req.query.details_same;
+
+  if (details_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full2/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full2/issue_cant_details');
+
+  }
+
+});
+
+
+router.get('/contingency_full2/issue_address_alt', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_UK = req.query.address_UK;
+
+  if (address_UK == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full2/issue_address_alt');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full2/forecast_alt');
+
+  }
+
+});
+
+
+router.get('/contingency_full2/issue_address_exclusion', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same2 = req.query.details_same2;
+
+  if (details_same2 == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full2/issue_address_exclusion');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full2/issue_cant_details');
+
+  }
+
+});
+
+
+
+router.get('/contingency_full2/print', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full2/print');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full2/issue_cant');
+
+  }
+
+});
+
+router.get('/contingency_full2/print_v2', function (req, res) {
+
+  var NInumber = req.query.NInumber;
+
+  res.render('contingency_full2/print_v2', { 'NInumber' : NInumber  });
+
+});
+
+// contingency_full3
+
+
+
+router.get('/contingency_full3/results_confirm2', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_full3/results_confirm2', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
+router.get('/contingency_full3/results_confirm3', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_full3/results_confirm3', {
+    'search' : req.query.search,
+    'excluded': search === 'aa678910c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+    'special': search === 'gg123456c'
+  });
+});
+
+router.get('/contingency_full3/ole_details', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('contingency_full3/ole_details', {
+    'search' : req.query.search,
+    'excluded': search === 'gg123456c',
+    'included': search === 'bb123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'yy109876c',
+  });
+});
+
+router.get('/contingency_full3/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same = req.query.details_same;
+
+  if (details_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full3/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full3/issue_cant_details');
+
+  }
+
+});
+
+
+router.get('/contingency_full3/issue_address_alt', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_UK = req.query.address_UK;
+
+  if (address_UK == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full3/issue_address_alt');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full3/forecast_alt');
+
+  }
+
+});
+
+
+router.get('/contingency_full3/issue_address_exclusion', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same2 = req.query.details_same2;
+
+  if (details_same2 == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full3/issue_address_exclusion');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full3/issue_cant_details');
+
+  }
+
+});
+
+
+
+router.get('/contingency_full3/print', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('contingency_full3/print');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/contingency_full3/issue_cant');
+
+  }
+
+});
+
+router.get('/contingency_full3/print_v2', function (req, res) {
+
+  var NInumber = req.query.NInumber;
+
+  res.render('contingency_full3/print_v2', { 'NInumber' : NInumber  });
+
+});
+
+
+
+
+
 
 
 // contingency_mvp
