@@ -1,0 +1,195 @@
+{% extends "layout.html" %} {% block page_title %} Agent view - Pension forecast {% endblock %} {% block content %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-menu">
+      <ul class="main-nav-notactive">
+        <li id="home-notactive"><a href="start2">Home</a></li>
+        <!--<li id="main-nav-todo-list"><a href="/agent/to-do-list">To-do list</a></li>
+        <li id="main-nav-claimants"><a href="/agent/claimants">Claimants</a></li>
+        <li id="main-nav-colleagues"><a href="/agent/colleagues">Colleagues</a></li>
+        <!--<li id="main-nav-teams"><a href="/agent/teams">Teams</a></li>-->
+      </ul>
+    </div>
+    <!-- end col menu -->
+
+    <div class="column-two-thirds" style="padding-left: 40px; width: 80%">
+      <div id="global-breadcrumb" class="breadcrumb">
+        <a class="link-back" href="results_confirm2?search=AA678910C">Back</a>
+      </div>
+      <h1 class="heading-large">AA678910C</h1>
+
+
+      <div class="tab-content">
+        <div class="js-tabs nav-tabs" style="width: 90%">
+
+          <ul class="tabs-nav" role="tablist">
+            <li class="active"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
+            <li><a href="#contracted-out" id="tab-ni-record">National Insurance record</a></li>
+            <!--<li><a href="#improve-sp-value" id="tab-contracting-out">Contracting out</a></li>-->
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div id="forecast" class="tab-pane">
+      <div class="column-one-half" style="padding: 20px 40px 0 40px; width: 35%">
+
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">State Pension date:</span> <span class="forecast-data-bold2">17 February 2023</span>
+
+        </div>
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">Final relevant year:</span> <span class="forecast-data-bold2">2021-22<br>7 years to FRY
+          </span>
+        </div>
+        <h3 class="heading-small">Has never been contracted out</h3>
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">COPE estimate</span> <span class="forecast-data-bold2">£0</span>
+        </div>
+      </div>
+
+      <div class="column-one-half" style="width: 38%; padding-top:20px">
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">Estimate up to 5 April 2016
+          </span> <span class="forecast-data-bold2">£124.52 a week</span>
+          <span class="forecast-label2" style="margin-top: 10px">Qualifying (full) years:</span> <span class="forecast-data-bold2" style="margin-top: 10px">28</span>
+        </div>
+
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">Forecast contributing future years</span> <span class="forecast-data-bold2">£155.65 a week</span>
+          <span class="forecast-label2" style="margin-top: 10px">Future years needed:</span> <span class="forecast-data-bold2" style="margin-top: 10px">7</span>
+
+        </div>
+        <div class="forecast-wrapper2">
+          <p><span style="font-size: 16px">£155.65 is the most they can get</span></p>
+        </div>
+
+      </div>
+    </div>
+    <div id="ni-record" class="tab-pane">
+      <div class="column-two-thirds" style="padding: 20px 0 0 40px; width: 45%">
+
+        <h1 class="heading-small" style="margin-top: 20px">There are no payable shortfalls</h1>
+
+      </div>
+      <div class="column-one-third" style="width: 25%; margin: 40px 0 0 30px;">
+        <aside class="govuk-related-items dwp-related-items" role="complementary">
+          <h2 class="heading-small" id="subsection-title">Full years and shortfalls</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+
+              <nav role="navigation" aria-labelledby="parent-subsection">
+                <ul class="list-bullets">
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">28</span> full (qualifying) years </span></li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">7</span> years to contribute before 05 April 2022</span></li>
+                  <li><span style="font-size: 16px"><span style="font-weight: 700">15</span> years with shortfalls</span></li>
+                </ul>
+              </ul>
+            </nav>
+          </aside>
+
+        </div>
+    </div>
+
+  </div>
+
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+// function show(elementId) {
+//   document.getElementById("id1").style.display = "none";
+//   document.getElementById("id2").style.display = "block";
+//   document.getElementById(elementId).style.display = "block";
+// }
+
+var allPanels = $('.accordion2 > dd').hide(),
+allHeaders = $('.accordion2 > dt');
+
+$('.accordion2 > dt').click(function() {
+  // $(this).parent().children("dd")
+  //   // .hide()
+  //   // .removeClass('active');
+
+  // $(this).parent().children("dt")
+  //   .children('span')
+  //   .removeClass('down');
+
+  if(!$(this).hasClass('active')) {
+    // $(this).parent().children("dt")
+    //   .removeClass('active');
+
+    $(this)
+    .addClass('active')
+    .next()
+    .show();
+
+    $(this).find("a").text("Hide details");
+
+    $(this)
+    .children('span')
+    .addClass('down');
+  }
+  else{
+    $(this)
+    .removeClass('active')
+    .next()
+    .hide();
+
+    $(this).find("a").text("View details");
+  }
+
+  return false;
+});
+
+jQuery(document).ready(function($){
+
+
+  $("a#tab-overview").click(function() {
+    $(".tabs-nav li").removeClass("active");
+
+    $(this).parent().addClass("active");
+    $("#forecast").show();
+    $("#ni-record").hide();
+    $("#contracting-out").hide();
+    window.location.hash = "#lie-forecast";
+    return false;
+  });
+
+  $("a#tab-ni-record").click(function() {
+    $(".tabs-nav li").removeClass("active");
+
+    $(this).parent().addClass("active");
+    $("#ni-record").show();
+    $("#contracting-out").hide();
+    $("#forecast").hide();
+    window.location.hash = "#lie-ni-record";
+    return false;
+  });
+
+
+  $("a#tab-contracting-out").click(function() {
+    $(".tabs-nav li").removeClass("active");
+
+    $(this).parent().addClass("active");
+    $("#contracting-out").show();
+    $("#ni-record").hide();
+    $("#forecast").hide();
+    window.location.hash = "#lie-contracting-out";
+    return false;
+  });
+
+  if(window.location.hash === "#lie-forecast") {
+    $("a#tab-overview").trigger('click');
+  }
+  else if (window.location.hash === "#lie-ni-record") {
+    $("a#tab-ni-record").trigger('click');
+  }
+
+  else if (window.location.hash === "#lie-contracting-out") {
+    $("a#tab-contracting-out").trigger('click');
+  }
+});
+
+
+</script>
+{% endblock %}
