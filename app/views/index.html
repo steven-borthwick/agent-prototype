@@ -1,153 +1,165 @@
-{% extends "layout.html" %}
-
-{% block page_title %}
-Agent view - Pension forecast
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block page_title %} Agent view - Pension forecast {% endblock %} {% block content %}
 
 <main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds" style="width: 100%; padding-left: 30px">
-      <h1 class="heading-xlarge">Check your State Pension - Agent view </h1>
-      <h2 class="heading-medium">MVP for dev</h2>
+    <div class="grid-row">
+        <div class="column-two-thirds" style="width: 100%; padding-left: 30px">
+            <h1 class="heading-xlarge">Check your State Pension - Agent view </h1>
+            <h2 class="heading-medium">Postcode look up for review</h2>
+            <p>3 February 2017</p>
 
-      <ul class="list-bullet">
-        <li><a href="/contingency_mvp/start2">Search screen</a><br>
-          BB123456C - can issue statement<br>
-          AA678910C - can't issue, customer excluded<br></li>
+            <p>
+                <p><a href="/contingency_postcode/start" class="button">Postcode look up</a></p>
+                <p>BB123456C - can issue statement
 
-        </ul>
-
-        <h2 class="heading-medium">Prototypes</h2>
-        <details>
-          <summary style="margin-top: 20px"><span class="summary">Show all prototypes</span></summary>
-          <h2 class="heading-medium">Enquiries</h2>
-          <p>BB123456C - will get the full amount by contributing<br>
-          GG678910C -  can improve forecast by filling gaps</p>
-
-          <ul class="list-bullet">
-            <li><a href="/contingency_full/ole">OLE screens</a></li>
-            <li><a href="/contingency_full/start2">NINO search then Forecast/Enquiry option</a></li>
-            <li><a href="/contingency_full/start_alt">Forecast/Enquiry option then NINO search</a></li>
-
-            </ul>
-
-          <h2 class="heading-medium">Contingency test v4</h2>
-          <p>Back button added. Some text changes - declaration before creating PDF</p>
-          <ul class="list-bullet">
-            <li><a href="/contingency_test4/ole">OLE screens</a></li>
-            <li><a href="/contingency_test4/start2">Search screen without postcode</a></li>
-
-            </ul>
-      <h2 class="heading-medium">Contingency test v3</h2>
-      <p>Improve end print screens. Postcode look up</p>
-      <ul class="list-bullet">
-        <li><a href="/contingency_test3/ole">OLE screens</a></li>
-        <li><a href="/contingency_test3/start2">Postcode look up</a></li>
-        <li><a href="/contingency_test3/start3">Alternative layout for postcode search</a></li>
-        </ul>
-      <h2 class="heading-medium">Contingency test v2</h2>
-      <p>Changes to the print screen flow.</p>
-      <ul class="list-bullet">
-        <li><a href="/contingency_test2/ole">OLE screens</a></li>
-          <li><a href="/contingency_test2/start2">Prototype - J Burns</a></li>
-        </ul>
-      <h2 class="heading-medium">Contingency test</h2>
-      <p>Enter NINO > Enter details > Print forecast</p>
-      <ul class="list-bullet">
-        <li><a href="/contingency_test/ole">OLE screens</a></li>
-          <li><a href="/contingency_test/start2">Prototype - J Burns</a></li>
-        </ul>
-      <ul class="list-bullet">
-        <li><a href="/contingency/start">Version 1</a><br>NINO search > record retreived > enter details > produce paper statement<br>
-          BB123456C - can issue statement<br>
-          AA678910C - can't issue, customer excluded<br>
-          GG123456C - special customer record</li>
-        <li><a href="/contingency/start2">Version 2</a><br>NINO search > enter details > produce paper statement<br>
-          BB123456C - can issue statement<br>
-          AA678910C - can't issue, customer excluded<br>
-          GG123456C - special customer record</li>
-        <li><a href="/contingency/add_details_box ">Address text box</a>
-        </ul>
-      <h2 class="heading-medium">MVP</h2>
-      <ul class="list-bullet">
-        <li><a href="/MVP/start">Print flow</a><br>NINO search > check details > check address > produce paper statement<br>
-          BB123456C  - can issue statement<br>
-          AA678910C - can't issue, customer excluded<br>
-          CD654321C - name change<br>
-          YY109876C - address change<br>
-          GG123456C special customer record</li>
-          <li><strong>Alternative end pages (shows customer details/finish button)</strong><br>
-          <a href="/MVP/issue_cant_details2">Name/DOB incorrect</a><br>
-        <a href="/MVP/issue_cant2">Address incorrect</a><br>
-        <a href="/MVP/issue_excluded?details_same2=Yes">Excluded</a><br>
-        <a href="/MVP/sent2">Forecast sent</a></li>
-        </ul>
-
-      <h2 class="heading-medium">Changing address and agent enquiry view</h2>
-      <ul class="list-bullet">
-        <li><a href="/full_service2/start">Using OLE as security</a>. BB123456C</li>
-        <li><a href="/full_service2/change_address_postcode">Postcode look up</a></li>
-        <li><a href="/full_service1/start">Address broadcasted and enquiry</a>.  BB123456C</li>
-        <li><a href="/change_address/start">Address not broadcasted</a>. BB123456C</li>
-      </ul>
-
-      <h2 class="heading-medium">Sprint 5</h2>
-      <ul class="list-bullet">
-        <li><a href="/sprint5/start">Print flow</a><br>NINO search > check details > check address > produce paper statement<br>
-          BB123456C  - can issue statement<br>
-          AA678910C - can't issue, customer excluded<br>
-          GG123456C special customer record</li>
-          <li><a href="/sprint5/generating_statement">generating forecast spinner</a></li>
-        </ul>
-
-        <h2 class="heading-medium">Sprint 4</h2>
-        <ul class="list-bullet">
-          <li><a href="/sprint3/start">Check if details are correct (Yes/No questions)</a><br>NINO search > check address > produce paper statement<br>
-            BB123456C  - can issue statement<br>
-            AA678910C - can't issue, customer excluded<br>
-            DD123456C (or any other NI number) - no record found</li>
-            <li><a href="/sprint3/start_light">Alternative version (no prompts)</a></li>
-          </ul>
-          <h2 class="heading-medium">Sprint 2</h2>
-          <ul class="list-bullet">
-            <li><a href="/sprint2/start">Added patterns for warning messages/lines to take</a><br>NINO search > check address > produce paper statement<br>
-              BB123456C  - can issue statement<br>
-              AA678910C - can't issue, customer excluded<br>
-              ZZ123456C - wants to change address</li>
-              <li><a href="/sprint2/results_confirm?search=bb123456c">check if name and DOB are correct</a></li>
-
-            </ul>
-            <h2 class="heading-medium">Sprint 1</h2>
+            </p>
+            <p>Changes from previous round of testing:</p>
             <ul class="list-bullet">
-              <li><a href="/sprint1/start">MVP - test 6 May 2016</a><br>NINO search > check address > produce paper statement<br>
-                BB123456C  - can issue statement<br>
-                AA678910C - can't issue, customer excluded<br>
-                ZZ123456C - wants to change address</li>
-                <li><a href="/sprint1/error">Service down</a></li>
-              </ul>
-              <h2 class="heading-medium">Sprint 0</h2>
-              <ul class="list-bullet">
-                <li><a href="start">MVP</a><br>NINO search > security > amend address > produce paper statement</li>
-                <li><a href="forecast">Forecast</a></li>
-                <li><a href="issuev3">Manual address change</a></li>
-                <li><a href="issue_cant">Exclusion from online</a></li>
-                <li><a href="issue_no_address_change">No address change</a></li>
-                <li><a href="start_error_blank">Search error</a></li>
-                <li><a href="results_non_found">Search no results</a></li>
-                <li><a href="verify_alt">Alternative header</a></li>
-              </ul>
+                <li>simplified flow for repeated use</li>
+                <li>overseas and UK fields consistent layout</li>
+                <li>postcode repeated for manual entry</li>
+                <li>added Name and Address labels to help group fields</li>
+            </ul>
+            <hr>
+            <h2 class="heading-medium">MVP for dev</h2>
+            <p>14 December 2016</p>
+
+            <p>
+                <p><a href="/contingency_mvp/start" class="button">Start MVP</a></p>
+                BB123456C - can issue statement<br> AA678910C - can't issue, customer excluded<br>
+
+            </p>
+            <hr>
+
+            <h2 class="heading-large">Prototypes</h2>
+            <details>
+                <summary style="margin-top: 20px"><span class="summary">Show all prototypes</span></summary>
+                <h2 class="heading-medium">Enquiries v4</h2>
+                <p>17 February 2017</p>
+
+
+
+                <p><a href="/enquiriesv4/start" class="button secondary-button">Enquiries v4</a></p>
+
+                <p>BB123456C - shows non paybale gaps<br> AA678910C - hide non payable gaps</p>
+                <p>Changes from previous round of testing:</p>
+                <ul class="list-bullet">
+                    <li>separated info to make overview page easier to scan (qualifying years, FRY)</li>
+                    <li>stripped down NI record to show shortfalls only</li>
+
+                    <li>used 2 column layout so more info is visible</li>
+                </ul>
+                <hr>
+                <h2 class="heading-medium">Enquiries v3 - Forecast/NI on 1 page </h2>
+                <p>February 10 2017</p>
+
+
+                <p><a href="/contingency_full3/start" class="button">Enquiries v3</a></p>
+
+                BB123456C - can improve with gaps<br> AA678910C - can't improve pension<br>
+
+                </p>
+                <p>Changes from previous round of testing:</p>
+                <ul class="list-bullet">
+                    <li>simplified layout and made more consistent between scenarios</li>
+                    <li>used 2 column layout so more info is visible</li>
+                </ul>
+                <hr>
+                <h2 class="heading-medium">Enquiries v2 - Forecast/NI on tabs</h2>
+                <p>February 10 2017</p>
+
+
+                <p><a href="/contingency_full2/start" class="button">Enquiries v2</a></p>
+
+                BB123456C - can improve with gaps<br> AA678910C - can't improve pension<br>
+
+                </p>
+                <p>Changes from previous round of testing:</p>
+                <ul class="list-bullet">
+                    <li>simplified layout and made more consistent between scenarios</li>
+                    <li>use tabs to toggle between forecast and NI record </li>
+                </ul>
+                <hr>
+                <h2 class="heading-medium">Enquiries v1</h2>
+                <p>19 December 2016</p>
+
+                <p><a href="/contingency_full/ole">Fake OLE screens</a></p>
+                <h3 class="heading-small">NINO search then Forecast/Enquiry option</h3>
+                <p><a href="/contingency_full/start2" class="button">Enquiries v1 - NINO first</a></p>
+                <h3 class="heading-small">Forecast/Enquiry option then NINO search</h3>
+                <p><a href="/contingency_full/start_alt" class="button">Enquiries v1 - option first</a></p>
+
+
+                <p>BB123456C - will get the full amount by contributing<br> GG678910C - can improve forecast by filling gaps</p>
+                <p>Changes from previous round of testing:</p>
+                <p>Different journeys to test which was clearer and simpler for agent</p>
+                <hr>
+                <h2 class="heading-medium">Contingency test v4</h2>
+
+                <p><a href="/contingency_test4/ole">OLE screens</a></p>
+                <p><a href="/contingency_test4/start2" class="button">Contingency test v4</a></p>
+
+                </ul>
+                <p>Changes from previous round of testing:</p>
+                <ul class="list-bullet">
+                    <li>
+                        Back button added</li>
+                    <li>Some text changes - declaration before creating PDF</li>
+                </ul>
+                <hr>
+                <h2 class="heading-medium">Contingency test v3 - postcode look up</h2>
+                <p>19 December 2016</p>
+
+                <p><a href="/contingency_test3/ole">OLE screens</a></p>
+                <p><a href="/contingency_test3/start2" class="button">Contingency test v3</a></p>
+                <p><a href="/contingency_test3/start3">Alternative layout for postcode search</a></p>
+                </ul>
+                <p>Changes from previous round of testing:</p>
+                <ul class="list-bullet">
+                    <li>simplified end print screens</li>
+                    <li>postcode look up</li>
+                </ul>
+                <hr>
+                <h2 class="heading-medium">Contingency test v2</h2>
+                <p>5 December 2016</p>
+
+
+                <p><a href="/contingency_test2/ole">OLE screens</a></p>
+                <p><a href="/contingency_test2/start2" class="button">Contingency test v2</a></li>
+                    </ul>
+                    <p>Changes from previous round of testing:</p>
+                    <p>Simplified print flow.</p>
+                    <hr>
+                    <h2 class="heading-medium">Contingency test - with CIS intergration</h2>
+                    <p>24 November 2016</p>
+                    <p>Unable to retrieve personal data from CIS. Prototypes to test the manual entry journey and fake OLE screens</p>
+                    <p><a href="/contingency_test/" class="button">Contingency test</a></p>
+                    <hr>
+                    <h2 class="heading-medium">MVP - check details and issue statement</h2>
+                    <p>10 October 2016</p>
+
+                        <p><a href="/MVP/start" class="button">Start MVP</a></p>
+                        <p>NINO search > check details > check address > produce paper statement<p> BB123456C - can issue statement<br> AA678910C - can't issue, customer excluded<br> CD654321C - name change<br> YY109876C
+                            - address change<br> GG123456C special customer record</p>
+                            <p>Changes from last round of testing</p>
+                        <p><strong>Alternative end pages (shows customer details/finish button)</strong><br>
+                            <a href="/MVP/issue_cant_details2">Name/DOB incorrect</a><br>
+                            <a href="/MVP/issue_cant2">Address incorrect</a><br>
+                            <a href="/MVP/issue_excluded?details_same2=Yes">Excluded</a><br>
+                            <a href="/MVP/sent2">Forecast sent</a>
+                    <hr>
+                  <h2 class="heading-medium">Service with CIS integration</h2>
+                  <p> Prototypes of service with CIS integration and security questions</p>
+                  <p><a href="cis_prototypes" class="button">CIS prototypes</a></p>
             </details>
 
-              <!--<h3 class="heading-small">Paper statement</h3>
+            <!--<h3 class="heading-small">Paper statement</h3>
               <ul class="list-bullet">
               <li><a href="/public/PDF/06_04_2thirds.pdf">Paper statement v1 (PDF)</a></li>
               <li><a href="/public/PDF/paper_statement_Jarrett.pdf">Paper statement v2 (PDF)</a><br>
               similar to Notify template</li>
             </ul>-->
-          </div>
         </div>
-      </main>
+    </div>
+</main>
 
-      {% endblock %}
+{% endblock %}

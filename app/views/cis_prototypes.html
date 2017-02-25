@@ -1,0 +1,85 @@
+ {% extends "layout.html" %} {% block page_title %} Can't send forecast : Pension statements {% endblock %} {% block content %}
+<main id="content" role="main">
+
+        <!-- end col menu -->
+
+        <div class="column-two-thirds" style="padding: 0 40px 0 40px; width: 80%">
+          <h1 class="heading-large">Prototypes with CIS integration</h1>
+          <h2 class="heading-medium">Changing address and agent enquiry view</h2>
+            <ul class="list-bullet">
+                <li><a href="/full_service2/start">Using OLE as security</a>. BB123456C</li>
+                <li><a href="/full_service2/change_address_postcode">Postcode look up</a></li>
+                <li><a href="/full_service1/start">Address broadcasted and enquiry</a>. BB123456C</li>
+                <li><a href="/change_address/start">Address not broadcasted</a>. BB123456C</li>
+            </ul>
+            <hr>
+            <h2 class="heading-medium">Sprint 5</h2>
+            <ul class="list-bullet">
+                <li><a href="/sprint5/start">Print flow</a><br>NINO search > check details > check address > produce paper statement<br> BB123456C - can issue statement<br> AA678910C - can't issue, customer excluded<br> GG123456C special customer
+                    record</li>
+                <li><a href="/sprint5/generating_statement">generating forecast spinner</a></li>
+            </ul>
+            <hr>
+            <h2 class="heading-medium">Sprint 4</h2>
+            <ul class="list-bullet">
+                <li><a href="/sprint3/start">Check if details are correct (Yes/No questions)</a><br>NINO search > check address > produce paper statement<br> BB123456C - can issue statement<br> AA678910C - can't issue, customer excluded<br> DD123456C
+                    (or any other NI number) - no record found</li>
+                <li><a href="/sprint3/start_light">Alternative version (no prompts)</a></li>
+            </ul>
+            <h2 class="heading-medium">Sprint 2</h2>
+            <ul class="list-bullet">
+                <li><a href="/sprint2/start">Added patterns for warning messages/lines to take</a><br>NINO search > check address > produce paper statement<br> BB123456C - can issue statement<br> AA678910C - can't issue, customer excluded<br> ZZ123456C
+                    - wants to change address</li>
+                <li><a href="/sprint2/results_confirm?search=bb123456c">check if name and DOB are correct</a></li>
+
+            </ul>
+            <hr>
+            <h2 class="heading-medium">Sprint 1</h2>
+            <ul class="list-bullet">
+                <li><a href="/sprint1/start">MVP - test 6 May 2016</a><br>NINO search > check address > produce paper statement<br> BB123456C - can issue statement<br> AA678910C - can't issue, customer excluded<br> ZZ123456C - wants to change address</li>
+                <li><a href="/sprint1/error">Service down</a></li>
+            </ul>
+            <hr>
+            <h2 class="heading-medium">Sprint 0</h2>
+            <ul class="list-bullet">
+                <li><a href="start">MVP</a><br>NINO search > security > amend address > produce paper statement</li>
+                <li><a href="forecast">Forecast</a></li>
+                <li><a href="issuev3">Manual address change</a></li>
+                <li><a href="issue_cant">Exclusion from online</a></li>
+                <li><a href="issue_no_address_change">No address change</a></li>
+                <li><a href="start_error_blank">Search error</a></li>
+                <li><a href="results_non_found">Search no results</a></li>
+                <li><a href="verify_alt">Alternative header</a></li>
+            </ul>
+        </div>
+</main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+    // function show(elementId) {
+    //   document.getElementById("id1").style.display = "none";
+    //   document.getElementById("id2").style.display = "block";
+    //   document.getElementById(elementId).style.display = "block";
+    // }
+
+    $(document).on('click', '#find-address', function() {
+        $('#id2').show();
+    });
+
+    $(document).on('click', '#cant-find', function(e) {
+        e.preventDefault();
+        $('#id2').hide();
+        $('#id3').show();
+    });
+
+    $(document).on('click', 'input[type="radio"]', function(e) {
+        if ($(e.target).attr('id') === 'radio-1' || $(e.target).attr('id') === 'radio-2') {
+            $('#warningmessage').show();
+            if ($(this).attr('id') === 'radio-2') {
+                $('#warningmessage').show();
+            } else {
+                $('#warningmessage').hide();
+            }
+        }
+    });
+</script>
+{% endblock %}
