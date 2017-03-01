@@ -47,10 +47,10 @@ router.get('/full_service2/results', function (req, res) {
 
   res.render('full_service2/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -61,10 +61,10 @@ router.get('/full_service2/results_confirm', function (req, res) {
 
   res.render('full_service2/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -179,10 +179,10 @@ router.get('/full_service1/results', function (req, res) {
 
   res.render('full_service1/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -193,10 +193,10 @@ router.get('/full_service1/results_confirm', function (req, res) {
 
   res.render('full_service1/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -231,10 +231,10 @@ router.get('/change_address/results', function (req, res) {
 
   res.render('change_address/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -245,10 +245,10 @@ router.get('/change_address/results_confirm', function (req, res) {
 
   res.render('change_address/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -355,10 +355,10 @@ router.get('/MVP/results', function (req, res) {
 
   res.render('MVP/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -369,11 +369,11 @@ router.get('/MVP/results_confirm', function (req, res) {
 
   res.render('MVP/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -383,10 +383,10 @@ router.get('/MVP/results_confirm_audit', function (req, res) {
 
   res.render('MVP/results_confirm_audit', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c',
+    'special': search === 'ff123456c',
     'name': search === 'nn123456c',
     'address': search === 'hh123456c'
   });
@@ -475,10 +475,10 @@ router.get('/contingency/results', function (req, res) {
 
   res.render('contingency/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -489,11 +489,11 @@ router.get('/contingency/results_confirm', function (req, res) {
 
   res.render('contingency/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -503,11 +503,11 @@ router.get('/contingency/results_confirm2', function (req, res) {
 
   res.render('contingency/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -517,10 +517,10 @@ router.get('/contingency/results_confirm_audit', function (req, res) {
 
   res.render('contingency/results_confirm_audit', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c',
+    'special': search === 'ff123456c',
     'name': search === 'nn123456c',
     'address': search === 'hh123456c'
   });
@@ -618,10 +618,10 @@ router.get('//results', function (req, res) {
 
   res.render('contingency_test/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -632,11 +632,11 @@ router.get('/contingency_test/results_confirm', function (req, res) {
 
   res.render('contingency_test/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -646,11 +646,11 @@ router.get('/contingency_test/results_confirm2', function (req, res) {
 
   res.render('contingency_test/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -660,10 +660,10 @@ router.get('/contingency_test/results_confirm_audit', function (req, res) {
 
   res.render('contingency_test/results_confirm_audit', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c',
+    'special': search === 'ff123456c',
     'name': search === 'nn123456c',
     'address': search === 'hh123456c'
   });
@@ -688,11 +688,11 @@ router.get('/contingency_test/ole_details', function (req, res) {
 
   res.render('contingency_test/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -776,11 +776,11 @@ router.get('/contingency_test2/results_confirm2', function (req, res) {
 
   res.render('contingency_test2/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -791,11 +791,11 @@ router.get('/contingency_test2/ole_details', function (req, res) {
 
   res.render('contingency_test2/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -880,11 +880,11 @@ router.get('/contingency_test3/results_confirm2', function (req, res) {
 
   res.render('contingency_test3/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -894,11 +894,11 @@ router.get('/contingency_test3/results_confirm3', function (req, res) {
 
   res.render('contingency_test3/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -908,11 +908,11 @@ router.get('/contingency_test3/ole_details', function (req, res) {
 
   res.render('contingency_test3/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -998,11 +998,11 @@ router.get('/contingency_postcode/results_confirm2', function (req, res) {
 
   res.render('contingency_postcode/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1012,11 +1012,11 @@ router.get('/contingency_postcode/results_confirm3', function (req, res) {
 
   res.render('contingency_postcode/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1026,11 +1026,11 @@ router.get('/contingency_postcode/results_confirm4', function (req, res) {
 
   res.render('contingency_postcode/results_confirm4', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1040,11 +1040,11 @@ router.get('/contingency_postcode/results_confirm5', function (req, res) {
 
   res.render('contingency_postcode/results_confirm5', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1055,11 +1055,11 @@ router.get('/contingency_postcode/ole_details', function (req, res) {
 
   res.render('contingency_postcode/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1144,11 +1144,11 @@ router.get('/contingency_test4/results_confirm2', function (req, res) {
 
   res.render('contingency_test4/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1158,11 +1158,11 @@ router.get('/contingency_test4/results_confirm3', function (req, res) {
 
   res.render('contingency_test4/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1172,11 +1172,11 @@ router.get('/contingency_test4/ole_details', function (req, res) {
 
   res.render('contingency_test4/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1260,11 +1260,11 @@ router.get('/contingency_full/results_confirm2', function (req, res) {
 
   res.render('contingency_full/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1274,11 +1274,11 @@ router.get('/contingency_full/results_confirm3', function (req, res) {
 
   res.render('contingency_full/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1288,10 +1288,10 @@ router.get('/contingency_full/ole_details', function (req, res) {
 
   res.render('contingency_full/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'gg123456c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'ff123456c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
+    'address': search === 'nt109876c',
   });
 });
 
@@ -1397,11 +1397,11 @@ router.get('/contingency_full2/results_confirm2', function (req, res) {
 
   res.render('contingency_full2/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1411,11 +1411,11 @@ router.get('/contingency_full2/results_confirm3', function (req, res) {
 
   res.render('contingency_full2/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1425,10 +1425,10 @@ router.get('/contingency_full2/ole_details', function (req, res) {
 
   res.render('contingency_full2/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'gg123456c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'ff123456c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
+    'address': search === 'nt109876c',
   });
 });
 
@@ -1534,11 +1534,11 @@ router.get('/contingency_full3/results_confirm2', function (req, res) {
 
   res.render('contingency_full3/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1548,11 +1548,11 @@ router.get('/contingency_full3/results_confirm3', function (req, res) {
 
   res.render('contingency_full3/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1562,10 +1562,10 @@ router.get('/contingency_full3/ole_details', function (req, res) {
 
   res.render('contingency_full3/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'gg123456c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'ff123456c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
+    'address': search === 'nt109876c',
   });
 });
 
@@ -1671,11 +1671,11 @@ router.get('/enquiriesv4/results_confirm2', function (req, res) {
 
   res.render('enquiriesv4/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1685,11 +1685,11 @@ router.get('/enquiriesv4/results_confirm3', function (req, res) {
 
   res.render('enquiriesv4/results_confirm3', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1699,10 +1699,10 @@ router.get('/enquiriesv4/ole_details', function (req, res) {
 
   res.render('enquiriesv4/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'gg123456c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'ff123456c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
+    'address': search === 'nt109876c',
   });
 });
 
@@ -1799,6 +1799,131 @@ router.get('/enquiriesv4/print_v2', function (req, res) {
 });
 
 
+// enquiriesv5
+
+
+
+router.get('/enquiriesv5/results_confirm2', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('enquiriesv5/results_confirm2', {
+    'search' : req.query.search,
+    'QQ123456C': search === 'qq123456c',
+    'DD678910C': search === 'dd678910c',
+    'FF123456C': search === 'ff123456c',
+    'FF654321B': search === 'ff654321b',
+    'NK678910D': search === 'nk678910d',
+    'NT678910A': search === 'nt678910a',
+    'ZZ345678A': search === 'zz345678a',
+    'BG345678A': search === 'bg345678a'
+  });
+});
+
+router.get('/enquiriesv5/ole_details', function (req, res) {
+
+  var search = req.query.search ? req.query.search.toLowerCase() : '';
+
+  res.render('enquiriesv5/ole_details', {
+    'search' : req.query.search,
+    'excluded': search === 'ff123456c',
+    'included': search === 'qq123456c',
+    'name': search === 'cd654321c',
+    'address': search === 'nt109876c',
+  });
+});
+
+router.get('/enquiriesv5/issue_address_confirm', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same = req.query.details_same;
+
+  if (details_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('enquiriesv5/issue_address_confirm');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/enquiriesv5/issue_cant_details');
+
+  }
+
+});
+
+
+router.get('/enquiriesv5/issue_address_alt', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_UK = req.query.address_UK;
+
+  if (address_UK == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('enquiriesv5/issue_address_alt');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/enquiriesv5/forecast_alt');
+
+  }
+
+});
+
+
+router.get('/enquiriesv5/issue_address_exclusion', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var details_same2 = req.query.details_same2;
+
+  if (details_same2 == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('enquiriesv5/issue_address_exclusion');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/enquiriesv5/issue_cant_details');
+
+  }
+
+});
+
+
+
+router.get('/enquiriesv5/print', function (req, res) {
+
+  // get the answer from the query string (eg. ?address_same=No)
+  var address_same = req.query.address_same;
+
+  if (address_same == "Yes"){
+
+    // if address_same is any other value (or is missing) render the page requested
+    res.render('enquiriesv5/print');
+
+
+  } else {
+
+          // redirect to the relevant page
+    res.redirect('/enquiriesv5/issue_cant');
+
+  }
+
+});
+
+router.get('/enquiriesv5/print_v2', function (req, res) {
+
+  var NInumber = req.query.NInumber;
+
+  res.render('enquiriesv5/print_v2', { 'NInumber' : NInumber  });
+
+});
 
 
 
@@ -1817,11 +1942,11 @@ router.get('/contingency_mvp/results_confirm2', function (req, res) {
 
   res.render('contingency_mvp/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1832,11 +1957,11 @@ router.get('/contingency_mvp/ole_details', function (req, res) {
 
   res.render('contingency_mvp/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1920,11 +2045,11 @@ router.get('/training_mvp/results_confirm2', function (req, res) {
 
   res.render('training_mvp/results_confirm2', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'excluded2': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -1935,11 +2060,11 @@ router.get('/training_mvp/ole_details', function (req, res) {
 
   res.render('training_mvp/ole_details', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'name': search === 'cd654321c',
-    'address': search === 'yy109876c',
-    'special': search === 'gg123456c'
+    'address': search === 'nt109876c',
+    'special': search === 'ff123456c'
   });
 });
 
@@ -2025,10 +2150,10 @@ router.get('/sprint5/results', function (req, res) {
 
   res.render('sprint5/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -2039,10 +2164,10 @@ router.get('/sprint5/results_confirm', function (req, res) {
 
   res.render('sprint5/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c',
-    'special': search === 'gg123456c'
+    'special': search === 'ff123456c'
   });
 
 });
@@ -2118,8 +2243,8 @@ router.get('/sprint3/results', function (req, res) {
 
   res.render('sprint3/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c'
   });
 
@@ -2131,8 +2256,8 @@ router.get('/sprint3/results_confirm', function (req, res) {
 
   res.render('sprint3/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c'
   });
 
@@ -2252,8 +2377,8 @@ router.get('/sprint2/results', function (req, res) {
 
   res.render('sprint2/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c'
   });
 
@@ -2266,8 +2391,8 @@ router.get('/sprint2/results_confirm', function (req, res) {
 
   res.render('sprint2/results_confirm', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c'
   });
 
@@ -2312,8 +2437,8 @@ router.get('/sprint1/results', function (req, res) {
 
   res.render('sprint1/results', {
     'search' : req.query.search,
-    'excluded': search === 'aa678910c',
-    'included': search === 'bb123456c',
+    'excluded': search === 'dd678910c',
+    'included': search === 'qq123456c',
     'included_address': search === 'zz123456c'
   });
 
