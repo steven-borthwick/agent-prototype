@@ -425,16 +425,17 @@ heading-small {
 	width: 100%;
 	display: inline-block;
 	border-bottom: 1px solid #BFC1C3;
-	padding: 10px 0;
+	padding: 10px 0 20px 0;
 }
 
 .forecast-label2 {
-	width: 45%;
+	width: 60%;
 	float: left;
 	font-size: 16px;
-	margin-right: 30px;
+	margin-right: 10px;
 	@media only screen and (max-width: 640px) {
-		margin-right: 40px;
+		margin-right: 10px;
+		width: 50%;
 	}
 }
 
@@ -444,7 +445,7 @@ heading-small {
 }
 
 .forecast-data-bold2 {
-	width: 40%;
+	width: 35%;
 	float: left;
 	font-size: 16px;
 	font-weight: 700;
@@ -467,6 +468,11 @@ heading-small {
 	font-size: 16px;
 	display: block;
 	clear: both;
+}
+
+.forecast-header {
+	font-size:16px;
+	font-weight: 700;
 }
 // panel-indent
 .panel-indent {
