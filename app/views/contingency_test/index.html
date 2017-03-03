@@ -1,0 +1,33 @@
+{% extends "layout.html" %} {% block page_title %} Agent view - Pension forecast {% endblock %} {% block content %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds" style="width: 100%; padding-left: 30px">
+          <h2 class="heading-medium">Contingency test</h2>
+ <p>Enter NINO > Enter details > Print forecast</p>
+ <ul class="list-bullet">
+ <li><a href="/contingency_test/ole">OLE screens</a></li>
+ <li><a href="/contingency_test/start2">Prototype - J Burns</a></li>
+       </ul>
+<ul class="list-bullet">
+        <li><a href="/contingency/start">Version 1</a><br>NINO search > record retreived > enter details > produce paper statement<br>
+          BB123456C - can issue statement<br>
+          AA678910C - can't issue, customer excluded<br>
+          GG123456C - special customer record</li>
+        <li><a href="/contingency/start2">Version 2</a><br>NINO search > enter details > produce paper statement<br>
+          BB123456C - can issue statement<br>
+          AA678910C - can't issue, customer excluded<br>
+GG123456C - special customer record</li>
+<li><a href="/contingency/add_details_box ">Address text box</a>
+   </ul>
+            <!--<h3 class="heading-small">Paper statement</h3>
+              <ul class="list-bullet">
+              <li><a href="/public/PDF/06_04_2thirds.pdf">Paper statement v1 (PDF)</a></li>
+              <li><a href="/public/PDF/paper_statement_Jarrett.pdf">Paper statement v2 (PDF)</a><br>
+              similar to Notify template</li>
+            </ul>-->
+        </div>
+    </div>
+</main>
+
+{% endblock %}
