@@ -425,11 +425,11 @@ heading-small {
 	width: 100%;
 	display: inline-block;
 	border-bottom: 1px solid #BFC1C3;
-	padding: 10px 0 20px 0;
+	padding: 10px 0 15px 0;
 }
 
 .forecast-label2 {
-	width: 60%;
+	width: 55%;
 	float: left;
 	font-size: 16px;
 	margin-right: 10px;
@@ -445,10 +445,11 @@ heading-small {
 }
 
 .forecast-data-bold2 {
-	width: 35%;
+	width: 40%;
 	float: left;
 	font-size: 16px;
 	font-weight: 700;
+	padding-left: 10px
 }
 
 .forecast-data-important {
