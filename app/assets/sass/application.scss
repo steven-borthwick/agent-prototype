@@ -6,6 +6,10 @@
 // If you need to create a page as part of your journey, but without GOV.UK branding
 // See localhost:3000/examples/unbranded/
 
+.grid-row {
+	margin: 0;
+}
+
 .unbranded {
 	background: $white; // Use the universal selector and !important to *ALWAYS OVERRIDE* GDS Transport
 
@@ -68,6 +72,7 @@
 //content font
 body {
 	font-family: 'Helvetica Neue', helvetica, arial, sans-seri !important;
+	position: relative;
 }
 
 #proposition-name {
@@ -146,6 +151,12 @@ heading-small {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+
+	&::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
 }
 @media (max-width: 641px) {
 	.column-menu {
@@ -388,6 +399,15 @@ heading-small {
 	padding-left: 30px;
 }
 // forecast page
+
+#forecast {
+	&::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
 .forecast-wrapper {
 	clear: both;
 	display: block;
@@ -621,6 +641,12 @@ heading-small {
 	a:visited {
 		color: $link-colour;
 	}
+
+	&::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
 }
 .nav-tabs {
 	zoom: 1;
@@ -1069,6 +1095,13 @@ li .amount {
 .column-two-thirds-dwp {
 	padding: 0 0 0 40px;
 	width: 80%;
+	
+	&::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+	
 	@media only screen and (max-width: 640px) {
 		width: 100%;
 	}
