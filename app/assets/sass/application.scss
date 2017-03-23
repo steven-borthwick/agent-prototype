@@ -617,6 +617,11 @@ heading-small {
 	}
 }
 //tabs
+.tabs-nav {
+	a:visited {
+		color: $link-colour;
+	}
+}
 .nav-tabs {
 	zoom: 1;
 	background: #fff;
