@@ -25,7 +25,7 @@
           <ul class="tabs-nav" role="tablist">
             <li class="active"><a href="#current-sp-value" id="tab-overview">Overview</a></li>
             <li><a href="#contracted-out" id="tab-ni-record">National Insurance summary</a></li>
-            <!--<li><a href="#improve-sp-value" id="tab-contracting-out">Contracting out</a></li>-->
+            <li><a href="#breakdown" id="tab-breakdown">Breakdown</a></li>
           </ul>
 
         </div>
@@ -120,6 +120,22 @@
         </div>
     </div>
 
+    <div id="breakdown" class="tab-pane">
+      <div class="column-two-thirds column-two-thirds-ni">
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">A amount</span>
+          <span class="forecast-data-bold2">£155</span>
+
+          <span class="forecast-label2">Additional Pension</span>
+          <span class="forecast-data-bold2">£155</span>
+        </div>
+
+        <div class="forecast-wrapper2">
+          <span class="forecast-label2">B amount</span>
+          <span class="forecast-data-bold2">£155</span>
+        </div>
+      </div>
+    </div>
   </div>
 
 </main>
@@ -133,15 +149,13 @@
 
 
 jQuery(document).ready(function($){
-
-
   $("a#tab-overview").click(function() {
     $(".tabs-nav li").removeClass("active");
 
     $(this).parent().addClass("active");
     $("#forecast").show();
     $("#ni-record").hide();
-    $("#contracting-out").hide();
+    $("#breakdown").hide();
     window.location.hash = "#lie-forecast";
     return false;
   });
@@ -151,21 +165,20 @@ jQuery(document).ready(function($){
 
     $(this).parent().addClass("active");
     $("#ni-record").show();
-    $("#contracting-out").hide();
+    $("#breakdown").hide();
     $("#forecast").hide();
     window.location.hash = "#lie-ni-record";
     return false;
   });
 
-
-  $("a#tab-contracting-out").click(function() {
+  $("a#tab-breakdown").click(function() {
     $(".tabs-nav li").removeClass("active");
 
     $(this).parent().addClass("active");
-    $("#contracting-out").show();
+    $("#breakdown").show();
     $("#ni-record").hide();
     $("#forecast").hide();
-    window.location.hash = "#lie-contracting-out";
+    window.location.hash = "#lie-breakdown";
     return false;
   });
 
@@ -176,8 +189,8 @@ jQuery(document).ready(function($){
     $("a#tab-ni-record").trigger('click');
   }
 
-  else if (window.location.hash === "#lie-contracting-out") {
-    $("a#tab-contracting-out").trigger('click');
+  else if (window.location.hash === "#lie-breakdown") {
+    $("a#tab-breakdown").trigger('click');
   }
 });
 
