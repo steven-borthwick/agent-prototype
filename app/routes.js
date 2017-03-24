@@ -2008,9 +2008,7 @@ router.get('/:prototype/print_v2', function (req, res) {
 
 // contingency_mvp
 router.get('/contingency_mvp/results_confirm2', function (req, res) {
-
   var search = req.query.search ? req.query.search.toLowerCase() : '';
-
   res.render('contingency_mvp/results_confirm2', {
     'search' : req.query.search,
     'excluded': search === 'dd678910c',
@@ -2023,9 +2021,7 @@ router.get('/contingency_mvp/results_confirm2', function (req, res) {
 
 
 router.get('/contingency_mvp/ole_details', function (req, res) {
-
   var search = req.query.search ? req.query.search.toLowerCase() : '';
-
   res.render('contingency_mvp/ole_details', {
     'search' : req.query.search,
     'excluded': search === 'dd678910c',
@@ -2037,73 +2033,44 @@ router.get('/contingency_mvp/ole_details', function (req, res) {
 });
 
 router.get('/contingency_mvp/issue_address_confirm', function (req, res) {
-
   // get the answer from the query string (eg. ?address_same=No)
   var details_same = req.query.details_same;
-
   if (details_same == "Yes"){
-
     // if address_same is any other value (or is missing) render the page requested
     res.render('contingency_mvp/issue_address_confirm');
-
-
   } else {
-
-          // redirect to the relevant page
+    // redirect to the relevant page
     res.redirect('/contingency_mvp/issue_cant_details');
-
   }
-
 });
 
 router.get('/contingency_mvp/issue_address_exclusion', function (req, res) {
-
   // get the answer from the query string (eg. ?address_same=No)
   var details_same2 = req.query.details_same2;
-
   if (details_same2 == "Yes"){
-
     // if address_same is any other value (or is missing) render the page requested
     res.render('contingency_mvp/issue_address_exclusion');
-
-
   } else {
-
-          // redirect to the relevant page
+    // redirect to the relevant page
     res.redirect('/contingency_mvp/issue_cant_details');
-
   }
-
 });
 
-
-
 router.get('/contingency_mvp/print', function (req, res) {
-
   // get the answer from the query string (eg. ?address_same=No)
   var address_same = req.query.address_same;
-
   if (address_same == "Yes"){
-
     // if address_same is any other value (or is missing) render the page requested
     res.render('contingency_mvp/print');
-
-
   } else {
-
-          // redirect to the relevant page
+    // redirect to the relevant page
     res.redirect('/contingency_mvp/issue_cant');
-
   }
-
 });
 
 router.get('/contingency_mvp/print_v2', function (req, res) {
-
   var NInumber = req.query.NInumber;
-
   res.render('contingency_mvp/print_v2', { 'NInumber' : NInumber  });
-
 });
 
 // training_mvp
